@@ -47,8 +47,8 @@
             this.selectbox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.editpanel = new System.Windows.Forms.Panel();
-            this.materialRaisedButton4 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.editcancelbtn = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.updatebtn = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRadioButton4 = new MaterialSkin.Controls.MaterialRadioButton();
             this.materialRadioButton3 = new MaterialSkin.Controls.MaterialRadioButton();
             this.editimgtxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -58,20 +58,20 @@
             this.editnametxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label5 = new System.Windows.Forms.Label();
             this.removepnl = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.selectbox2 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.materialRaisedButton5 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton6 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.label10 = new System.Windows.Forms.Label();
+            this.rvmpnl = new System.Windows.Forms.Panel();
+            this.picbox = new System.Windows.Forms.PictureBox();
+            this.rvmcancel = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.rmvbtn = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.placelbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.back)).BeginInit();
             this.addpnl.SuspendLayout();
             this.editpnl.SuspendLayout();
             this.editpanel.SuspendLayout();
             this.removepnl.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.rvmpnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox)).BeginInit();
             this.SuspendLayout();
             // 
             // back
@@ -312,8 +312,8 @@
             // 
             // editpanel
             // 
-            this.editpanel.Controls.Add(this.materialRaisedButton4);
-            this.editpanel.Controls.Add(this.materialRaisedButton3);
+            this.editpanel.Controls.Add(this.editcancelbtn);
+            this.editpanel.Controls.Add(this.updatebtn);
             this.editpanel.Controls.Add(this.materialRadioButton4);
             this.editpanel.Controls.Add(this.materialRadioButton3);
             this.editpanel.Controls.Add(this.editimgtxt);
@@ -328,29 +328,31 @@
             this.editpanel.TabIndex = 2;
             this.editpanel.Visible = false;
             // 
-            // materialRaisedButton4
+            // editcancelbtn
             // 
-            this.materialRaisedButton4.Depth = 0;
-            this.materialRaisedButton4.Location = new System.Drawing.Point(676, 264);
-            this.materialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton4.Name = "materialRaisedButton4";
-            this.materialRaisedButton4.Primary = true;
-            this.materialRaisedButton4.Size = new System.Drawing.Size(143, 35);
-            this.materialRaisedButton4.TabIndex = 9;
-            this.materialRaisedButton4.Text = "cancel";
-            this.materialRaisedButton4.UseVisualStyleBackColor = true;
+            this.editcancelbtn.Depth = 0;
+            this.editcancelbtn.Location = new System.Drawing.Point(676, 264);
+            this.editcancelbtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.editcancelbtn.Name = "editcancelbtn";
+            this.editcancelbtn.Primary = true;
+            this.editcancelbtn.Size = new System.Drawing.Size(143, 35);
+            this.editcancelbtn.TabIndex = 9;
+            this.editcancelbtn.Text = "cancel";
+            this.editcancelbtn.UseVisualStyleBackColor = true;
+            this.editcancelbtn.Click += new System.EventHandler(this.editcancelbtn_Click);
             // 
-            // materialRaisedButton3
+            // updatebtn
             // 
-            this.materialRaisedButton3.Depth = 0;
-            this.materialRaisedButton3.Location = new System.Drawing.Point(825, 264);
-            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton3.Name = "materialRaisedButton3";
-            this.materialRaisedButton3.Primary = true;
-            this.materialRaisedButton3.Size = new System.Drawing.Size(143, 35);
-            this.materialRaisedButton3.TabIndex = 8;
-            this.materialRaisedButton3.Text = "Update Details";
-            this.materialRaisedButton3.UseVisualStyleBackColor = true;
+            this.updatebtn.Depth = 0;
+            this.updatebtn.Location = new System.Drawing.Point(825, 264);
+            this.updatebtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.updatebtn.Name = "updatebtn";
+            this.updatebtn.Primary = true;
+            this.updatebtn.Size = new System.Drawing.Size(143, 35);
+            this.updatebtn.TabIndex = 8;
+            this.updatebtn.Text = "Update Details";
+            this.updatebtn.UseVisualStyleBackColor = true;
+            this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
             // 
             // materialRadioButton4
             // 
@@ -457,22 +459,23 @@
             // 
             // removepnl
             // 
-            this.removepnl.Controls.Add(this.comboBox2);
+            this.removepnl.Controls.Add(this.selectbox2);
             this.removepnl.Controls.Add(this.label8);
-            this.removepnl.Controls.Add(this.panel2);
+            this.removepnl.Controls.Add(this.rvmpnl);
             this.removepnl.Location = new System.Drawing.Point(12, 129);
             this.removepnl.Name = "removepnl";
             this.removepnl.Size = new System.Drawing.Size(998, 420);
             this.removepnl.TabIndex = 6;
             this.removepnl.Visible = false;
             // 
-            // comboBox2
+            // selectbox2
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(305, 17);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(461, 21);
-            this.comboBox2.TabIndex = 5;
+            this.selectbox2.FormattingEnabled = true;
+            this.selectbox2.Location = new System.Drawing.Point(305, 17);
+            this.selectbox2.Name = "selectbox2";
+            this.selectbox2.Size = new System.Drawing.Size(461, 21);
+            this.selectbox2.TabIndex = 5;
+            this.selectbox2.SelectedIndexChanged += new System.EventHandler(this.selectbox2_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -483,59 +486,61 @@
             this.label8.TabIndex = 4;
             this.label8.Text = "Select Place";
             // 
-            // panel2
+            // rvmpnl
             // 
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.materialRaisedButton5);
-            this.panel2.Controls.Add(this.materialRaisedButton6);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Location = new System.Drawing.Point(3, 63);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(992, 357);
-            this.panel2.TabIndex = 3;
-            this.panel2.Visible = false;
+            this.rvmpnl.Controls.Add(this.picbox);
+            this.rvmpnl.Controls.Add(this.rvmcancel);
+            this.rvmpnl.Controls.Add(this.rmvbtn);
+            this.rvmpnl.Controls.Add(this.placelbl);
+            this.rvmpnl.Location = new System.Drawing.Point(3, 63);
+            this.rvmpnl.Name = "rvmpnl";
+            this.rvmpnl.Size = new System.Drawing.Size(992, 357);
+            this.rvmpnl.TabIndex = 3;
+            this.rvmpnl.Visible = false;
             // 
-            // pictureBox1
+            // picbox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(48, 71);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(463, 269);
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
+            this.picbox.Location = new System.Drawing.Point(48, 71);
+            this.picbox.Name = "picbox";
+            this.picbox.Size = new System.Drawing.Size(463, 269);
+            this.picbox.TabIndex = 10;
+            this.picbox.TabStop = false;
             // 
-            // materialRaisedButton5
+            // rvmcancel
             // 
-            this.materialRaisedButton5.Depth = 0;
-            this.materialRaisedButton5.Location = new System.Drawing.Point(602, 178);
-            this.materialRaisedButton5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton5.Name = "materialRaisedButton5";
-            this.materialRaisedButton5.Primary = true;
-            this.materialRaisedButton5.Size = new System.Drawing.Size(143, 35);
-            this.materialRaisedButton5.TabIndex = 9;
-            this.materialRaisedButton5.Text = "cancel";
-            this.materialRaisedButton5.UseVisualStyleBackColor = true;
+            this.rvmcancel.Depth = 0;
+            this.rvmcancel.Location = new System.Drawing.Point(602, 178);
+            this.rvmcancel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.rvmcancel.Name = "rvmcancel";
+            this.rvmcancel.Primary = true;
+            this.rvmcancel.Size = new System.Drawing.Size(143, 35);
+            this.rvmcancel.TabIndex = 9;
+            this.rvmcancel.Text = "cancel";
+            this.rvmcancel.UseVisualStyleBackColor = true;
+            this.rvmcancel.Click += new System.EventHandler(this.rvmcancel_Click);
             // 
-            // materialRaisedButton6
+            // rmvbtn
             // 
-            this.materialRaisedButton6.Depth = 0;
-            this.materialRaisedButton6.Location = new System.Drawing.Point(751, 178);
-            this.materialRaisedButton6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton6.Name = "materialRaisedButton6";
-            this.materialRaisedButton6.Primary = true;
-            this.materialRaisedButton6.Size = new System.Drawing.Size(143, 35);
-            this.materialRaisedButton6.TabIndex = 8;
-            this.materialRaisedButton6.Text = "Remove place";
-            this.materialRaisedButton6.UseVisualStyleBackColor = true;
+            this.rmvbtn.Depth = 0;
+            this.rmvbtn.Location = new System.Drawing.Point(751, 178);
+            this.rmvbtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.rmvbtn.Name = "rmvbtn";
+            this.rmvbtn.Primary = true;
+            this.rmvbtn.Size = new System.Drawing.Size(143, 35);
+            this.rmvbtn.TabIndex = 8;
+            this.rmvbtn.Text = "Remove place";
+            this.rmvbtn.UseVisualStyleBackColor = true;
+            this.rmvbtn.Click += new System.EventHandler(this.rmvbtn_Click);
             // 
-            // label10
+            // placelbl
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(233, 33);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 20);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Name";
+            this.placelbl.AutoSize = true;
+            this.placelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.placelbl.Location = new System.Drawing.Point(52, 32);
+            this.placelbl.Name = "placelbl";
+            this.placelbl.Size = new System.Drawing.Size(51, 20);
+            this.placelbl.TabIndex = 0;
+            this.placelbl.Text = "Name";
             // 
             // destinations
             // 
@@ -563,9 +568,9 @@
             this.editpanel.PerformLayout();
             this.removepnl.ResumeLayout(false);
             this.removepnl.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.rvmpnl.ResumeLayout(false);
+            this.rvmpnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -592,8 +597,8 @@
         private System.Windows.Forms.ComboBox selectbox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel editpanel;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton4;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton3;
+        private MaterialSkin.Controls.MaterialRaisedButton editcancelbtn;
+        private MaterialSkin.Controls.MaterialRaisedButton updatebtn;
         private MaterialSkin.Controls.MaterialRadioButton materialRadioButton4;
         private MaterialSkin.Controls.MaterialRadioButton materialRadioButton3;
         private MaterialSkin.Controls.MaterialSingleLineTextField editimgtxt;
@@ -603,12 +608,12 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField editnametxt;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel removepnl;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton5;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton6;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Panel rvmpnl;
+        private System.Windows.Forms.PictureBox picbox;
+        private MaterialSkin.Controls.MaterialRaisedButton rvmcancel;
+        private MaterialSkin.Controls.MaterialRaisedButton rmvbtn;
+        private System.Windows.Forms.Label placelbl;
+        private System.Windows.Forms.ComboBox selectbox2;
         private System.Windows.Forms.Label label8;
     }
 }

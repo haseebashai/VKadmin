@@ -17,7 +17,7 @@ namespace Veiled_Kashmir_Admin_Panel
         String cmd;
         int exp;
 
-        MySqlDataReader dr,dr2;
+        MySqlDataReader dr;
 
         private Homepage hp = null;
         public destinations(Form hpcopy)
@@ -43,6 +43,14 @@ namespace Veiled_Kashmir_Admin_Panel
         {
             cmd= "insert into places (`name`, `description`, `location`, `explored`) values ('"+nametxt.Text+"', '"+desctxt.Text+"', '"+loctxt.Text+"', '"+exp+"')";
             obj.nonQuery(cmd);
+            
+            MessageBox.Show("New Place added succesfully!");
+            nametxt.Text = "";
+            desctxt.Text = "";
+            loctxt.Text = "";
+            exbtn.Checked = false;
+            unexbtn.Checked = false;
+
         }
 
         private void exbtn_CheckedChanged(object sender, EventArgs e)
@@ -68,7 +76,7 @@ namespace Veiled_Kashmir_Admin_Panel
             dt.Columns.Add("name", typeof(String));
             dt.Load(dr);
             selectbox.DisplayMember = "name";
-            selectbox.DataSource = dt;
+            selectbox.DataSource = dt; 
 
             obj.closeConnection();
         }
@@ -85,7 +93,16 @@ namespace Veiled_Kashmir_Admin_Panel
             editpnl.Visible = false;
             addpnl.Visible = false;
             removepnl.Visible = true;
-            
+
+            dr = obj.Query("select name from places");
+            DataTable dt = new DataTable();
+            dt.Columns.Add("name", typeof(String));
+            dt.Load(dr);
+            selectbox2.DisplayMember = "name";
+            selectbox2.DataSource = dt;
+
+            obj.closeConnection();
+
         }
 
         private void cancelbtn_Click(object sender, EventArgs e)
@@ -100,14 +117,61 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void selectbox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selected = selectbox.Text; //this.selectbox.GetItemText(this.selectbox.SelectedItem);
 
-            dr2 = obj.Query("select * from places where name='"+selected+"'");
-            dr2.Read();
-            editnametxt.Text= dr2[1].ToString();
-            editdesctxt.Text = dr2[2].ToString();
-            editimgtxt.Text = dr2[3].ToString();
+            dr = obj.Query("select * from places where name='"+selectbox.Text+"'");
+            dr.Read();
+                editnametxt.Text = dr[1].ToString();
+                editdesctxt.Text = dr[2].ToString();
+                editimgtxt.Text = dr[3].ToString();
+                exp = Convert.ToInt32(dr[4]);
+                if (exp == 1)
+                    exbtn.Checked = true;
+                else
+                    unexbtn.Checked = true;
+
+            
             obj.closeConnection(); 
-        } 
+        }
+
+        private void updatebtn_Click(object sender, EventArgs e)
+        {
+            cmd = ("update places set `name`='"+editnametxt.Text+"', `description`='"+editdesctxt.Text+"', `location`='"+editimgtxt.Text+"', `explored`='"+exp+"' where `name`='"+selectbox.Text+"';");
+            obj.nonQuery(cmd);
+            
+        }
+
+        private void editcancelbtn_Click(object sender, EventArgs e)
+        {
+            editnametxt.Text = "";
+            editdesctxt.Text = "";
+            editimgtxt.Text = "";
+            exbtn.Checked = false;
+            unexbtn.Checked = false;
+        }
+
+        private void selectbox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dr = obj.Query("select * from places where name='" + selectbox2.Text + "'");
+            dr.Read();
+            placelbl.Text = dr[1].ToString();
+            picbox.BackgroundImage= new Bitmap(dr[3].ToString());
+            rvmpnl.Visible = true;
+
+
+
+            obj.closeConnection();
+        }
+        private void rmvbtn_Click(object sender, EventArgs e)
+        {
+            cmd = ("delete from places where name= '" + selectbox2.Text + "';");
+            obj.nonQuery(cmd);
+
+        }
+
+        private void rvmcancel_Click(object sender, EventArgs e)
+        {
+            rvmpnl.Visible = false;
+
+        }
     }
 }
