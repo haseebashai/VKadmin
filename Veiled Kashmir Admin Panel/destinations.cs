@@ -33,8 +33,9 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void back_Click(object sender, EventArgs e)
         {
-            mainform mf = new mainform(this);
+            mainform mf = new mainform(hp);
             mf.TopLevel = false;
+            hp.mainpnl.Controls.Clear();
             hp.mainpnl.Controls.Add(mf);
             mf.Show();
         }
