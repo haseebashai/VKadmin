@@ -178,7 +178,7 @@ namespace Veiled_Kashmir_Admin_Panel
             obj.nonQuery(cmd);
             MessageBox.Show("selected place removed sucessfully.");
             rvmpnl.Visible = false;
-            selectbox2.Refresh();
+            
 
         }
 

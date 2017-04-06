@@ -16,7 +16,7 @@ namespace Veiled_Kashmir_Admin_Panel
         DBConnect obj = new DBConnect();
         String cmd;
 
-        MySqlDataReader dr;
+        MySqlDataReader dr,dr2;
 
         private Homepage hp = null;
         public business(Form hpcopy)
@@ -80,6 +80,64 @@ namespace Veiled_Kashmir_Admin_Panel
             removepnl.Visible = true;
             addpnl.Visible = false;
             shoppnl.Visible = false;
+
+            dr = obj.Query("select name from business");
+            DataTable dt = new DataTable();
+            dt.Columns.Add("name", typeof(String));
+            dt.Load(dr);
+            obj.closeConnection();
+            selectbox2.DisplayMember = "name";
+            selectbox2.DataSource = dt;
+
+            obj.closeConnection();
+        }
+
+        private void selectbox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            dr = obj.Query("select * from business where name='" + selectbox3.Text + "'");
+            dr.Read();
+            
+            bidlbl.Text = dr[0].ToString();
+            addshoppnl.Visible = true;
+
+            obj.closeConnection();
+
+            dr2 = obj.Query("select name from businessdetails where bid ='"+bidlbl.Text+"'");
+            DataTable dt = new DataTable();
+            dt.Columns.Add("name", typeof(String));
+            dt.Load(dr2);
+            obj.closeConnection();
+            shopbox.DisplayMember = "name";
+            shopbox.DataSource = dt;
+
+        }
+        private void addshopdetbtn_Click(object sender, EventArgs e)
+        {
+            cmd = "insert into businessdetails (`bid`, `name`, `location`, `phone`, `email`) values ('" + bidlbl.Text + "', '" + shopnametxt.Text + "', '" + shopaddtxt.Text + "', '" + shopnotxt.Text+"', '" + shopemailtxt.Text + "')";
+            obj.nonQuery(cmd);
+
+            MessageBox.Show("New Shop added succesfully!");
+            shopnametxt.Text = "";
+            shopaddtxt.Text = "";
+            shopnotxt.Text = "";
+            shopemailtxt.Text = "";
+        }
+
+        private void shopbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dr2 = obj.Query("select * from businessdetails where name='" + shopbox.Text + "'");
+            dr2.Read();
+            shopeditnametxt.Text = dr2[2].ToString();
+            shopeditaddresstxt.Text = dr2[3].ToString();
+            shopeditnotxt.Text = dr2[4].ToString();
+            shopeditemailtxt.Text = dr2[5].ToString();
+            bideditlbl.Text = dr2[1].ToString();
+            rvmpnl.Visible = true;
+
+
+
+            obj.closeConnection();
         }
 
         private void addshopbtn_Click(object sender, EventArgs e)
@@ -89,7 +147,7 @@ namespace Veiled_Kashmir_Admin_Panel
             addpnl.Visible = false;
             shoppnl.Visible = true;
 
-            dr = obj.Query("select name from businessdetails");
+            dr = obj.Query("select name from business");
             DataTable dt = new DataTable();
             dt.Columns.Add("name", typeof(String));
             dt.Load(dr);
@@ -112,7 +170,7 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void updatebtn_Click(object sender, EventArgs e)
         {
-            cmd = ("update places set `name`='" + editnametxt.Text + "', `description`='" + editdesctxt.Text + "', `location`='" + editimgtxt.Text + "', `explored`='" + exp + "' where `name`='" + selectbox.Text + "';");
+            cmd = ("update business set `name`='" + editnametxt.Text + "', `description`='" + editdesctxt.Text + "', `pic`='" + editimgtxt.Text + "' where `name`='" + selectbox.Text + "';");
             obj.nonQuery(cmd);
             MessageBox.Show("Details updated for the selected business.");
             editnametxt.Text = "";
@@ -150,20 +208,28 @@ namespace Veiled_Kashmir_Admin_Panel
            
         }
 
+        private void shoprvmbtn_Click(object sender, EventArgs e)
+        {
+            cmd = ("delete from businessdetails where name= '" + shopbox.Text + "'");
+            obj.nonQuery(cmd);
+            MessageBox.Show("selected shop removed sucessfully.");
+            editshoppnl.Refresh();
+        }
+
+        private void updateshopbtn_Click(object sender, EventArgs e)
+        {
+            cmd = ("update businessdetails set `bid`='" + bideditlbl.Text + "', `name`='" + shopeditnametxt.Text + "', `location`='" + shopeditaddresstxt.Text + "', `phone`='" + shopeditnotxt.Text + "', `email`='" + shopeditemailtxt.Text + "' where `name`='" + shopbox.Text + "'");
+            obj.nonQuery(cmd);
+            MessageBox.Show("Details updated for the selected shop.");
+        }
+
         private void rvmcancel_Click(object sender, EventArgs e)
         {
             rvmpnl.Visible = false;
         }
 
-        private void selectbox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            dr = obj.Query("select * from businessdetails where name='" + selectbox3.Text + "'");
-            dr.Read();
-            addshoppnl.Visible = true;
-            bidlbl.Text = dr[1].ToString();
-            
+        
 
-            obj.closeConnection();
-        }
+        
     }
 }

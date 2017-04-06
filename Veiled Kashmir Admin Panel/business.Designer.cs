@@ -66,26 +66,26 @@
             this.addshoppnl = new System.Windows.Forms.Panel();
             this.editshoppnl = new System.Windows.Forms.Panel();
             this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton5 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialSingleLineTextField5 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField6 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField7 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField8 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.updateshopbtn = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.shopeditemailtxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.shopeditnotxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.shopeditaddresstxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.shopeditnametxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.bideditlbl = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.shoprvmbtn = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label15 = new System.Windows.Forms.Label();
             this.shopbox = new System.Windows.Forms.ComboBox();
             this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton4 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialSingleLineTextField4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField3 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.addshopdetbtn = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.shopemailtxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.shopnotxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.shopaddtxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.shopnametxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -530,15 +530,15 @@
             // addshoppnl
             // 
             this.addshoppnl.Controls.Add(this.editshoppnl);
-            this.addshoppnl.Controls.Add(this.materialRaisedButton1);
+            this.addshoppnl.Controls.Add(this.shoprvmbtn);
             this.addshoppnl.Controls.Add(this.label15);
             this.addshoppnl.Controls.Add(this.shopbox);
             this.addshoppnl.Controls.Add(this.materialRaisedButton3);
-            this.addshoppnl.Controls.Add(this.materialRaisedButton4);
-            this.addshoppnl.Controls.Add(this.materialSingleLineTextField4);
-            this.addshoppnl.Controls.Add(this.materialSingleLineTextField3);
-            this.addshoppnl.Controls.Add(this.materialSingleLineTextField2);
-            this.addshoppnl.Controls.Add(this.materialSingleLineTextField1);
+            this.addshoppnl.Controls.Add(this.addshopdetbtn);
+            this.addshoppnl.Controls.Add(this.shopemailtxt);
+            this.addshoppnl.Controls.Add(this.shopnotxt);
+            this.addshoppnl.Controls.Add(this.shopaddtxt);
+            this.addshoppnl.Controls.Add(this.shopnametxt);
             this.addshoppnl.Controls.Add(this.label26);
             this.addshoppnl.Controls.Add(this.label25);
             this.addshoppnl.Controls.Add(this.label13);
@@ -553,16 +553,16 @@
             // editshoppnl
             // 
             this.editshoppnl.Controls.Add(this.materialRaisedButton2);
-            this.editshoppnl.Controls.Add(this.materialRaisedButton5);
-            this.editshoppnl.Controls.Add(this.materialSingleLineTextField5);
-            this.editshoppnl.Controls.Add(this.materialSingleLineTextField6);
-            this.editshoppnl.Controls.Add(this.materialSingleLineTextField7);
-            this.editshoppnl.Controls.Add(this.materialSingleLineTextField8);
+            this.editshoppnl.Controls.Add(this.updateshopbtn);
+            this.editshoppnl.Controls.Add(this.shopeditemailtxt);
+            this.editshoppnl.Controls.Add(this.shopeditnotxt);
+            this.editshoppnl.Controls.Add(this.shopeditaddresstxt);
+            this.editshoppnl.Controls.Add(this.shopeditnametxt);
             this.editshoppnl.Controls.Add(this.label14);
             this.editshoppnl.Controls.Add(this.label16);
             this.editshoppnl.Controls.Add(this.label17);
             this.editshoppnl.Controls.Add(this.label18);
-            this.editshoppnl.Controls.Add(this.label19);
+            this.editshoppnl.Controls.Add(this.bideditlbl);
             this.editshoppnl.Controls.Add(this.label20);
             this.editshoppnl.Location = new System.Drawing.Point(486, 52);
             this.editshoppnl.Name = "editshoppnl";
@@ -581,77 +581,78 @@
             this.materialRaisedButton2.Text = "cancel";
             this.materialRaisedButton2.UseVisualStyleBackColor = true;
             // 
-            // materialRaisedButton5
+            // updateshopbtn
             // 
-            this.materialRaisedButton5.Depth = 0;
-            this.materialRaisedButton5.Location = new System.Drawing.Point(300, 199);
-            this.materialRaisedButton5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton5.Name = "materialRaisedButton5";
-            this.materialRaisedButton5.Primary = true;
-            this.materialRaisedButton5.Size = new System.Drawing.Size(143, 35);
-            this.materialRaisedButton5.TabIndex = 24;
-            this.materialRaisedButton5.Text = "Update shop";
-            this.materialRaisedButton5.UseVisualStyleBackColor = true;
+            this.updateshopbtn.Depth = 0;
+            this.updateshopbtn.Location = new System.Drawing.Point(300, 199);
+            this.updateshopbtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.updateshopbtn.Name = "updateshopbtn";
+            this.updateshopbtn.Primary = true;
+            this.updateshopbtn.Size = new System.Drawing.Size(143, 35);
+            this.updateshopbtn.TabIndex = 24;
+            this.updateshopbtn.Text = "Update shop";
+            this.updateshopbtn.UseVisualStyleBackColor = true;
+            this.updateshopbtn.Click += new System.EventHandler(this.updateshopbtn_Click);
             // 
-            // materialSingleLineTextField5
+            // shopeditemailtxt
             // 
-            this.materialSingleLineTextField5.Depth = 0;
-            this.materialSingleLineTextField5.Hint = "";
-            this.materialSingleLineTextField5.Location = new System.Drawing.Point(89, 124);
-            this.materialSingleLineTextField5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField5.Name = "materialSingleLineTextField5";
-            this.materialSingleLineTextField5.PasswordChar = '\0';
-            this.materialSingleLineTextField5.SelectedText = "";
-            this.materialSingleLineTextField5.SelectionLength = 0;
-            this.materialSingleLineTextField5.SelectionStart = 0;
-            this.materialSingleLineTextField5.Size = new System.Drawing.Size(354, 23);
-            this.materialSingleLineTextField5.TabIndex = 23;
-            this.materialSingleLineTextField5.UseSystemPasswordChar = false;
+            this.shopeditemailtxt.Depth = 0;
+            this.shopeditemailtxt.Hint = "";
+            this.shopeditemailtxt.Location = new System.Drawing.Point(89, 124);
+            this.shopeditemailtxt.MouseState = MaterialSkin.MouseState.HOVER;
+            this.shopeditemailtxt.Name = "shopeditemailtxt";
+            this.shopeditemailtxt.PasswordChar = '\0';
+            this.shopeditemailtxt.SelectedText = "";
+            this.shopeditemailtxt.SelectionLength = 0;
+            this.shopeditemailtxt.SelectionStart = 0;
+            this.shopeditemailtxt.Size = new System.Drawing.Size(354, 23);
+            this.shopeditemailtxt.TabIndex = 23;
+            this.shopeditemailtxt.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField6
+            // shopeditnotxt
             // 
-            this.materialSingleLineTextField6.Depth = 0;
-            this.materialSingleLineTextField6.Hint = "";
-            this.materialSingleLineTextField6.Location = new System.Drawing.Point(120, 87);
-            this.materialSingleLineTextField6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField6.Name = "materialSingleLineTextField6";
-            this.materialSingleLineTextField6.PasswordChar = '\0';
-            this.materialSingleLineTextField6.SelectedText = "";
-            this.materialSingleLineTextField6.SelectionLength = 0;
-            this.materialSingleLineTextField6.SelectionStart = 0;
-            this.materialSingleLineTextField6.Size = new System.Drawing.Size(323, 23);
-            this.materialSingleLineTextField6.TabIndex = 22;
-            this.materialSingleLineTextField6.UseSystemPasswordChar = false;
+            this.shopeditnotxt.Depth = 0;
+            this.shopeditnotxt.Hint = "";
+            this.shopeditnotxt.Location = new System.Drawing.Point(120, 87);
+            this.shopeditnotxt.MouseState = MaterialSkin.MouseState.HOVER;
+            this.shopeditnotxt.Name = "shopeditnotxt";
+            this.shopeditnotxt.PasswordChar = '\0';
+            this.shopeditnotxt.SelectedText = "";
+            this.shopeditnotxt.SelectionLength = 0;
+            this.shopeditnotxt.SelectionStart = 0;
+            this.shopeditnotxt.Size = new System.Drawing.Size(323, 23);
+            this.shopeditnotxt.TabIndex = 22;
+            this.shopeditnotxt.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField7
+            // shopeditaddresstxt
             // 
-            this.materialSingleLineTextField7.Depth = 0;
-            this.materialSingleLineTextField7.Hint = "";
-            this.materialSingleLineTextField7.Location = new System.Drawing.Point(89, 47);
-            this.materialSingleLineTextField7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField7.Name = "materialSingleLineTextField7";
-            this.materialSingleLineTextField7.PasswordChar = '\0';
-            this.materialSingleLineTextField7.SelectedText = "";
-            this.materialSingleLineTextField7.SelectionLength = 0;
-            this.materialSingleLineTextField7.SelectionStart = 0;
-            this.materialSingleLineTextField7.Size = new System.Drawing.Size(354, 23);
-            this.materialSingleLineTextField7.TabIndex = 21;
-            this.materialSingleLineTextField7.UseSystemPasswordChar = false;
+            this.shopeditaddresstxt.Depth = 0;
+            this.shopeditaddresstxt.Hint = "";
+            this.shopeditaddresstxt.Location = new System.Drawing.Point(89, 47);
+            this.shopeditaddresstxt.MouseState = MaterialSkin.MouseState.HOVER;
+            this.shopeditaddresstxt.Name = "shopeditaddresstxt";
+            this.shopeditaddresstxt.PasswordChar = '\0';
+            this.shopeditaddresstxt.SelectedText = "";
+            this.shopeditaddresstxt.SelectionLength = 0;
+            this.shopeditaddresstxt.SelectionStart = 0;
+            this.shopeditaddresstxt.Size = new System.Drawing.Size(354, 23);
+            this.shopeditaddresstxt.TabIndex = 21;
+            this.shopeditaddresstxt.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField8
+            // shopeditnametxt
             // 
-            this.materialSingleLineTextField8.Depth = 0;
-            this.materialSingleLineTextField8.Hint = "";
-            this.materialSingleLineTextField8.Location = new System.Drawing.Point(89, 10);
-            this.materialSingleLineTextField8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField8.Name = "materialSingleLineTextField8";
-            this.materialSingleLineTextField8.PasswordChar = '\0';
-            this.materialSingleLineTextField8.SelectedText = "";
-            this.materialSingleLineTextField8.SelectionLength = 0;
-            this.materialSingleLineTextField8.SelectionStart = 0;
-            this.materialSingleLineTextField8.Size = new System.Drawing.Size(354, 23);
-            this.materialSingleLineTextField8.TabIndex = 20;
-            this.materialSingleLineTextField8.UseSystemPasswordChar = false;
+            this.shopeditnametxt.Depth = 0;
+            this.shopeditnametxt.Hint = "";
+            this.shopeditnametxt.Location = new System.Drawing.Point(89, 10);
+            this.shopeditnametxt.MouseState = MaterialSkin.MouseState.HOVER;
+            this.shopeditnametxt.Name = "shopeditnametxt";
+            this.shopeditnametxt.PasswordChar = '\0';
+            this.shopeditnametxt.SelectedText = "";
+            this.shopeditnametxt.SelectionLength = 0;
+            this.shopeditnametxt.SelectionStart = 0;
+            this.shopeditnametxt.Size = new System.Drawing.Size(354, 23);
+            this.shopeditnametxt.TabIndex = 20;
+            this.shopeditnametxt.UseSystemPasswordChar = false;
             // 
             // label14
             // 
@@ -689,15 +690,15 @@
             this.label18.TabIndex = 16;
             this.label18.Text = "Name";
             // 
-            // label19
+            // bideditlbl
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(82, 166);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(32, 20);
-            this.label19.TabIndex = 15;
-            this.label19.Text = "Bid";
+            this.bideditlbl.AutoSize = true;
+            this.bideditlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bideditlbl.Location = new System.Drawing.Point(82, 166);
+            this.bideditlbl.Name = "bideditlbl";
+            this.bideditlbl.Size = new System.Drawing.Size(32, 20);
+            this.bideditlbl.TabIndex = 15;
+            this.bideditlbl.Text = "Bid";
             // 
             // label20
             // 
@@ -708,17 +709,18 @@
             this.label20.TabIndex = 14;
             this.label20.Text = "Bid";
             // 
-            // materialRaisedButton1
+            // shoprvmbtn
             // 
-            this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(832, 8);
-            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton1.Name = "materialRaisedButton1";
-            this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(123, 24);
-            this.materialRaisedButton1.TabIndex = 17;
-            this.materialRaisedButton1.Text = "Remove";
-            this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            this.shoprvmbtn.Depth = 0;
+            this.shoprvmbtn.Location = new System.Drawing.Point(832, 8);
+            this.shoprvmbtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.shoprvmbtn.Name = "shoprvmbtn";
+            this.shoprvmbtn.Primary = true;
+            this.shoprvmbtn.Size = new System.Drawing.Size(123, 24);
+            this.shoprvmbtn.TabIndex = 17;
+            this.shoprvmbtn.Text = "Remove";
+            this.shoprvmbtn.UseVisualStyleBackColor = true;
+            this.shoprvmbtn.Click += new System.EventHandler(this.shoprvmbtn_Click);
             // 
             // label15
             // 
@@ -736,6 +738,7 @@
             this.shopbox.Name = "shopbox";
             this.shopbox.Size = new System.Drawing.Size(288, 21);
             this.shopbox.TabIndex = 15;
+            this.shopbox.SelectedIndexChanged += new System.EventHandler(this.shopbox_SelectedIndexChanged);
             // 
             // materialRaisedButton3
             // 
@@ -749,77 +752,78 @@
             this.materialRaisedButton3.Text = "cancel";
             this.materialRaisedButton3.UseVisualStyleBackColor = true;
             // 
-            // materialRaisedButton4
+            // addshopdetbtn
             // 
-            this.materialRaisedButton4.Depth = 0;
-            this.materialRaisedButton4.Location = new System.Drawing.Point(278, 204);
-            this.materialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton4.Name = "materialRaisedButton4";
-            this.materialRaisedButton4.Primary = true;
-            this.materialRaisedButton4.Size = new System.Drawing.Size(143, 35);
-            this.materialRaisedButton4.TabIndex = 12;
-            this.materialRaisedButton4.Text = "add shop";
-            this.materialRaisedButton4.UseVisualStyleBackColor = true;
+            this.addshopdetbtn.Depth = 0;
+            this.addshopdetbtn.Location = new System.Drawing.Point(278, 204);
+            this.addshopdetbtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.addshopdetbtn.Name = "addshopdetbtn";
+            this.addshopdetbtn.Primary = true;
+            this.addshopdetbtn.Size = new System.Drawing.Size(143, 35);
+            this.addshopdetbtn.TabIndex = 12;
+            this.addshopdetbtn.Text = "add shop";
+            this.addshopdetbtn.UseVisualStyleBackColor = true;
+            this.addshopdetbtn.Click += new System.EventHandler(this.addshopdetbtn_Click);
             // 
-            // materialSingleLineTextField4
+            // shopemailtxt
             // 
-            this.materialSingleLineTextField4.Depth = 0;
-            this.materialSingleLineTextField4.Hint = "";
-            this.materialSingleLineTextField4.Location = new System.Drawing.Point(67, 129);
-            this.materialSingleLineTextField4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField4.Name = "materialSingleLineTextField4";
-            this.materialSingleLineTextField4.PasswordChar = '\0';
-            this.materialSingleLineTextField4.SelectedText = "";
-            this.materialSingleLineTextField4.SelectionLength = 0;
-            this.materialSingleLineTextField4.SelectionStart = 0;
-            this.materialSingleLineTextField4.Size = new System.Drawing.Size(354, 23);
-            this.materialSingleLineTextField4.TabIndex = 11;
-            this.materialSingleLineTextField4.UseSystemPasswordChar = false;
+            this.shopemailtxt.Depth = 0;
+            this.shopemailtxt.Hint = "";
+            this.shopemailtxt.Location = new System.Drawing.Point(67, 129);
+            this.shopemailtxt.MouseState = MaterialSkin.MouseState.HOVER;
+            this.shopemailtxt.Name = "shopemailtxt";
+            this.shopemailtxt.PasswordChar = '\0';
+            this.shopemailtxt.SelectedText = "";
+            this.shopemailtxt.SelectionLength = 0;
+            this.shopemailtxt.SelectionStart = 0;
+            this.shopemailtxt.Size = new System.Drawing.Size(354, 23);
+            this.shopemailtxt.TabIndex = 11;
+            this.shopemailtxt.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField3
+            // shopnotxt
             // 
-            this.materialSingleLineTextField3.Depth = 0;
-            this.materialSingleLineTextField3.Hint = "";
-            this.materialSingleLineTextField3.Location = new System.Drawing.Point(98, 92);
-            this.materialSingleLineTextField3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField3.Name = "materialSingleLineTextField3";
-            this.materialSingleLineTextField3.PasswordChar = '\0';
-            this.materialSingleLineTextField3.SelectedText = "";
-            this.materialSingleLineTextField3.SelectionLength = 0;
-            this.materialSingleLineTextField3.SelectionStart = 0;
-            this.materialSingleLineTextField3.Size = new System.Drawing.Size(323, 23);
-            this.materialSingleLineTextField3.TabIndex = 10;
-            this.materialSingleLineTextField3.UseSystemPasswordChar = false;
+            this.shopnotxt.Depth = 0;
+            this.shopnotxt.Hint = "";
+            this.shopnotxt.Location = new System.Drawing.Point(98, 92);
+            this.shopnotxt.MouseState = MaterialSkin.MouseState.HOVER;
+            this.shopnotxt.Name = "shopnotxt";
+            this.shopnotxt.PasswordChar = '\0';
+            this.shopnotxt.SelectedText = "";
+            this.shopnotxt.SelectionLength = 0;
+            this.shopnotxt.SelectionStart = 0;
+            this.shopnotxt.Size = new System.Drawing.Size(323, 23);
+            this.shopnotxt.TabIndex = 10;
+            this.shopnotxt.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField2
+            // shopaddtxt
             // 
-            this.materialSingleLineTextField2.Depth = 0;
-            this.materialSingleLineTextField2.Hint = "";
-            this.materialSingleLineTextField2.Location = new System.Drawing.Point(67, 52);
-            this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
-            this.materialSingleLineTextField2.PasswordChar = '\0';
-            this.materialSingleLineTextField2.SelectedText = "";
-            this.materialSingleLineTextField2.SelectionLength = 0;
-            this.materialSingleLineTextField2.SelectionStart = 0;
-            this.materialSingleLineTextField2.Size = new System.Drawing.Size(354, 23);
-            this.materialSingleLineTextField2.TabIndex = 9;
-            this.materialSingleLineTextField2.UseSystemPasswordChar = false;
+            this.shopaddtxt.Depth = 0;
+            this.shopaddtxt.Hint = "";
+            this.shopaddtxt.Location = new System.Drawing.Point(67, 52);
+            this.shopaddtxt.MouseState = MaterialSkin.MouseState.HOVER;
+            this.shopaddtxt.Name = "shopaddtxt";
+            this.shopaddtxt.PasswordChar = '\0';
+            this.shopaddtxt.SelectedText = "";
+            this.shopaddtxt.SelectionLength = 0;
+            this.shopaddtxt.SelectionStart = 0;
+            this.shopaddtxt.Size = new System.Drawing.Size(354, 23);
+            this.shopaddtxt.TabIndex = 9;
+            this.shopaddtxt.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField1
+            // shopnametxt
             // 
-            this.materialSingleLineTextField1.Depth = 0;
-            this.materialSingleLineTextField1.Hint = "";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(67, 15);
-            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
-            this.materialSingleLineTextField1.PasswordChar = '\0';
-            this.materialSingleLineTextField1.SelectedText = "";
-            this.materialSingleLineTextField1.SelectionLength = 0;
-            this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(354, 23);
-            this.materialSingleLineTextField1.TabIndex = 8;
-            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
+            this.shopnametxt.Depth = 0;
+            this.shopnametxt.Hint = "";
+            this.shopnametxt.Location = new System.Drawing.Point(67, 15);
+            this.shopnametxt.MouseState = MaterialSkin.MouseState.HOVER;
+            this.shopnametxt.Name = "shopnametxt";
+            this.shopnametxt.PasswordChar = '\0';
+            this.shopnametxt.SelectedText = "";
+            this.shopnametxt.SelectionLength = 0;
+            this.shopnametxt.SelectionStart = 0;
+            this.shopnametxt.Size = new System.Drawing.Size(354, 23);
+            this.shopnametxt.TabIndex = 8;
+            this.shopnametxt.UseSystemPasswordChar = false;
             // 
             // label26
             // 
@@ -976,26 +980,26 @@
         private System.Windows.Forms.Panel addshoppnl;
         private System.Windows.Forms.Panel editshoppnl;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton5;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField5;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField6;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField7;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField8;
+        private MaterialSkin.Controls.MaterialRaisedButton updateshopbtn;
+        private MaterialSkin.Controls.MaterialSingleLineTextField shopeditemailtxt;
+        private MaterialSkin.Controls.MaterialSingleLineTextField shopeditnotxt;
+        private MaterialSkin.Controls.MaterialSingleLineTextField shopeditaddresstxt;
+        private MaterialSkin.Controls.MaterialSingleLineTextField shopeditnametxt;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label bideditlbl;
         private System.Windows.Forms.Label label20;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
+        private MaterialSkin.Controls.MaterialRaisedButton shoprvmbtn;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox shopbox;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton3;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton4;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField4;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField3;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField2;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
+        private MaterialSkin.Controls.MaterialRaisedButton addshopdetbtn;
+        private MaterialSkin.Controls.MaterialSingleLineTextField shopemailtxt;
+        private MaterialSkin.Controls.MaterialSingleLineTextField shopnotxt;
+        private MaterialSkin.Controls.MaterialSingleLineTextField shopaddtxt;
+        private MaterialSkin.Controls.MaterialSingleLineTextField shopnametxt;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label13;
