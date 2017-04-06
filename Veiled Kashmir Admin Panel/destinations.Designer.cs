@@ -500,6 +500,7 @@
             // 
             // picbox
             // 
+            this.picbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picbox.Location = new System.Drawing.Point(48, 71);
             this.picbox.Name = "picbox";
             this.picbox.Size = new System.Drawing.Size(463, 269);
@@ -552,9 +553,9 @@
             this.Controls.Add(this.editbtn);
             this.Controls.Add(this.addbtn);
             this.Controls.Add(this.back);
+            this.Controls.Add(this.removepnl);
             this.Controls.Add(this.editpnl);
             this.Controls.Add(this.addpnl);
-            this.Controls.Add(this.removepnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "destinations";
             this.Text = "destinations";

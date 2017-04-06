@@ -19,9 +19,6 @@ namespace Veiled_Kashmir_Admin_Panel
             InitializeComponent();
         }
 
-        private void business_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
