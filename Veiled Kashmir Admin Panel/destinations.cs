@@ -71,15 +71,17 @@ namespace Veiled_Kashmir_Admin_Panel
             addpnl.Visible = false;
             editpnl.Visible = true;
             removepnl.Visible = false;
-
+            
             dr = obj.Query("select name from places");
             DataTable dt = new DataTable();
             dt.Columns.Add("name", typeof(String));
             dt.Load(dr);
-            selectbox.DisplayMember = "name";
-            selectbox.DataSource = dt; 
-
             obj.closeConnection();
+            selectbox.DisplayMember = "name";
+            selectbox.DataSource = dt;
+            
+
+           
         }
 
         private void addbtn_Click(object sender, EventArgs e)
@@ -99,6 +101,7 @@ namespace Veiled_Kashmir_Admin_Panel
             DataTable dt = new DataTable();
             dt.Columns.Add("name", typeof(String));
             dt.Load(dr);
+            obj.closeConnection();
             selectbox2.DisplayMember = "name";
             selectbox2.DataSource = dt;
 

@@ -26,7 +26,7 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void desbtn_Click(object sender, EventArgs e)
         {
-            destinations ds = new destinations(this);
+            destinations ds = new destinations(hp);
             ds.TopLevel = false;
             hp.mainpnl.Controls.Clear();
             hp.mainpnl.Controls.Add(ds);
@@ -35,7 +35,7 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void busbtn_Click(object sender, EventArgs e)
         {
-            business bs = new business(this);
+            business bs = new business(hp);
             bs.TopLevel = false;
             hp.mainpnl.Controls.Clear();
             hp.mainpnl.Controls.Add(bs);
@@ -44,7 +44,7 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void wldbtn_Click(object sender, EventArgs e)
         {
-            wildlife wl = new wildlife(this);
+            wildlife wl = new wildlife(hp);
             wl.TopLevel = false;
             hp.mainpnl.Controls.Clear();
             hp.mainpnl.Controls.Add(wl);
@@ -53,7 +53,7 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void culbtn_Click(object sender, EventArgs e)
         {
-            culture cl = new culture(this);
+            culture cl = new culture(hp);
             cl.TopLevel = false;
             hp.mainpnl.Controls.Clear();
             hp.mainpnl.Controls.Add(cl);
@@ -62,7 +62,7 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void resbtn_Click(object sender, EventArgs e)
         {
-            research rs = new research(this);
+            research rs = new research(hp);
             rs.TopLevel = false;
             hp.mainpnl.Controls.Clear();
             hp.mainpnl.Controls.Add(rs);
@@ -71,7 +71,7 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void frmbtn_Click(object sender, EventArgs e)
         {
-            forum fr = new forum(this);
+            forum fr = new forum(hp);
             fr.TopLevel = false;
             hp.mainpnl.Controls.Clear();
             hp.mainpnl.Controls.Add(fr);
@@ -80,7 +80,7 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void evtbtn_Click(object sender, EventArgs e)
         {
-            events ev = new events(this);
+            events ev = new events(hp);
             ev.TopLevel = false;
             hp.mainpnl.Controls.Clear();
             hp.mainpnl.Controls.Add(ev);
@@ -89,7 +89,7 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void conbtn_Click(object sender, EventArgs e)
         {
-            contacts cn = new contacts(this);
+            contacts cn = new contacts(hp);
             cn.TopLevel = false;
             hp.mainpnl.Controls.Clear();
             hp.mainpnl.Controls.Add(cn);
@@ -98,7 +98,7 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void revbtn_Click(object sender, EventArgs e)
         {
-            reviews rv = new reviews(this);
+            reviews rv = new reviews(hp);
             rv.TopLevel = false;
             hp.mainpnl.Controls.Clear();
             hp.mainpnl.Controls.Add(rv);
