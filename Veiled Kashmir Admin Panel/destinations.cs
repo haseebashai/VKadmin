@@ -124,6 +124,7 @@ namespace Veiled_Kashmir_Admin_Panel
 
             dr = obj.Query("select * from places where name='"+selectbox.Text+"'");
             dr.Read();
+            editpanel.Visible = true;
                 editnametxt.Text = dr[1].ToString();
                 editdesctxt.Text = dr[2].ToString();
                 editimgtxt.Text = dr[3].ToString();
@@ -132,6 +133,7 @@ namespace Veiled_Kashmir_Admin_Panel
                     exbtn.Checked = true;
                 else
                     unexbtn.Checked = true;
+                
 
             
             obj.closeConnection(); 
@@ -141,7 +143,12 @@ namespace Veiled_Kashmir_Admin_Panel
         {
             cmd = ("update places set `name`='"+editnametxt.Text+"', `description`='"+editdesctxt.Text+"', `location`='"+editimgtxt.Text+"', `explored`='"+exp+"' where `name`='"+selectbox.Text+"';");
             obj.nonQuery(cmd);
-            
+            MessageBox.Show("Details updated for the selected place.");
+            editnametxt.Text = "";
+            editdesctxt.Text = "";
+            editimgtxt.Text = "";
+            exbtn.Checked = false;
+            unexbtn.Checked = false;
         }
 
         private void editcancelbtn_Click(object sender, EventArgs e)
@@ -160,7 +167,7 @@ namespace Veiled_Kashmir_Admin_Panel
             placelbl.Text = dr[1].ToString();
             picbox.BackgroundImage= new Bitmap(dr[3].ToString());
             rvmpnl.Visible = true;
-
+            
 
 
             obj.closeConnection();
@@ -169,6 +176,9 @@ namespace Veiled_Kashmir_Admin_Panel
         {
             cmd = ("delete from places where name= '" + selectbox2.Text + "';");
             obj.nonQuery(cmd);
+            MessageBox.Show("selected place removed sucessfully.");
+            rvmpnl.Visible = false;
+            selectbox2.Refresh();
 
         }
 
@@ -177,5 +187,7 @@ namespace Veiled_Kashmir_Admin_Panel
             rvmpnl.Visible = false;
 
         }
+
+        
     }
 }

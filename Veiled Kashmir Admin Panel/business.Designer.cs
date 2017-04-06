@@ -44,32 +44,14 @@
             this.picbox = new System.Windows.Forms.PictureBox();
             this.rvmcancel = new MaterialSkin.Controls.MaterialRaisedButton();
             this.rmvbtn = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.placelbl = new System.Windows.Forms.Label();
+            this.buslbl = new System.Windows.Forms.Label();
             this.editnametxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.editpanel = new System.Windows.Forms.Panel();
-            this.materialSingleLineTextField5 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField6 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.materialSingleLineTextField7 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.label16 = new System.Windows.Forms.Label();
-            this.materialSingleLineTextField8 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.removebtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.editbtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.addbtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.back = new System.Windows.Forms.PictureBox();
             this.addpnl = new System.Windows.Forms.Panel();
-            this.materialSingleLineTextField4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField3 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.label11 = new System.Windows.Forms.Label();
-            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.cancelbtn = new MaterialSkin.Controls.MaterialRaisedButton();
             this.addbusbtn = new MaterialSkin.Controls.MaterialRaisedButton();
             this.loctxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -79,16 +61,39 @@
             this.nametxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label1 = new System.Windows.Forms.Label();
             this.editpnl = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.addshopbtn = new MaterialSkin.Controls.MaterialFlatButton();
+            this.shoppnl = new System.Windows.Forms.Panel();
+            this.addshoppnl = new System.Windows.Forms.Panel();
+            this.editshoppnl = new System.Windows.Forms.Panel();
             this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton5 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialSingleLineTextField5 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialSingleLineTextField6 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialSingleLineTextField7 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialSingleLineTextField8 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.label15 = new System.Windows.Forms.Label();
+            this.shopbox = new System.Windows.Forms.ComboBox();
+            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton4 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialSingleLineTextField4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialSingleLineTextField3 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.bidlbl = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.selectbox3 = new System.Windows.Forms.ComboBox();
             this.removepnl.SuspendLayout();
             this.rvmpnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbox)).BeginInit();
@@ -96,12 +101,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.back)).BeginInit();
             this.addpnl.SuspendLayout();
             this.editpnl.SuspendLayout();
+            this.shoppnl.SuspendLayout();
+            this.addshoppnl.SuspendLayout();
+            this.editshoppnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // editcancelbtn
             // 
             this.editcancelbtn.Depth = 0;
-            this.editcancelbtn.Location = new System.Drawing.Point(630, 325);
+            this.editcancelbtn.Location = new System.Drawing.Point(641, 216);
             this.editcancelbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.editcancelbtn.Name = "editcancelbtn";
             this.editcancelbtn.Primary = true;
@@ -109,6 +117,7 @@
             this.editcancelbtn.TabIndex = 9;
             this.editcancelbtn.Text = "cancel";
             this.editcancelbtn.UseVisualStyleBackColor = true;
+            this.editcancelbtn.Click += new System.EventHandler(this.editcancelbtn_Click);
             // 
             // selectbox
             // 
@@ -117,11 +126,12 @@
             this.selectbox.Name = "selectbox";
             this.selectbox.Size = new System.Drawing.Size(461, 21);
             this.selectbox.TabIndex = 1;
+            this.selectbox.SelectedIndexChanged += new System.EventHandler(this.selectbox_SelectedIndexChanged);
             // 
             // updatebtn
             // 
             this.updatebtn.Depth = 0;
-            this.updatebtn.Location = new System.Drawing.Point(779, 325);
+            this.updatebtn.Location = new System.Drawing.Point(790, 216);
             this.updatebtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.updatebtn.Name = "updatebtn";
             this.updatebtn.Primary = true;
@@ -129,12 +139,13 @@
             this.updatebtn.TabIndex = 8;
             this.updatebtn.Text = "Update Details";
             this.updatebtn.UseVisualStyleBackColor = true;
+            this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
             // 
             // editimgtxt
             // 
             this.editimgtxt.Depth = 0;
             this.editimgtxt.Hint = "";
-            this.editimgtxt.Location = new System.Drawing.Point(707, 27);
+            this.editimgtxt.Location = new System.Drawing.Point(710, 122);
             this.editimgtxt.MouseState = MaterialSkin.MouseState.HOVER;
             this.editimgtxt.Name = "editimgtxt";
             this.editimgtxt.PasswordChar = '\0';
@@ -149,7 +160,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(571, 30);
+            this.label7.Location = new System.Drawing.Point(574, 125);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(119, 20);
             this.label7.TabIndex = 4;
@@ -211,6 +222,7 @@
             this.selectbox2.Name = "selectbox2";
             this.selectbox2.Size = new System.Drawing.Size(461, 21);
             this.selectbox2.TabIndex = 5;
+            this.selectbox2.SelectedIndexChanged += new System.EventHandler(this.selectbox2_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -223,18 +235,10 @@
             // 
             // rvmpnl
             // 
-            this.rvmpnl.Controls.Add(this.materialRaisedButton1);
-            this.rvmpnl.Controls.Add(this.materialRaisedButton2);
-            this.rvmpnl.Controls.Add(this.comboBox2);
-            this.rvmpnl.Controls.Add(this.label20);
-            this.rvmpnl.Controls.Add(this.label21);
-            this.rvmpnl.Controls.Add(this.label22);
-            this.rvmpnl.Controls.Add(this.label23);
-            this.rvmpnl.Controls.Add(this.label24);
             this.rvmpnl.Controls.Add(this.picbox);
             this.rvmpnl.Controls.Add(this.rvmcancel);
             this.rvmpnl.Controls.Add(this.rmvbtn);
-            this.rvmpnl.Controls.Add(this.placelbl);
+            this.rvmpnl.Controls.Add(this.buslbl);
             this.rvmpnl.Location = new System.Drawing.Point(3, 63);
             this.rvmpnl.Name = "rvmpnl";
             this.rvmpnl.Size = new System.Drawing.Size(992, 357);
@@ -244,7 +248,7 @@
             // picbox
             // 
             this.picbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picbox.Location = new System.Drawing.Point(55, 36);
+            this.picbox.Location = new System.Drawing.Point(327, 36);
             this.picbox.Name = "picbox";
             this.picbox.Size = new System.Drawing.Size(335, 269);
             this.picbox.TabIndex = 10;
@@ -253,7 +257,7 @@
             // rvmcancel
             // 
             this.rvmcancel.Depth = 0;
-            this.rvmcancel.Location = new System.Drawing.Point(60, 311);
+            this.rvmcancel.Location = new System.Drawing.Point(336, 316);
             this.rvmcancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.rvmcancel.Name = "rvmcancel";
             this.rvmcancel.Primary = true;
@@ -261,11 +265,12 @@
             this.rvmcancel.TabIndex = 9;
             this.rvmcancel.Text = "cancel";
             this.rvmcancel.UseVisualStyleBackColor = true;
+            this.rvmcancel.Click += new System.EventHandler(this.rvmcancel_Click);
             // 
             // rmvbtn
             // 
             this.rmvbtn.Depth = 0;
-            this.rmvbtn.Location = new System.Drawing.Point(209, 311);
+            this.rmvbtn.Location = new System.Drawing.Point(485, 316);
             this.rmvbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.rmvbtn.Name = "rmvbtn";
             this.rmvbtn.Primary = true;
@@ -273,16 +278,17 @@
             this.rmvbtn.TabIndex = 8;
             this.rmvbtn.Text = "Remove business entry";
             this.rmvbtn.UseVisualStyleBackColor = true;
+            this.rmvbtn.Click += new System.EventHandler(this.rmvbtn_Click);
             // 
-            // placelbl
+            // buslbl
             // 
-            this.placelbl.AutoSize = true;
-            this.placelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.placelbl.Location = new System.Drawing.Point(51, 10);
-            this.placelbl.Name = "placelbl";
-            this.placelbl.Size = new System.Drawing.Size(51, 20);
-            this.placelbl.TabIndex = 0;
-            this.placelbl.Text = "Name";
+            this.buslbl.AutoSize = true;
+            this.buslbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buslbl.Location = new System.Drawing.Point(323, 12);
+            this.buslbl.Name = "buslbl";
+            this.buslbl.Size = new System.Drawing.Size(51, 20);
+            this.buslbl.TabIndex = 0;
+            this.buslbl.Text = "Name";
             // 
             // editnametxt
             // 
@@ -301,17 +307,6 @@
             // 
             // editpanel
             // 
-            this.editpanel.Controls.Add(this.comboBox1);
-            this.editpanel.Controls.Add(this.label19);
-            this.editpanel.Controls.Add(this.materialSingleLineTextField5);
-            this.editpanel.Controls.Add(this.materialSingleLineTextField6);
-            this.editpanel.Controls.Add(this.label14);
-            this.editpanel.Controls.Add(this.label15);
-            this.editpanel.Controls.Add(this.materialSingleLineTextField7);
-            this.editpanel.Controls.Add(this.label16);
-            this.editpanel.Controls.Add(this.materialSingleLineTextField8);
-            this.editpanel.Controls.Add(this.label17);
-            this.editpanel.Controls.Add(this.label18);
             this.editpanel.Controls.Add(this.editcancelbtn);
             this.editpanel.Controls.Add(this.updatebtn);
             this.editpanel.Controls.Add(this.editimgtxt);
@@ -326,123 +321,12 @@
             this.editpanel.TabIndex = 2;
             this.editpanel.Visible = false;
             // 
-            // materialSingleLineTextField5
-            // 
-            this.materialSingleLineTextField5.Depth = 0;
-            this.materialSingleLineTextField5.Hint = "";
-            this.materialSingleLineTextField5.Location = new System.Drawing.Point(652, 270);
-            this.materialSingleLineTextField5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField5.Name = "materialSingleLineTextField5";
-            this.materialSingleLineTextField5.PasswordChar = '\0';
-            this.materialSingleLineTextField5.SelectedText = "";
-            this.materialSingleLineTextField5.SelectionLength = 0;
-            this.materialSingleLineTextField5.SelectionStart = 0;
-            this.materialSingleLineTextField5.Size = new System.Drawing.Size(261, 23);
-            this.materialSingleLineTextField5.TabIndex = 27;
-            this.materialSingleLineTextField5.UseSystemPasswordChar = false;
-            // 
-            // materialSingleLineTextField6
-            // 
-            this.materialSingleLineTextField6.Depth = 0;
-            this.materialSingleLineTextField6.Hint = "";
-            this.materialSingleLineTextField6.Location = new System.Drawing.Point(652, 229);
-            this.materialSingleLineTextField6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField6.Name = "materialSingleLineTextField6";
-            this.materialSingleLineTextField6.PasswordChar = '\0';
-            this.materialSingleLineTextField6.SelectedText = "";
-            this.materialSingleLineTextField6.SelectionLength = 0;
-            this.materialSingleLineTextField6.SelectionStart = 0;
-            this.materialSingleLineTextField6.Size = new System.Drawing.Size(261, 23);
-            this.materialSingleLineTextField6.TabIndex = 26;
-            this.materialSingleLineTextField6.UseSystemPasswordChar = false;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(578, 270);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(46, 20);
-            this.label14.TabIndex = 25;
-            this.label14.Text = "email";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(578, 232);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(55, 20);
-            this.label15.TabIndex = 24;
-            this.label15.Text = "Phone";
-            // 
-            // materialSingleLineTextField7
-            // 
-            this.materialSingleLineTextField7.Depth = 0;
-            this.materialSingleLineTextField7.Hint = "";
-            this.materialSingleLineTextField7.Location = new System.Drawing.Point(652, 195);
-            this.materialSingleLineTextField7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField7.Name = "materialSingleLineTextField7";
-            this.materialSingleLineTextField7.PasswordChar = '\0';
-            this.materialSingleLineTextField7.SelectedText = "";
-            this.materialSingleLineTextField7.SelectionLength = 0;
-            this.materialSingleLineTextField7.SelectionStart = 0;
-            this.materialSingleLineTextField7.Size = new System.Drawing.Size(261, 23);
-            this.materialSingleLineTextField7.TabIndex = 23;
-            this.materialSingleLineTextField7.UseSystemPasswordChar = false;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(578, 195);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(68, 20);
-            this.label16.TabIndex = 22;
-            this.label16.Text = "Address";
-            // 
-            // materialSingleLineTextField8
-            // 
-            this.materialSingleLineTextField8.Depth = 0;
-            this.materialSingleLineTextField8.Hint = "";
-            this.materialSingleLineTextField8.Location = new System.Drawing.Point(652, 155);
-            this.materialSingleLineTextField8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField8.Name = "materialSingleLineTextField8";
-            this.materialSingleLineTextField8.PasswordChar = '\0';
-            this.materialSingleLineTextField8.SelectedText = "";
-            this.materialSingleLineTextField8.SelectionLength = 0;
-            this.materialSingleLineTextField8.SelectionStart = 0;
-            this.materialSingleLineTextField8.Size = new System.Drawing.Size(261, 23);
-            this.materialSingleLineTextField8.TabIndex = 21;
-            this.materialSingleLineTextField8.UseSystemPasswordChar = false;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(578, 158);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(51, 20);
-            this.label17.TabIndex = 20;
-            this.label17.Text = "Name";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.Maroon;
-            this.label18.Location = new System.Drawing.Point(578, 125);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(126, 20);
-            this.label18.TabIndex = 19;
-            this.label18.Text = "Edit shop details";
-            // 
             // removebtn
             // 
             this.removebtn.AutoSize = true;
             this.removebtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.removebtn.Depth = 0;
-            this.removebtn.Location = new System.Drawing.Point(680, 83);
+            this.removebtn.Location = new System.Drawing.Point(597, 83);
             this.removebtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.removebtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.removebtn.Name = "removebtn";
@@ -451,13 +335,14 @@
             this.removebtn.TabIndex = 10;
             this.removebtn.Text = "remove business";
             this.removebtn.UseVisualStyleBackColor = true;
+            this.removebtn.Click += new System.EventHandler(this.removebtn_Click);
             // 
             // editbtn
             // 
             this.editbtn.AutoSize = true;
             this.editbtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.editbtn.Depth = 0;
-            this.editbtn.Location = new System.Drawing.Point(463, 83);
+            this.editbtn.Location = new System.Drawing.Point(386, 83);
             this.editbtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.editbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.editbtn.Name = "editbtn";
@@ -466,13 +351,14 @@
             this.editbtn.TabIndex = 9;
             this.editbtn.Text = "edit business details";
             this.editbtn.UseVisualStyleBackColor = true;
+            this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
             // 
             // addbtn
             // 
             this.addbtn.AutoSize = true;
             this.addbtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.addbtn.Depth = 0;
-            this.addbtn.Location = new System.Drawing.Point(266, 83);
+            this.addbtn.Location = new System.Drawing.Point(198, 83);
             this.addbtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.addbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.addbtn.Name = "addbtn";
@@ -481,6 +367,7 @@
             this.addbtn.TabIndex = 8;
             this.addbtn.Text = "add new business";
             this.addbtn.UseVisualStyleBackColor = true;
+            this.addbtn.Click += new System.EventHandler(this.addbtn_Click);
             // 
             // back
             // 
@@ -491,18 +378,10 @@
             this.back.Size = new System.Drawing.Size(64, 64);
             this.back.TabIndex = 7;
             this.back.TabStop = false;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // addpnl
             // 
-            this.addpnl.Controls.Add(this.materialSingleLineTextField4);
-            this.addpnl.Controls.Add(this.materialSingleLineTextField3);
-            this.addpnl.Controls.Add(this.label13);
-            this.addpnl.Controls.Add(this.label12);
-            this.addpnl.Controls.Add(this.materialSingleLineTextField2);
-            this.addpnl.Controls.Add(this.label11);
-            this.addpnl.Controls.Add(this.materialSingleLineTextField1);
-            this.addpnl.Controls.Add(this.label10);
-            this.addpnl.Controls.Add(this.label9);
             this.addpnl.Controls.Add(this.cancelbtn);
             this.addpnl.Controls.Add(this.addbusbtn);
             this.addpnl.Controls.Add(this.loctxt);
@@ -515,117 +394,6 @@
             this.addpnl.Name = "addpnl";
             this.addpnl.Size = new System.Drawing.Size(998, 420);
             this.addpnl.TabIndex = 11;
-            // 
-            // materialSingleLineTextField4
-            // 
-            this.materialSingleLineTextField4.Depth = 0;
-            this.materialSingleLineTextField4.Hint = "";
-            this.materialSingleLineTextField4.Location = new System.Drawing.Point(561, 223);
-            this.materialSingleLineTextField4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField4.Name = "materialSingleLineTextField4";
-            this.materialSingleLineTextField4.PasswordChar = '\0';
-            this.materialSingleLineTextField4.SelectedText = "";
-            this.materialSingleLineTextField4.SelectionLength = 0;
-            this.materialSingleLineTextField4.SelectionStart = 0;
-            this.materialSingleLineTextField4.Size = new System.Drawing.Size(261, 23);
-            this.materialSingleLineTextField4.TabIndex = 18;
-            this.materialSingleLineTextField4.UseSystemPasswordChar = false;
-            // 
-            // materialSingleLineTextField3
-            // 
-            this.materialSingleLineTextField3.Depth = 0;
-            this.materialSingleLineTextField3.Hint = "";
-            this.materialSingleLineTextField3.Location = new System.Drawing.Point(561, 182);
-            this.materialSingleLineTextField3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField3.Name = "materialSingleLineTextField3";
-            this.materialSingleLineTextField3.PasswordChar = '\0';
-            this.materialSingleLineTextField3.SelectedText = "";
-            this.materialSingleLineTextField3.SelectionLength = 0;
-            this.materialSingleLineTextField3.SelectionStart = 0;
-            this.materialSingleLineTextField3.Size = new System.Drawing.Size(261, 23);
-            this.materialSingleLineTextField3.TabIndex = 17;
-            this.materialSingleLineTextField3.UseSystemPasswordChar = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(487, 223);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(46, 20);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "email";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(487, 185);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(55, 20);
-            this.label12.TabIndex = 15;
-            this.label12.Text = "Phone";
-            // 
-            // materialSingleLineTextField2
-            // 
-            this.materialSingleLineTextField2.Depth = 0;
-            this.materialSingleLineTextField2.Hint = "";
-            this.materialSingleLineTextField2.Location = new System.Drawing.Point(561, 148);
-            this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
-            this.materialSingleLineTextField2.PasswordChar = '\0';
-            this.materialSingleLineTextField2.SelectedText = "";
-            this.materialSingleLineTextField2.SelectionLength = 0;
-            this.materialSingleLineTextField2.SelectionStart = 0;
-            this.materialSingleLineTextField2.Size = new System.Drawing.Size(261, 23);
-            this.materialSingleLineTextField2.TabIndex = 14;
-            this.materialSingleLineTextField2.UseSystemPasswordChar = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(487, 148);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(68, 20);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "Address";
-            // 
-            // materialSingleLineTextField1
-            // 
-            this.materialSingleLineTextField1.Depth = 0;
-            this.materialSingleLineTextField1.Hint = "";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(561, 108);
-            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
-            this.materialSingleLineTextField1.PasswordChar = '\0';
-            this.materialSingleLineTextField1.SelectedText = "";
-            this.materialSingleLineTextField1.SelectionLength = 0;
-            this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(261, 23);
-            this.materialSingleLineTextField1.TabIndex = 12;
-            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(487, 111);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 20);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Name";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Maroon;
-            this.label9.Location = new System.Drawing.Point(487, 78);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(127, 20);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Add shop details";
             // 
             // cancelbtn
             // 
@@ -650,12 +418,13 @@
             this.addbusbtn.TabIndex = 8;
             this.addbusbtn.Text = "add entry";
             this.addbusbtn.UseVisualStyleBackColor = true;
+            this.addbusbtn.Click += new System.EventHandler(this.addbusbtn_Click);
             // 
             // loctxt
             // 
             this.loctxt.Depth = 0;
             this.loctxt.Hint = "";
-            this.loctxt.Location = new System.Drawing.Point(612, 23);
+            this.loctxt.Location = new System.Drawing.Point(613, 161);
             this.loctxt.MouseState = MaterialSkin.MouseState.HOVER;
             this.loctxt.Name = "loctxt";
             this.loctxt.PasswordChar = '\0';
@@ -670,7 +439,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(487, 26);
+            this.label3.Location = new System.Drawing.Point(488, 164);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 20);
             this.label3.TabIndex = 4;
@@ -731,103 +500,399 @@
             this.editpnl.TabIndex = 12;
             this.editpnl.Visible = false;
             // 
-            // comboBox1
+            // addshopbtn
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(665, 82);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(279, 21);
-            this.comboBox1.TabIndex = 29;
+            this.addshopbtn.AutoSize = true;
+            this.addshopbtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.addshopbtn.Depth = 0;
+            this.addshopbtn.Location = new System.Drawing.Point(785, 83);
+            this.addshopbtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.addshopbtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.addshopbtn.Name = "addshopbtn";
+            this.addshopbtn.Primary = false;
+            this.addshopbtn.Size = new System.Drawing.Size(136, 36);
+            this.addshopbtn.TabIndex = 14;
+            this.addshopbtn.Text = "Add shop details";
+            this.addshopbtn.UseVisualStyleBackColor = true;
+            this.addshopbtn.Click += new System.EventHandler(this.addshopbtn_Click);
             // 
-            // label19
+            // shoppnl
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(578, 85);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(65, 13);
-            this.label19.TabIndex = 28;
-            this.label19.Text = "Select Shop";
+            this.shoppnl.Controls.Add(this.addshoppnl);
+            this.shoppnl.Controls.Add(this.label9);
+            this.shoppnl.Controls.Add(this.selectbox3);
+            this.shoppnl.Location = new System.Drawing.Point(12, 128);
+            this.shoppnl.Name = "shoppnl";
+            this.shoppnl.Size = new System.Drawing.Size(998, 420);
+            this.shoppnl.TabIndex = 15;
+            this.shoppnl.Visible = false;
             // 
-            // comboBox2
+            // addshoppnl
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(594, 38);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(279, 21);
-            this.comboBox2.TabIndex = 40;
+            this.addshoppnl.Controls.Add(this.editshoppnl);
+            this.addshoppnl.Controls.Add(this.materialRaisedButton1);
+            this.addshoppnl.Controls.Add(this.label15);
+            this.addshoppnl.Controls.Add(this.shopbox);
+            this.addshoppnl.Controls.Add(this.materialRaisedButton3);
+            this.addshoppnl.Controls.Add(this.materialRaisedButton4);
+            this.addshoppnl.Controls.Add(this.materialSingleLineTextField4);
+            this.addshoppnl.Controls.Add(this.materialSingleLineTextField3);
+            this.addshoppnl.Controls.Add(this.materialSingleLineTextField2);
+            this.addshoppnl.Controls.Add(this.materialSingleLineTextField1);
+            this.addshoppnl.Controls.Add(this.label26);
+            this.addshoppnl.Controls.Add(this.label25);
+            this.addshoppnl.Controls.Add(this.label13);
+            this.addshoppnl.Controls.Add(this.label12);
+            this.addshoppnl.Controls.Add(this.bidlbl);
+            this.addshoppnl.Controls.Add(this.label10);
+            this.addshoppnl.Location = new System.Drawing.Point(6, 55);
+            this.addshoppnl.Name = "addshoppnl";
+            this.addshoppnl.Size = new System.Drawing.Size(986, 363);
+            this.addshoppnl.TabIndex = 2;
             // 
-            // label20
+            // editshoppnl
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(507, 41);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(65, 13);
-            this.label20.TabIndex = 39;
-            this.label20.Text = "Select Shop";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(590, 213);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(46, 20);
-            this.label21.TabIndex = 36;
-            this.label21.Text = "email";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(590, 175);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(55, 20);
-            this.label22.TabIndex = 35;
-            this.label22.Text = "Phone";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(590, 138);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(68, 20);
-            this.label23.TabIndex = 33;
-            this.label23.Text = "Address";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(590, 101);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(51, 20);
-            this.label24.TabIndex = 31;
-            this.label24.Text = "Name";
-            // 
-            // materialRaisedButton1
-            // 
-            this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(552, 275);
-            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton1.Name = "materialRaisedButton1";
-            this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(143, 35);
-            this.materialRaisedButton1.TabIndex = 42;
-            this.materialRaisedButton1.Text = "cancel";
-            this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            this.editshoppnl.Controls.Add(this.materialRaisedButton2);
+            this.editshoppnl.Controls.Add(this.materialRaisedButton5);
+            this.editshoppnl.Controls.Add(this.materialSingleLineTextField5);
+            this.editshoppnl.Controls.Add(this.materialSingleLineTextField6);
+            this.editshoppnl.Controls.Add(this.materialSingleLineTextField7);
+            this.editshoppnl.Controls.Add(this.materialSingleLineTextField8);
+            this.editshoppnl.Controls.Add(this.label14);
+            this.editshoppnl.Controls.Add(this.label16);
+            this.editshoppnl.Controls.Add(this.label17);
+            this.editshoppnl.Controls.Add(this.label18);
+            this.editshoppnl.Controls.Add(this.label19);
+            this.editshoppnl.Controls.Add(this.label20);
+            this.editshoppnl.Location = new System.Drawing.Point(486, 52);
+            this.editshoppnl.Name = "editshoppnl";
+            this.editshoppnl.Size = new System.Drawing.Size(469, 290);
+            this.editshoppnl.TabIndex = 18;
             // 
             // materialRaisedButton2
             // 
             this.materialRaisedButton2.Depth = 0;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(701, 275);
+            this.materialRaisedButton2.Location = new System.Drawing.Point(151, 199);
             this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton2.Name = "materialRaisedButton2";
             this.materialRaisedButton2.Primary = true;
-            this.materialRaisedButton2.Size = new System.Drawing.Size(172, 35);
-            this.materialRaisedButton2.TabIndex = 41;
-            this.materialRaisedButton2.Text = "Remove Shop";
+            this.materialRaisedButton2.Size = new System.Drawing.Size(143, 35);
+            this.materialRaisedButton2.TabIndex = 25;
+            this.materialRaisedButton2.Text = "cancel";
             this.materialRaisedButton2.UseVisualStyleBackColor = true;
+            // 
+            // materialRaisedButton5
+            // 
+            this.materialRaisedButton5.Depth = 0;
+            this.materialRaisedButton5.Location = new System.Drawing.Point(300, 199);
+            this.materialRaisedButton5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton5.Name = "materialRaisedButton5";
+            this.materialRaisedButton5.Primary = true;
+            this.materialRaisedButton5.Size = new System.Drawing.Size(143, 35);
+            this.materialRaisedButton5.TabIndex = 24;
+            this.materialRaisedButton5.Text = "Update shop";
+            this.materialRaisedButton5.UseVisualStyleBackColor = true;
+            // 
+            // materialSingleLineTextField5
+            // 
+            this.materialSingleLineTextField5.Depth = 0;
+            this.materialSingleLineTextField5.Hint = "";
+            this.materialSingleLineTextField5.Location = new System.Drawing.Point(89, 124);
+            this.materialSingleLineTextField5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField5.Name = "materialSingleLineTextField5";
+            this.materialSingleLineTextField5.PasswordChar = '\0';
+            this.materialSingleLineTextField5.SelectedText = "";
+            this.materialSingleLineTextField5.SelectionLength = 0;
+            this.materialSingleLineTextField5.SelectionStart = 0;
+            this.materialSingleLineTextField5.Size = new System.Drawing.Size(354, 23);
+            this.materialSingleLineTextField5.TabIndex = 23;
+            this.materialSingleLineTextField5.UseSystemPasswordChar = false;
+            // 
+            // materialSingleLineTextField6
+            // 
+            this.materialSingleLineTextField6.Depth = 0;
+            this.materialSingleLineTextField6.Hint = "";
+            this.materialSingleLineTextField6.Location = new System.Drawing.Point(120, 87);
+            this.materialSingleLineTextField6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField6.Name = "materialSingleLineTextField6";
+            this.materialSingleLineTextField6.PasswordChar = '\0';
+            this.materialSingleLineTextField6.SelectedText = "";
+            this.materialSingleLineTextField6.SelectionLength = 0;
+            this.materialSingleLineTextField6.SelectionStart = 0;
+            this.materialSingleLineTextField6.Size = new System.Drawing.Size(323, 23);
+            this.materialSingleLineTextField6.TabIndex = 22;
+            this.materialSingleLineTextField6.UseSystemPasswordChar = false;
+            // 
+            // materialSingleLineTextField7
+            // 
+            this.materialSingleLineTextField7.Depth = 0;
+            this.materialSingleLineTextField7.Hint = "";
+            this.materialSingleLineTextField7.Location = new System.Drawing.Point(89, 47);
+            this.materialSingleLineTextField7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField7.Name = "materialSingleLineTextField7";
+            this.materialSingleLineTextField7.PasswordChar = '\0';
+            this.materialSingleLineTextField7.SelectedText = "";
+            this.materialSingleLineTextField7.SelectionLength = 0;
+            this.materialSingleLineTextField7.SelectionStart = 0;
+            this.materialSingleLineTextField7.Size = new System.Drawing.Size(354, 23);
+            this.materialSingleLineTextField7.TabIndex = 21;
+            this.materialSingleLineTextField7.UseSystemPasswordChar = false;
+            // 
+            // materialSingleLineTextField8
+            // 
+            this.materialSingleLineTextField8.Depth = 0;
+            this.materialSingleLineTextField8.Hint = "";
+            this.materialSingleLineTextField8.Location = new System.Drawing.Point(89, 10);
+            this.materialSingleLineTextField8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField8.Name = "materialSingleLineTextField8";
+            this.materialSingleLineTextField8.PasswordChar = '\0';
+            this.materialSingleLineTextField8.SelectedText = "";
+            this.materialSingleLineTextField8.SelectionLength = 0;
+            this.materialSingleLineTextField8.SelectionStart = 0;
+            this.materialSingleLineTextField8.Size = new System.Drawing.Size(354, 23);
+            this.materialSingleLineTextField8.TabIndex = 20;
+            this.materialSingleLineTextField8.UseSystemPasswordChar = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(38, 134);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(31, 13);
+            this.label14.TabIndex = 19;
+            this.label14.Text = "email";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(38, 97);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(76, 13);
+            this.label16.TabIndex = 18;
+            this.label16.Text = "Phone number";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(38, 57);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(45, 13);
+            this.label17.TabIndex = 17;
+            this.label17.Text = "Address";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(38, 20);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(35, 13);
+            this.label18.TabIndex = 16;
+            this.label18.Text = "Name";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(82, 166);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(32, 20);
+            this.label19.TabIndex = 15;
+            this.label19.Text = "Bid";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(38, 170);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(22, 13);
+            this.label20.TabIndex = 14;
+            this.label20.Text = "Bid";
+            // 
+            // materialRaisedButton1
+            // 
+            this.materialRaisedButton1.Depth = 0;
+            this.materialRaisedButton1.Location = new System.Drawing.Point(832, 8);
+            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton1.Name = "materialRaisedButton1";
+            this.materialRaisedButton1.Primary = true;
+            this.materialRaisedButton1.Size = new System.Drawing.Size(123, 24);
+            this.materialRaisedButton1.TabIndex = 17;
+            this.materialRaisedButton1.Text = "Remove";
+            this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(479, 16);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(53, 13);
+            this.label15.TabIndex = 16;
+            this.label15.Text = "Edit Shop";
+            // 
+            // shopbox
+            // 
+            this.shopbox.FormattingEnabled = true;
+            this.shopbox.Location = new System.Drawing.Point(538, 10);
+            this.shopbox.Name = "shopbox";
+            this.shopbox.Size = new System.Drawing.Size(288, 21);
+            this.shopbox.TabIndex = 15;
+            // 
+            // materialRaisedButton3
+            // 
+            this.materialRaisedButton3.Depth = 0;
+            this.materialRaisedButton3.Location = new System.Drawing.Point(129, 204);
+            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton3.Name = "materialRaisedButton3";
+            this.materialRaisedButton3.Primary = true;
+            this.materialRaisedButton3.Size = new System.Drawing.Size(143, 35);
+            this.materialRaisedButton3.TabIndex = 13;
+            this.materialRaisedButton3.Text = "cancel";
+            this.materialRaisedButton3.UseVisualStyleBackColor = true;
+            // 
+            // materialRaisedButton4
+            // 
+            this.materialRaisedButton4.Depth = 0;
+            this.materialRaisedButton4.Location = new System.Drawing.Point(278, 204);
+            this.materialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton4.Name = "materialRaisedButton4";
+            this.materialRaisedButton4.Primary = true;
+            this.materialRaisedButton4.Size = new System.Drawing.Size(143, 35);
+            this.materialRaisedButton4.TabIndex = 12;
+            this.materialRaisedButton4.Text = "add shop";
+            this.materialRaisedButton4.UseVisualStyleBackColor = true;
+            // 
+            // materialSingleLineTextField4
+            // 
+            this.materialSingleLineTextField4.Depth = 0;
+            this.materialSingleLineTextField4.Hint = "";
+            this.materialSingleLineTextField4.Location = new System.Drawing.Point(67, 129);
+            this.materialSingleLineTextField4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField4.Name = "materialSingleLineTextField4";
+            this.materialSingleLineTextField4.PasswordChar = '\0';
+            this.materialSingleLineTextField4.SelectedText = "";
+            this.materialSingleLineTextField4.SelectionLength = 0;
+            this.materialSingleLineTextField4.SelectionStart = 0;
+            this.materialSingleLineTextField4.Size = new System.Drawing.Size(354, 23);
+            this.materialSingleLineTextField4.TabIndex = 11;
+            this.materialSingleLineTextField4.UseSystemPasswordChar = false;
+            // 
+            // materialSingleLineTextField3
+            // 
+            this.materialSingleLineTextField3.Depth = 0;
+            this.materialSingleLineTextField3.Hint = "";
+            this.materialSingleLineTextField3.Location = new System.Drawing.Point(98, 92);
+            this.materialSingleLineTextField3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField3.Name = "materialSingleLineTextField3";
+            this.materialSingleLineTextField3.PasswordChar = '\0';
+            this.materialSingleLineTextField3.SelectedText = "";
+            this.materialSingleLineTextField3.SelectionLength = 0;
+            this.materialSingleLineTextField3.SelectionStart = 0;
+            this.materialSingleLineTextField3.Size = new System.Drawing.Size(323, 23);
+            this.materialSingleLineTextField3.TabIndex = 10;
+            this.materialSingleLineTextField3.UseSystemPasswordChar = false;
+            // 
+            // materialSingleLineTextField2
+            // 
+            this.materialSingleLineTextField2.Depth = 0;
+            this.materialSingleLineTextField2.Hint = "";
+            this.materialSingleLineTextField2.Location = new System.Drawing.Point(67, 52);
+            this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
+            this.materialSingleLineTextField2.PasswordChar = '\0';
+            this.materialSingleLineTextField2.SelectedText = "";
+            this.materialSingleLineTextField2.SelectionLength = 0;
+            this.materialSingleLineTextField2.SelectionStart = 0;
+            this.materialSingleLineTextField2.Size = new System.Drawing.Size(354, 23);
+            this.materialSingleLineTextField2.TabIndex = 9;
+            this.materialSingleLineTextField2.UseSystemPasswordChar = false;
+            // 
+            // materialSingleLineTextField1
+            // 
+            this.materialSingleLineTextField1.Depth = 0;
+            this.materialSingleLineTextField1.Hint = "";
+            this.materialSingleLineTextField1.Location = new System.Drawing.Point(67, 15);
+            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
+            this.materialSingleLineTextField1.PasswordChar = '\0';
+            this.materialSingleLineTextField1.SelectedText = "";
+            this.materialSingleLineTextField1.SelectionLength = 0;
+            this.materialSingleLineTextField1.SelectionStart = 0;
+            this.materialSingleLineTextField1.Size = new System.Drawing.Size(354, 23);
+            this.materialSingleLineTextField1.TabIndex = 8;
+            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(16, 139);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(31, 13);
+            this.label26.TabIndex = 7;
+            this.label26.Text = "email";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(16, 102);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(76, 13);
+            this.label25.TabIndex = 6;
+            this.label25.Text = "Phone number";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(16, 62);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(45, 13);
+            this.label13.TabIndex = 5;
+            this.label13.Text = "Address";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(16, 25);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(35, 13);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "Name";
+            // 
+            // bidlbl
+            // 
+            this.bidlbl.AutoSize = true;
+            this.bidlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bidlbl.Location = new System.Drawing.Point(60, 171);
+            this.bidlbl.Name = "bidlbl";
+            this.bidlbl.Size = new System.Drawing.Size(32, 20);
+            this.bidlbl.TabIndex = 3;
+            this.bidlbl.Text = "Bid";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(16, 175);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(22, 13);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Bid";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(328, 32);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(82, 13);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Select Business";
+            // 
+            // selectbox3
+            // 
+            this.selectbox3.FormattingEnabled = true;
+            this.selectbox3.Location = new System.Drawing.Point(431, 28);
+            this.selectbox3.Name = "selectbox3";
+            this.selectbox3.Size = new System.Drawing.Size(288, 21);
+            this.selectbox3.TabIndex = 0;
+            this.selectbox3.SelectedIndexChanged += new System.EventHandler(this.selectbox3_SelectedIndexChanged);
             // 
             // business
             // 
@@ -835,16 +900,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1022, 558);
+            this.Controls.Add(this.addshopbtn);
             this.Controls.Add(this.removebtn);
             this.Controls.Add(this.editbtn);
             this.Controls.Add(this.addbtn);
             this.Controls.Add(this.back);
+            this.Controls.Add(this.shoppnl);
+            this.Controls.Add(this.editpnl);
             this.Controls.Add(this.removepnl);
             this.Controls.Add(this.addpnl);
-            this.Controls.Add(this.editpnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "business";
             this.Text = "business";
+            this.Load += new System.EventHandler(this.business_Load);
             this.removepnl.ResumeLayout(false);
             this.removepnl.PerformLayout();
             this.rvmpnl.ResumeLayout(false);
@@ -857,6 +925,12 @@
             this.addpnl.PerformLayout();
             this.editpnl.ResumeLayout(false);
             this.editpnl.PerformLayout();
+            this.shoppnl.ResumeLayout(false);
+            this.shoppnl.PerformLayout();
+            this.addshoppnl.ResumeLayout(false);
+            this.addshoppnl.PerformLayout();
+            this.editshoppnl.ResumeLayout(false);
+            this.editshoppnl.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -880,7 +954,7 @@
         private System.Windows.Forms.PictureBox picbox;
         private MaterialSkin.Controls.MaterialRaisedButton rvmcancel;
         private MaterialSkin.Controls.MaterialRaisedButton rmvbtn;
-        private System.Windows.Forms.Label placelbl;
+        private System.Windows.Forms.Label buslbl;
         private MaterialSkin.Controls.MaterialSingleLineTextField editnametxt;
         private System.Windows.Forms.Panel editpanel;
         private MaterialSkin.Controls.MaterialFlatButton removebtn;
@@ -897,33 +971,38 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField nametxt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel editpnl;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField4;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField3;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField2;
-        private System.Windows.Forms.Label label11;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
+        private MaterialSkin.Controls.MaterialFlatButton addshopbtn;
+        private System.Windows.Forms.Panel shoppnl;
+        private System.Windows.Forms.Panel addshoppnl;
+        private System.Windows.Forms.Panel editshoppnl;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton5;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField5;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField6;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField7;
-        private System.Windows.Forms.Label label16;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField8;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox shopbox;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton3;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton4;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField4;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField3;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField2;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label bidlbl;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox selectbox3;
     }
 }
