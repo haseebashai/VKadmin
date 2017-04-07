@@ -15,7 +15,7 @@ namespace Veiled_Kashmir_Admin_Panel
 {
     public partial class profile : Form
     {
-        bool fnameok = true, lnameok = true, emailok = true, passwordok = true, confirmok = true, countryok = true, phoneok = true, dobok = true;
+        bool fnameok = true, lnameok = true, emailok = true, passwordok = true, confirmok = true, phoneok = true, dobok = true;
         DBConnect obj = new DBConnect();
         bool status; 
         String s;
@@ -24,16 +24,7 @@ namespace Veiled_Kashmir_Admin_Panel
         private Homepage hp = null;
         private mainform mf = null;
 
-        public static Bitmap ByteToImage(byte[] blob)
-        {
-            MemoryStream mStream = new MemoryStream();
-            byte[] pData = blob;
-            mStream.Write(pData, 0, Convert.ToInt32(pData.Length));
-            Bitmap bm = new Bitmap(mStream);
-            mStream.Dispose();
-            return bm;
-
-        }
+        
 
         public profile(Form hpcopy, Form mfcopy)
         {
@@ -56,8 +47,6 @@ namespace Veiled_Kashmir_Admin_Panel
             yeartxt.Text = temp.Substring(6, 4);
             usrlbl.Text = userinfo.username;
 
-            if (dr[7].ToString() != "")
-            dpbox.BackgroundImage = new Bitmap(dr[7].ToString());
             obj.closeConnection();
         }
 
@@ -128,17 +117,7 @@ namespace Veiled_Kashmir_Admin_Panel
             }
         }
 
-        private void dpbox_Click(object sender, EventArgs e)
-        {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                s = openFileDialog1.FileName;
-                Image myimage = new Bitmap(s);
-                dpbox.BackgroundImage = myimage;
-                dpbox.BackgroundImageLayout = ImageLayout.Stretch;
-                status = true;
-            } 
-        }
+       
 
         private void updatebtn_Click(object sender, EventArgs e)
         {
@@ -147,23 +126,12 @@ namespace Veiled_Kashmir_Admin_Panel
             {
                 String cmd;
                 inclbl.Visible = false;
-                if (status == true)
-                {
-                    long append = System.DateTime.Now.ToFileTime(); 
-                    cmd = "Update admin set fname='" + fnametxt.Text + "',lname='" + lnametxt.Text + "',email='" + emailtxt.Text + "',password='" + pwdtxt.Text + "',contact='" + phonetxt.Text + "',DOB='" + yeartxt.Text + "//" + montxt.Text + "//" + daytxt.Text + @"',pic='C:\\Vkashmir\\admin\\" + userinfo.username + append + ".jpg' where username='" + userinfo.username + "';";
-                    dpbox.BackgroundImage.Save("C:\\Vkashmir\\admin\\" + userinfo.username + append + ".jpg");
-                    mf.changepicture("C:\\Vkashmir\\admin\\" + userinfo.username + append + ".jpg");
-                  }
-              else
-              {
-                 cmd = "Update admin set fname='" + fnametxt.Text + "',lname='" + lnametxt.Text + "',email='" + emailtxt.Text + "',password='" + pwdtxt.Text + "',contact='" + phonetxt.Text + "',DOB='" + yeartxt.Text + "//" + montxt.Text + "//" + daytxt.Text + "' where username='" + userinfo.username + "';";
-              }
-                          obj.nonQuery(cmd);
-                          MessageBox.Show("Details Successfully Updated.");
-                        //  mf.changelabel("Welcome, " + dr[0] + "");
+                cmd = "Update admin set fname='" + fnametxt.Text + "',lname='" + lnametxt.Text + "',email='" + emailtxt.Text + "',password='" + pwdtxt.Text + "',contact='" + phonetxt.Text + "',DOB='" + yeartxt.Text + "//" + montxt.Text + "//" + daytxt.Text + "' where username='" + userinfo.username + "';";
+                obj.nonQuery(cmd);
+                MessageBox.Show("Details Successfully Updated.");
 
                  }
-                          else
+            else
                       {
                             inclbl.Visible = true;
                       } 
@@ -190,7 +158,10 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void cancelbtn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            mainform mf = new mainform(hp);
+            mf.TopLevel = false;
+            hp.mainpnl.Controls.Clear();
+            hp.mainpnl.Controls.Add(mf);
             mf.Show();
         }
 
@@ -199,10 +170,6 @@ namespace Veiled_Kashmir_Admin_Panel
 
         }
 
-        private void dpbox_MouseHover(object sender, EventArgs e)
-        {
-            dpbox.Cursor = Cursors.Hand;
-        }
 
         private void montxt_Leave(object sender, EventArgs e)
         {

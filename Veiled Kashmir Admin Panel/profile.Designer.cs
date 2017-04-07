@@ -58,11 +58,7 @@
             this.llbl = new System.Windows.Forms.Label();
             this.flbl = new System.Windows.Forms.Label();
             this.passlbl = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dpbox = new System.Windows.Forms.PictureBox();
             this.back = new System.Windows.Forms.PictureBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.dpbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.back)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +66,7 @@
             // 
             this.inclbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inclbl.ForeColor = System.Drawing.Color.Red;
-            this.inclbl.Location = new System.Drawing.Point(694, 418);
+            this.inclbl.Location = new System.Drawing.Point(752, 346);
             this.inclbl.Name = "inclbl";
             this.inclbl.Size = new System.Drawing.Size(122, 13);
             this.inclbl.TabIndex = 121;
@@ -83,7 +79,7 @@
             this.usrlbl.AutoSize = true;
             this.usrlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usrlbl.ForeColor = System.Drawing.Color.Gray;
-            this.usrlbl.Location = new System.Drawing.Point(332, 205);
+            this.usrlbl.Location = new System.Drawing.Point(293, 171);
             this.usrlbl.Name = "usrlbl";
             this.usrlbl.Size = new System.Drawing.Size(85, 13);
             this.usrlbl.TabIndex = 120;
@@ -92,7 +88,7 @@
             // cancelbtn
             // 
             this.cancelbtn.Depth = 0;
-            this.cancelbtn.Location = new System.Drawing.Point(597, 434);
+            this.cancelbtn.Location = new System.Drawing.Point(655, 362);
             this.cancelbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Primary = true;
@@ -105,7 +101,7 @@
             // updatebtn
             // 
             this.updatebtn.Depth = 0;
-            this.updatebtn.Location = new System.Drawing.Point(697, 434);
+            this.updatebtn.Location = new System.Drawing.Point(755, 362);
             this.updatebtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.updatebtn.Name = "updatebtn";
             this.updatebtn.Primary = true;
@@ -119,7 +115,7 @@
             // 
             this.dlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dlbl.ForeColor = System.Drawing.Color.Red;
-            this.dlbl.Location = new System.Drawing.Point(691, 322);
+            this.dlbl.Location = new System.Drawing.Point(716, 288);
             this.dlbl.Name = "dlbl";
             this.dlbl.Size = new System.Drawing.Size(122, 13);
             this.dlbl.TabIndex = 116;
@@ -131,7 +127,7 @@
             // 
             this.plbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plbl.ForeColor = System.Drawing.Color.Red;
-            this.plbl.Location = new System.Drawing.Point(307, 317);
+            this.plbl.Location = new System.Drawing.Point(268, 283);
             this.plbl.Name = "plbl";
             this.plbl.Size = new System.Drawing.Size(192, 14);
             this.plbl.TabIndex = 115;
@@ -143,7 +139,7 @@
             // 
             this.confirmlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmlbl.ForeColor = System.Drawing.Color.Red;
-            this.confirmlbl.Location = new System.Drawing.Point(663, 266);
+            this.confirmlbl.Location = new System.Drawing.Point(688, 232);
             this.confirmlbl.Name = "confirmlbl";
             this.confirmlbl.Size = new System.Drawing.Size(152, 12);
             this.confirmlbl.TabIndex = 113;
@@ -155,7 +151,7 @@
             // 
             this.elbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.elbl.ForeColor = System.Drawing.Color.Red;
-            this.elbl.Location = new System.Drawing.Point(591, 219);
+            this.elbl.Location = new System.Drawing.Point(708, 185);
             this.elbl.Name = "elbl";
             this.elbl.Size = new System.Drawing.Size(222, 10);
             this.elbl.TabIndex = 112;
@@ -167,7 +163,7 @@
             // 
             this.confirmtxt.Depth = 0;
             this.confirmtxt.Hint = "";
-            this.confirmtxt.Location = new System.Drawing.Point(654, 244);
+            this.confirmtxt.Location = new System.Drawing.Point(679, 210);
             this.confirmtxt.MouseState = MaterialSkin.MouseState.HOVER;
             this.confirmtxt.Name = "confirmtxt";
             this.confirmtxt.PasswordChar = '*';
@@ -183,12 +179,12 @@
             // 
             this.materialLabel4.AutoSize = true;
             this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel4.Location = new System.Drawing.Point(577, 248);
+            this.materialLabel4.Location = new System.Drawing.Point(602, 214);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(54, 18);
+            this.materialLabel4.Size = new System.Drawing.Size(54, 19);
             this.materialLabel4.TabIndex = 93;
             this.materialLabel4.Text = "Retype";
             // 
@@ -196,12 +192,12 @@
             // 
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(756, 300);
+            this.materialLabel3.Location = new System.Drawing.Point(781, 266);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(12, 18);
+            this.materialLabel3.Size = new System.Drawing.Size(15, 19);
             this.materialLabel3.TabIndex = 94;
             this.materialLabel3.Text = "/";
             // 
@@ -209,12 +205,12 @@
             // 
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(713, 300);
+            this.materialLabel2.Location = new System.Drawing.Point(738, 266);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(12, 18);
+            this.materialLabel2.Size = new System.Drawing.Size(15, 19);
             this.materialLabel2.TabIndex = 95;
             this.materialLabel2.Text = "/";
             // 
@@ -223,7 +219,7 @@
             this.yeartxt.Depth = 0;
             this.yeartxt.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.yeartxt.Hint = "";
-            this.yeartxt.Location = new System.Drawing.Point(771, 299);
+            this.yeartxt.Location = new System.Drawing.Point(796, 265);
             this.yeartxt.MouseState = MaterialSkin.MouseState.HOVER;
             this.yeartxt.Name = "yeartxt";
             this.yeartxt.PasswordChar = '\0';
@@ -241,7 +237,7 @@
             this.montxt.Depth = 0;
             this.montxt.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.montxt.Hint = "";
-            this.montxt.Location = new System.Drawing.Point(729, 299);
+            this.montxt.Location = new System.Drawing.Point(754, 265);
             this.montxt.MouseState = MaterialSkin.MouseState.HOVER;
             this.montxt.Name = "montxt";
             this.montxt.PasswordChar = '\0';
@@ -260,7 +256,7 @@
             this.daytxt.Depth = 0;
             this.daytxt.ForeColor = System.Drawing.Color.Black;
             this.daytxt.Hint = "";
-            this.daytxt.Location = new System.Drawing.Point(689, 299);
+            this.daytxt.Location = new System.Drawing.Point(714, 265);
             this.daytxt.MouseState = MaterialSkin.MouseState.HOVER;
             this.daytxt.Name = "daytxt";
             this.daytxt.PasswordChar = '\0';
@@ -277,12 +273,12 @@
             // 
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(593, 300);
+            this.materialLabel1.Location = new System.Drawing.Point(618, 266);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(41, 18);
+            this.materialLabel1.Size = new System.Drawing.Size(38, 19);
             this.materialLabel1.TabIndex = 97;
             this.materialLabel1.Text = "DOB";
             // 
@@ -291,7 +287,7 @@
             this.phonetxt.Depth = 0;
             this.phonetxt.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.phonetxt.Hint = "";
-            this.phonetxt.Location = new System.Drawing.Point(332, 295);
+            this.phonetxt.Location = new System.Drawing.Point(293, 261);
             this.phonetxt.MouseState = MaterialSkin.MouseState.HOVER;
             this.phonetxt.Name = "phonetxt";
             this.phonetxt.PasswordChar = '\0';
@@ -307,12 +303,12 @@
             // 
             this.phonelbl.AutoSize = true;
             this.phonelbl.Depth = 0;
-            this.phonelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.phonelbl.Font = new System.Drawing.Font("Roboto", 11F);
             this.phonelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.phonelbl.Location = new System.Drawing.Point(206, 298);
+            this.phonelbl.Location = new System.Drawing.Point(167, 264);
             this.phonelbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.phonelbl.Name = "phonelbl";
-            this.phonelbl.Size = new System.Drawing.Size(108, 18);
+            this.phonelbl.Size = new System.Drawing.Size(108, 19);
             this.phonelbl.TabIndex = 87;
             this.phonelbl.Text = "Phone Number";
             // 
@@ -320,7 +316,7 @@
             // 
             this.pwdtxt.Depth = 0;
             this.pwdtxt.Hint = "";
-            this.pwdtxt.Location = new System.Drawing.Point(333, 244);
+            this.pwdtxt.Location = new System.Drawing.Point(294, 210);
             this.pwdtxt.MouseState = MaterialSkin.MouseState.HOVER;
             this.pwdtxt.Name = "pwdtxt";
             this.pwdtxt.PasswordChar = '*';
@@ -336,14 +332,14 @@
             // 
             this.emailtxt.Depth = 0;
             this.emailtxt.Hint = "";
-            this.emailtxt.Location = new System.Drawing.Point(654, 197);
+            this.emailtxt.Location = new System.Drawing.Point(679, 163);
             this.emailtxt.MouseState = MaterialSkin.MouseState.HOVER;
             this.emailtxt.Name = "emailtxt";
             this.emailtxt.PasswordChar = '\0';
             this.emailtxt.SelectedText = "";
             this.emailtxt.SelectionLength = 0;
             this.emailtxt.SelectionStart = 0;
-            this.emailtxt.Size = new System.Drawing.Size(162, 23);
+            this.emailtxt.Size = new System.Drawing.Size(252, 23);
             this.emailtxt.TabIndex = 100;
             this.emailtxt.UseSystemPasswordChar = false;
             this.emailtxt.Leave += new System.EventHandler(this.emailtxt_Leave);
@@ -352,7 +348,7 @@
             // 
             this.lnametxt.Depth = 0;
             this.lnametxt.Hint = "";
-            this.lnametxt.Location = new System.Drawing.Point(334, 145);
+            this.lnametxt.Location = new System.Drawing.Point(679, 120);
             this.lnametxt.MouseState = MaterialSkin.MouseState.HOVER;
             this.lnametxt.Name = "lnametxt";
             this.lnametxt.PasswordChar = '\0';
@@ -368,12 +364,12 @@
             // 
             this.pwdlbl.AutoSize = true;
             this.pwdlbl.Depth = 0;
-            this.pwdlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.pwdlbl.Font = new System.Drawing.Font("Roboto", 11F);
             this.pwdlbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.pwdlbl.Location = new System.Drawing.Point(237, 248);
+            this.pwdlbl.Location = new System.Drawing.Point(198, 214);
             this.pwdlbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.pwdlbl.Name = "pwdlbl";
-            this.pwdlbl.Size = new System.Drawing.Size(75, 18);
+            this.pwdlbl.Size = new System.Drawing.Size(75, 19);
             this.pwdlbl.TabIndex = 96;
             this.pwdlbl.Text = "Password";
             // 
@@ -381,12 +377,12 @@
             // 
             this.emaillbl.AutoSize = true;
             this.emaillbl.Depth = 0;
-            this.emaillbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.emaillbl.Font = new System.Drawing.Font("Roboto", 11F);
             this.emaillbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.emaillbl.Location = new System.Drawing.Point(566, 201);
+            this.emaillbl.Location = new System.Drawing.Point(591, 167);
             this.emaillbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.emaillbl.Name = "emaillbl";
-            this.emaillbl.Size = new System.Drawing.Size(63, 18);
+            this.emaillbl.Size = new System.Drawing.Size(65, 19);
             this.emaillbl.TabIndex = 91;
             this.emaillbl.Text = "Email ID";
             // 
@@ -394,12 +390,12 @@
             // 
             this.usernamelbl.AutoSize = true;
             this.usernamelbl.Depth = 0;
-            this.usernamelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.usernamelbl.Font = new System.Drawing.Font("Roboto", 11F);
             this.usernamelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.usernamelbl.Location = new System.Drawing.Point(235, 201);
+            this.usernamelbl.Location = new System.Drawing.Point(196, 167);
             this.usernamelbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.usernamelbl.Name = "usernamelbl";
-            this.usernamelbl.Size = new System.Drawing.Size(77, 18);
+            this.usernamelbl.Size = new System.Drawing.Size(77, 19);
             this.usernamelbl.TabIndex = 90;
             this.usernamelbl.Text = "Username";
             // 
@@ -407,12 +403,12 @@
             // 
             this.lnamelbl.AutoSize = true;
             this.lnamelbl.Depth = 0;
-            this.lnamelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lnamelbl.Font = new System.Drawing.Font("Roboto", 11F);
             this.lnamelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lnamelbl.Location = new System.Drawing.Point(230, 150);
+            this.lnamelbl.Location = new System.Drawing.Point(575, 125);
             this.lnamelbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.lnamelbl.Name = "lnamelbl";
-            this.lnamelbl.Size = new System.Drawing.Size(80, 18);
+            this.lnamelbl.Size = new System.Drawing.Size(82, 19);
             this.lnamelbl.TabIndex = 89;
             this.lnamelbl.Text = "Last Name";
             // 
@@ -420,7 +416,7 @@
             // 
             this.fnametxt.Depth = 0;
             this.fnametxt.Hint = "";
-            this.fnametxt.Location = new System.Drawing.Point(332, 101);
+            this.fnametxt.Location = new System.Drawing.Point(294, 120);
             this.fnametxt.MouseState = MaterialSkin.MouseState.HOVER;
             this.fnametxt.Name = "fnametxt";
             this.fnametxt.PasswordChar = '\0';
@@ -436,12 +432,12 @@
             // 
             this.fnamelbl.AutoSize = true;
             this.fnamelbl.Depth = 0;
-            this.fnamelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.fnamelbl.Font = new System.Drawing.Font("Roboto", 11F);
             this.fnamelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.fnamelbl.Location = new System.Drawing.Point(229, 105);
+            this.fnamelbl.Location = new System.Drawing.Point(191, 124);
             this.fnamelbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.fnamelbl.Name = "fnamelbl";
-            this.fnamelbl.Size = new System.Drawing.Size(81, 18);
+            this.fnamelbl.Size = new System.Drawing.Size(83, 19);
             this.fnamelbl.TabIndex = 88;
             this.fnamelbl.Text = "First Name";
             // 
@@ -450,7 +446,7 @@
             this.llbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llbl.ForeColor = System.Drawing.Color.Red;
             this.llbl.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.llbl.Location = new System.Drawing.Point(407, 163);
+            this.llbl.Location = new System.Drawing.Point(752, 138);
             this.llbl.Name = "llbl";
             this.llbl.Size = new System.Drawing.Size(180, 22);
             this.llbl.TabIndex = 111;
@@ -462,7 +458,7 @@
             // 
             this.flbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flbl.ForeColor = System.Drawing.Color.Red;
-            this.flbl.Location = new System.Drawing.Point(407, 120);
+            this.flbl.Location = new System.Drawing.Point(369, 139);
             this.flbl.Name = "flbl";
             this.flbl.Size = new System.Drawing.Size(182, 19);
             this.flbl.TabIndex = 110;
@@ -474,37 +470,13 @@
             // 
             this.passlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passlbl.ForeColor = System.Drawing.Color.Red;
-            this.passlbl.Location = new System.Drawing.Point(335, 261);
+            this.passlbl.Location = new System.Drawing.Point(296, 227);
             this.passlbl.Name = "passlbl";
             this.passlbl.Size = new System.Drawing.Size(166, 25);
             this.passlbl.TabIndex = 114;
             this.passlbl.Text = "Invalid Password";
             this.passlbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.passlbl.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(690, 168);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 12);
-            this.label2.TabIndex = 109;
-            this.label2.Text = "Upload Image";
-            // 
-            // dpbox
-            // 
-            this.dpbox.BackColor = System.Drawing.Color.White;
-            this.dpbox.BackgroundImage = global::Veiled_Kashmir_Admin_Panel.Properties.Resources.user_20;
-            this.dpbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dpbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dpbox.Location = new System.Drawing.Point(683, 94);
-            this.dpbox.Name = "dpbox";
-            this.dpbox.Size = new System.Drawing.Size(75, 75);
-            this.dpbox.TabIndex = 108;
-            this.dpbox.TabStop = false;
-            this.dpbox.Click += new System.EventHandler(this.dpbox_Click);
-            this.dpbox.MouseHover += new System.EventHandler(this.dpbox_MouseHover);
             // 
             // back
             // 
@@ -516,10 +488,6 @@
             this.back.TabIndex = 8;
             this.back.TabStop = false;
             this.back.Click += new System.EventHandler(this.back_Click);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.Filter = "JPG|*.jpg|PNG|*.png";
             // 
             // profile
             // 
@@ -543,7 +511,6 @@
             this.Controls.Add(this.montxt);
             this.Controls.Add(this.daytxt);
             this.Controls.Add(this.materialLabel1);
-            this.Controls.Add(this.dpbox);
             this.Controls.Add(this.phonetxt);
             this.Controls.Add(this.phonelbl);
             this.Controls.Add(this.pwdtxt);
@@ -558,13 +525,11 @@
             this.Controls.Add(this.llbl);
             this.Controls.Add(this.flbl);
             this.Controls.Add(this.passlbl);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.back);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "profile";
             this.Text = "profile";
             this.Load += new System.EventHandler(this.profile_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dpbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.back)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -590,7 +555,6 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField montxt;
         private MaterialSkin.Controls.MaterialSingleLineTextField daytxt;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private System.Windows.Forms.PictureBox dpbox;
         private MaterialSkin.Controls.MaterialSingleLineTextField phonetxt;
         private MaterialSkin.Controls.MaterialLabel phonelbl;
         private MaterialSkin.Controls.MaterialSingleLineTextField pwdtxt;
@@ -605,7 +569,5 @@
         private System.Windows.Forms.Label llbl;
         private System.Windows.Forms.Label flbl;
         private System.Windows.Forms.Label passlbl;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

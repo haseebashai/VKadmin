@@ -120,11 +120,6 @@ namespace Veiled_Kashmir_Admin_Panel
             signinlbl.Visible = true;
 
         }
-
-        public void changepicture(String s)
-        {
-            //dp.BackgroundImage = new Bitmap(s);
-        }
         public void signout()
         {
             signoutlbl.Visible = true;
