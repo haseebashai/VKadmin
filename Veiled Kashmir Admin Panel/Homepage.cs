@@ -24,7 +24,7 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void Homepage_Load(object sender, EventArgs e)
         {
-            loginform lg = new loginform(this);
+            loginform lg = new loginform(this,this);
             lg.TopLevel = false;
             mainpnl.Controls.Clear();
             mainpnl.Controls.Add(lg);

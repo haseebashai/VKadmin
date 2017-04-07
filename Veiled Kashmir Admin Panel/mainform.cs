@@ -104,5 +104,46 @@ namespace Veiled_Kashmir_Admin_Panel
             hp.mainpnl.Controls.Add(rv);
             rv.Show();
         }
+
+        private void profilebtn_Click(object sender, EventArgs e)
+        {
+            profile pf = new profile(this,this);
+            pf.TopLevel = false;
+            hp.mainpnl.Controls.Clear();
+            hp.mainpnl.Controls.Add(pf);
+            pf.Show();
+        }
+        public void changelabel(String welcome)
+        {
+            signinlbl.Text = welcome;
+
+            signinlbl.Visible = true;
+
+        }
+
+        public void changepicture(String s)
+        {
+            //dp.BackgroundImage = new Bitmap(s);
+        }
+        public void signout()
+        {
+            signoutlbl.Visible = true;
+        }
+
+        private void signoutlbl_Click(object sender, EventArgs e)
+        {
+            userinfo.loggedin = false;
+            userinfo.username = "";           
+            this.Close();
+            MessageBox.Show("Logged out sucessfully.\nPlease Log in to continue");
+            Homepage hp = new Homepage();
+            hp.Show();
+        }
+
+        private void signoutlbl_Enter(object sender, EventArgs e)
+        {
+            signoutlbl.Cursor = Cursors.Hand;
+        }
+
     }
 }

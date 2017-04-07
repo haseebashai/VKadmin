@@ -20,6 +20,13 @@ namespace Veiled_Kashmir_Admin_Panel
             Application.Run(new Homepage());
         }
     }
+
+    class userinfo
+    {
+        public static bool loggedin;
+        public static String username;
+    }
+
     class DBConnect
     {
         MySqlConnection conn;
