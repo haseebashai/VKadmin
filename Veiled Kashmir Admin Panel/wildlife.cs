@@ -111,6 +111,7 @@ namespace Veiled_Kashmir_Admin_Panel
             nametxt.Text = "";
             desctxt.Text = "";
             loctxt.Text = "";
+            readanimals();
         }
 
         private void cancelbtn_Click(object sender, EventArgs e)

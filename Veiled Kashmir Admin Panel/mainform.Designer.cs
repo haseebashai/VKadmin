@@ -151,7 +151,7 @@
             this.culbtn.Primary = true;
             this.culbtn.Size = new System.Drawing.Size(233, 24);
             this.culbtn.TabIndex = 6;
-            this.culbtn.Text = "cultrue";
+            this.culbtn.Text = "culture";
             this.culbtn.UseVisualStyleBackColor = true;
             this.culbtn.Click += new System.EventHandler(this.culbtn_Click);
             // 
