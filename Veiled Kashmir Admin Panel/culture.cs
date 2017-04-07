@@ -37,7 +37,7 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void readwords()
         {
-            dr2 = obj.Query("select name from wildlife where class='2'");
+            dr2 = obj.Query("select name from dictionary");
             DataTable dt = new DataTable();
             dt.Columns.Add("name", typeof(String));
             dt.Load(dr2);
@@ -48,12 +48,12 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void readphrases()
         {
-            dr3 = obj.Query("select name from wildlife where class='1'");
+            dr3 = obj.Query("select phrases from phrases");
             DataTable dt = new DataTable();
-            dt.Columns.Add("name", typeof(String));
+            dt.Columns.Add("phrases", typeof(String));
             dt.Load(dr3);
             obj.closeConnection();
-            phrasebox.DisplayMember = "name";
+            phrasebox.DisplayMember = "phrases";
             phrasebox.DataSource = dt;
         }
 
