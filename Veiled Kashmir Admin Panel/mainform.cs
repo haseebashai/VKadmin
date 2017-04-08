@@ -107,7 +107,7 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void profilebtn_Click(object sender, EventArgs e)
         {
-            profile pf = new profile(this,this);
+            profile pf = new profile(hp,this);
             pf.TopLevel = false;
             hp.mainpnl.Controls.Clear();
             hp.mainpnl.Controls.Add(pf);
