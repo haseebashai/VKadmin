@@ -15,8 +15,8 @@ namespace Veiled_Kashmir_Admin_Panel
     {
 
         DBConnect obj = new DBConnect();
-        String cmd;
-
+        String cmd,s;
+        bool status, nametxtok, desctxtok, editnametxtok, editdesctxtok, parknametxtok, parkdesctxtok, editparktxtok, editparkdesctxtok, sancnametxtok, sancdesctxtok, editsanctnametxtok, editsancdesctxtok;
         MySqlDataReader dr,dr2,dr3;
         private Homepage hp = null;
         public wildlife(Form hpcopy)
@@ -104,21 +104,31 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void addanbtn_Click(object sender, EventArgs e)
         {
-            cmd = "insert into animals (`name`, `description`, `pic`) values ('" + nametxt.Text + "', '" + desctxt.Text + "', '" + loctxt.Text + "')";
-            obj.nonQuery(cmd);
+            if (nametxtok && desctxtok && status == true)
+            {
+                cmd = "insert into animals (`name`, `description`, `pic`) values ('" + nametxt.Text + "', '" + desctxt.Text + "', 'C:\\Vkashmir\\animals\\" + nametxt.Text + ".jpg')";
+                dpbox.BackgroundImage.Save("C:\\Vkashmir\\animals\\" + nametxt.Text + ".jpg");
 
-            MessageBox.Show("New Animal added succesfully!");
-            nametxt.Text = "";
-            desctxt.Text = "";
-            loctxt.Text = "";
-            readanimals();
+                obj.nonQuery(cmd);
+
+                MessageBox.Show("New Animal added succesfully!");
+                nametxt.Text = "";
+                desctxt.Text = "";
+                dpbox.BackgroundImage = null;
+                readanimals();
+            }
+            else
+            {
+                inclbl.Visible = true;
+            }
         }
 
         private void cancelbtn_Click(object sender, EventArgs e)
         {
             nametxt.Text = "";
             desctxt.Text = "";
-            loctxt.Text = "";
+            dpbox.BackgroundImage = null;
+            
         }
 
         private void animalbox_SelectedIndexChanged(object sender, EventArgs e)
@@ -127,26 +137,52 @@ namespace Veiled_Kashmir_Admin_Panel
             dr.Read();
             editnametxt.Text = dr[1].ToString();
             editdesctxt.Text = dr[2].ToString();
-            editloctxt.Text = dr[3].ToString();
+            edpbox.BackgroundImage = new Bitmap(dr[3].ToString());
+            agree.Checked = false;
             obj.closeConnection();
         }
 
         private void updateanbtn_Click(object sender, EventArgs e)
         {
-            cmd = ("update animals set `name`='" + editnametxt.Text + "', `description`='" + editdesctxt.Text + "', `pic`='" + editloctxt.Text + "' where `name`='" + animalbox.Text + "';");
-            obj.nonQuery(cmd);
+            if (editnametxt.Text.Contains("'") || editnametxt.Text.Contains("\\"))
+                MessageBox.Show("Name cannot contain ' & \\");
+            else
+            {
+                if (agree.Checked && editnametxtok && editdesctxtok == true)
+                {
+                    if (status == true)
+                    {
+                        cmd = ("update animals set `name`='" + editnametxt.Text + "', `description`='" + editdesctxt.Text + "', `pic`='C:\\Vkashmir\\animals\\" + editnametxt.Text + ".jpg' where `name`='" + animalbox.Text + "';");
+                        dpbox.BackgroundImage.Save("C:\\Vkashmir\\animals\\" + editnametxt.Text + ".jpg");
+                    }
+                    else
+                    {
+                        cmd = ("update animals set `name`='" + editnametxt.Text + "', `description`='" + editdesctxt.Text + "' where `name`='" + animalbox.Text + "';");
 
-            MessageBox.Show("Animal updated succesfully!");
-            editnametxt.Text = "";
-            editdesctxt.Text = "";
-            editloctxt.Text = "";
+                    }
+                    obj.nonQuery(cmd);
+                    MessageBox.Show("Animal updated succesfully!");
+                    editnametxt.Text = "";
+                    editdesctxt.Text = "";
+                    edpbox.BackgroundImage = null;
+                    agree.Checked = false;
+                    readanimals();
+                }
+                else
+                {
+                    inclbl2.Visible = true;
+                }
+
+            }
         }
 
         private void editcancelbtn_Click(object sender, EventArgs e)
         {
             editnametxt.Text = "";
             editdesctxt.Text = "";
-            editloctxt.Text = "";
+            agree.Checked = false;
+            edpbox.BackgroundImage = null;
+            
         }
 
         private void rvmanbtn_Click(object sender, EventArgs e)
@@ -154,6 +190,7 @@ namespace Veiled_Kashmir_Admin_Panel
             cmd = ("delete from animals where name= '" + animalbox.Text + "';");
             obj.nonQuery(cmd);
             MessageBox.Show("selected animal removed sucessfully.");
+            readanimals();
         }
 
         private void parkbox_SelectedIndexChanged(object sender, EventArgs e)
@@ -164,8 +201,9 @@ namespace Veiled_Kashmir_Admin_Panel
     
             editparktxt.Text = dr2[1].ToString();
             editparkdesctxt.Text = dr2[2].ToString();
-            editparkloctxt.Text = dr2[3].ToString();
+            epdpbox.BackgroundImage =new Bitmap(dr2[3].ToString());
             obj.closeConnection();
+            inclblep.Visible = false;
         }
 
         private void rvmparkbtn_Click(object sender, EventArgs e)
@@ -178,38 +216,71 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void updateparkbtn_Click(object sender, EventArgs e)
         {
-            cmd = ("update wildlife set `name`='" + editparktxt.Text + "', `description`='" + editparkdesctxt.Text + "', `pic`='" + editparkloctxt.Text + "', `class`='2' where `name`='" + parkbox.Text + "'");
-            obj.nonQuery(cmd);
-            MessageBox.Show("Details updated for the selected park.");
-            editparktxt.Text = "";
-            editparkdesctxt.Text = "";
-            editparkloctxt.Text = "";
-        }
+            if (editparktxt.Text.Contains("'") || editparktxt.Text.Contains("\\"))
+                MessageBox.Show("Name cannot contain ' & \\");
+            else
+            {
+                if (pagree.Checked && editparktxtok && editparkdesctxtok == true)
+                {
+                    if (status == true)
+                    {
+                        cmd = ("update wildlife set `name`='" + editparktxt.Text + "', `description`='" + editparkdesctxt.Text + "', `pic`='C:\\Vkashmir\\wildlife\\" + editparktxt.Text + ".jpg', `class`='2' where `name`='" + parkbox.Text + "'");
+                        epdpbox.BackgroundImage.Save("C:\\Vkashmir\\wildlife\\" + editparktxt.Text + ".jpg");
+                    }
+                    else
+                    {
+                        cmd = ("update wildlife set `name`='" + editparktxt.Text + "', `description`='" + editparkdesctxt.Text + "', `class`='2' where `name`='" + parkbox.Text + "'");
+
+                    }
+                    obj.nonQuery(cmd);
+                    MessageBox.Show("Details updated for the selected park.");
+                    editparktxt.Text = "";
+                    editparkdesctxt.Text = "";
+                    epdpbox.BackgroundImage = null;
+                    pagree.Checked = false;
+                    readparks();
+                }
+                else
+                {
+                    inclblep.Visible = true;
+                }
+
+            }
+          }
 
         private void parkcancelbtn_Click(object sender, EventArgs e)
         {
             parknametxt.Text = "";
             parkdesctxt.Text = "";
-            parkloctxt.Text = "";
+            pdpbox.BackgroundImage = null;
+            inclblp.Visible = false;
         }
 
         private void addsancbtn_Click(object sender, EventArgs e)
         {
-            cmd = "insert into wildlife (`name`, `description`, `pic`, `class`) values ('" + sancnametxt.Text + "', '" + sancdesctxt.Text + "', '" + sancloctxt.Text + "', '1')";
-            obj.nonQuery(cmd);
+            if (sancnametxtok && sancdesctxtok && status == true)
+            {
+                cmd = "insert into wildlife (`name`, `description`, `pic`, `class`) values ('" + sancnametxt.Text + "', '" + sancdesctxt.Text + "', 'C:\\Vkashmir\\wildlife\\" + sancnametxt.Text + ".jpg', '1')";
+                dpbox.BackgroundImage.Save("C:\\Vkashmir\\wildlife\\" + sancnametxt.Text + ".jpg");
 
-            MessageBox.Show("New Sanctuary added succesfully!");
-            sancnametxt.Text = "";
-            sancdesctxt.Text = "";
-            sancloctxt.Text = "";
-            readsanc();
+                obj.nonQuery(cmd);
+
+                MessageBox.Show("New Sanctuary added succesfully!");
+                sancnametxt.Text = "";
+                sancdesctxt.Text = "";
+                sdpbox.BackgroundImage = null;
+                readsanc();
+            }
+            else
+                inclbls.Visible = true;
         }
 
         private void sanccancelbtn_Click(object sender, EventArgs e)
         {
             sancnametxt.Text = "";
             sancdesctxt.Text = "";
-            sancloctxt.Text = "";
+            sdpbox.BackgroundImage = null;
+            inclbls.Visible = false;
         }
 
         private void sancrvmbtn_Click(object sender, EventArgs e)
@@ -227,45 +298,253 @@ namespace Veiled_Kashmir_Admin_Panel
 
             editsanctnametxt.Text = dr3[1].ToString();
             editsancdesctxt.Text = dr3[2].ToString();
-            editsancloctxt.Text = dr3[3].ToString();
+            sedpbox.BackgroundImage =new Bitmap(dr3[3].ToString());
+            inclblse.Visible = false;
             obj.closeConnection();
         }
 
         private void updatesancbtn_Click(object sender, EventArgs e)
         {
-            cmd = ("update wildlife set `name`='" + editsanctnametxt.Text + "', `description`='" + editsancdesctxt.Text + "', `pic`='" + editsancloctxt.Text + "', `class`='1' where `name`='" + sancbox.Text + "'");
-            obj.nonQuery(cmd);
-            MessageBox.Show("Details updated for the selected sanctuary.");
-            editsanctnametxt.Text = "";
-            editsancdesctxt.Text = "";
-            editsancloctxt.Text = "";
+            if (editsanctnametxt.Text.Contains("'") || editsanctnametxt.Text.Contains("\\"))
+                MessageBox.Show("Name cannot contain ' & \\");
+            else
+            {
+                if (sagree.Checked && editsanctnametxtok && editsancdesctxtok == true)
+                {
+                    if (status == true)
+                    {
+                        cmd = ("update wildlife set `name`='" + editsanctnametxt.Text + "', `description`='" + editsancdesctxt.Text + "', `pic`='C:\\Vkashmir\\wildlife\\" + editsanctnametxt.Text + ".jpg', `class`='1' where `name`='" + sancbox.Text + "'");
+                        dpbox.BackgroundImage.Save("C:\\Vkashmir\\wildlife\\" + editsanctnametxt.Text + ".jpg");
+                    }
+                    else
+                    {
+                        cmd = ("update wildlife set `name`='" + editsanctnametxt.Text + "', `description`='" + editsancdesctxt.Text + "', `class`='1' where `name`='" + sancbox.Text + "'");
+
+                    }
+                    obj.nonQuery(cmd);
+                    MessageBox.Show("Details updated for the selected sanctuary.");
+                    editsanctnametxt.Text = "";
+                    editsancdesctxt.Text = "";
+                    sdpbox.BackgroundImage = null;
+                    sagree.Checked = false;
+                    readsanc();
+                }
+                else
+                {
+                    inclblse.Visible = true;
+                }
+            }
+        }
+
+        private void parknametxt_Leave(object sender, EventArgs e)
+        {
+
+            if (parknametxt.Text == "")
+                parknametxtok = false;
+            else
+                parknametxtok = true;
+            if (parknametxt.Text.Contains("\\") || parknametxt.Text.Contains("'"))
+            {
+                MessageBox.Show("Name cannot contain special characters");
+                parknametxt.Text = "";
+                parknametxt.Focus();
+            }
+        }
+
+        private void sedpbox_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                s = openFileDialog1.FileName;
+                Image myimage = new Bitmap(s);
+                dpbox.BackgroundImage = myimage;
+                dpbox.BackgroundImageLayout = ImageLayout.Stretch;
+                status = true;
+
+            }
+        }
+
+        private void sancnametxt_Leave(object sender, EventArgs e)
+        {
+            if (sancnametxt.Text == "")
+                sancnametxtok = false;
+            else
+                sancnametxtok = true;
+            if (sancnametxt.Text.Contains("\\") || sancnametxt.Text.Contains("'"))
+            {
+                MessageBox.Show("Name cannot contain special characters");
+                sancnametxt.Text = "";
+                sancnametxt.Focus();
+            }
+        }
+
+        private void sagree_CheckedChanged(object sender, EventArgs e)
+        {
+            if (editsanctnametxt.Text == "" && editsancdesctxt.Text == "")
+            {
+                editsanctnametxtok = false;
+                editsancdesctxtok = false;
+            }
+            else
+            {
+                editparktxtok = true;
+                editparkdesctxtok = true;
+            }
+        }
+
+        private void sancdesctxt_Leave(object sender, EventArgs e)
+        {
+            if (sancdesctxt.Text == "")
+                sancdesctxtok = false;
+            else
+                sancdesctxtok = true;
+        }
+
+        private void sdpbox_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                s = openFileDialog1.FileName;
+                Image myimage = new Bitmap(s);
+                dpbox.BackgroundImage = myimage;
+                dpbox.BackgroundImageLayout = ImageLayout.Stretch;
+                status = true;
+
+            }
+        }
+
+        private void epdpbox_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                s = openFileDialog1.FileName;
+                Image myimage = new Bitmap(s);
+                dpbox.BackgroundImage = myimage;
+                dpbox.BackgroundImageLayout = ImageLayout.Stretch;
+                status = true;
+
+            }
+        }
+
+        private void pagree_CheckedChanged(object sender, EventArgs e)
+        {
+            if (editparktxt.Text == "" && editparkdesctxt.Text == "")
+            {
+                editparktxtok = false;
+                editparkdesctxtok = false;
+            }
+            else
+            {
+                editparktxtok = true;
+                editparkdesctxtok = true;
+            }
+        }
+
+        private void parkdesctxt_Leave(object sender, EventArgs e)
+        {
+            if (parkdesctxt.Text == "")
+                parkdesctxtok = false;
+            else
+                parkdesctxtok = true;
+        }
+
+        private void pdpbox_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                s = openFileDialog1.FileName;
+                Image myimage = new Bitmap(s);
+                dpbox.BackgroundImage = myimage;
+                dpbox.BackgroundImageLayout = ImageLayout.Stretch;
+                status = true;
+
+            }
         }
 
         private void sanceditcancelbtn_Click(object sender, EventArgs e)
         {
             editsanctnametxt.Text = "";
             editsancdesctxt.Text = "";
-            editsancloctxt.Text = "";
+            sedpbox.BackgroundImage = null;
+            sagree.Checked = false;
+            
+        }
+
+        private void agree_CheckedChanged(object sender, EventArgs e)
+        {
+            if (editnametxt.Text == "" && editdesctxt.Text == "")
+            {
+                editnametxtok = false;
+                editdesctxtok = false;
+            }
+            else
+            {
+                editnametxtok = true;
+                editdesctxtok = true;
+            }
+
+        }
+
+        private void nametxt_Leave(object sender, EventArgs e)
+        {
+            if (nametxt.Text == "")
+                nametxtok = false;
+            else
+                nametxtok = true;
+            if (nametxt.Text.Contains("\\") || nametxt.Text.Contains("'"))
+            {
+                MessageBox.Show("Name cannot contain special characters");
+                nametxt.Text = "";
+                nametxt.Focus();
+            }
+        }
+
+        private void desctxt_Leave(object sender, EventArgs e)
+        {
+            if (desctxt.Text == "")
+                desctxtok = false;
+            else
+                desctxtok = true;
+        }
+
+        private void dpbox_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                s = openFileDialog1.FileName;
+                Image myimage = new Bitmap(s);
+                dpbox.BackgroundImage = myimage;
+                dpbox.BackgroundImageLayout = ImageLayout.Stretch;
+                status = true;
+
+            }
         }
 
         private void editparkcancelbtn_Click(object sender, EventArgs e)
         {
             editparktxt.Text = "";
             editparkdesctxt.Text = "";
-            editparkloctxt.Text = "";
+            epdpbox.BackgroundImage = null;
+            inclblep.Visible = false;
+            
         }
 
         private void addparkbtn_Click(object sender, EventArgs e)
         {
+            if (parknametxtok && parkdesctxtok && status == true)
+            {
+                cmd = "insert into wildlife (`name`, `description`, `pic`, `class`) values ('" + parknametxt.Text + "', '" + parkdesctxt.Text + "', 'C:\\Vkashmir\\wildlife\\" + parknametxt.Text + ".jpg', '2')";
+                dpbox.BackgroundImage.Save("C:\\Vkashmir\\wildlife\\" + parknametxt.Text + ".jpg");
+                obj.nonQuery(cmd);
 
-            cmd = "insert into wildlife (`name`, `description`, `pic`, `class`) values ('" + parknametxt.Text + "', '" + parkdesctxt.Text + "', '" + parkloctxt.Text + "', '2')";
-            obj.nonQuery(cmd);
-
-            MessageBox.Show("New Park added succesfully!");
-            parknametxt.Text = "";
-            parkdesctxt.Text = "";
-            parkloctxt.Text = "";
-            readparks();
+                MessageBox.Show("New Park added succesfully!");
+                parknametxt.Text = "";
+                parkdesctxt.Text = "";
+                pdpbox.BackgroundImage = null;
+                readparks();
+            }
+            else
+                inclblp.Visible = true;
         }
     }
 }

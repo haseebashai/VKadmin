@@ -14,8 +14,8 @@ namespace Veiled_Kashmir_Admin_Panel
     public partial class culture : Form
     {
         DBConnect obj = new DBConnect();
-        String cmd;
-
+        String cmd,s;
+        bool status, nametxtok, desctxtok, editnametxtok, editdesctxtok, wordtxtok, meaningtxtok, editwordtxtok, editmeaningtxtok, phrasetxtok, phraseentxtok, editphrasetxtok, editphraseentxtok;
         MySqlDataReader dr, dr2, dr3;
         private Homepage hp = null;
         public culture(Form hpcopy)
@@ -37,12 +37,12 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void readwords()
         {
-            dr2 = obj.Query("select name from dictionary");
+            dr2 = obj.Query("select keyword from dictionary");
             DataTable dt = new DataTable();
-            dt.Columns.Add("name", typeof(String));
+            dt.Columns.Add("keyword", typeof(String));
             dt.Load(dr2);
             obj.closeConnection();
-            wordbox.DisplayMember = "name";
+            wordbox.DisplayMember = "keyword";
             wordbox.DataSource = dt;
         }
 
@@ -63,7 +63,7 @@ namespace Veiled_Kashmir_Admin_Panel
             dr.Read();
             editnametxt.Text = dr[1].ToString();
             editdesctxt.Text = dr[2].ToString();
-            editloctxt.Text = dr[3].ToString();
+            edpbox.BackgroundImage =new Bitmap(dr[3].ToString());
             obj.closeConnection();
         }
 
@@ -96,41 +96,75 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void addfdbtn_Click(object sender, EventArgs e)
         {
-            cmd = "insert into food (`name`, `description`, `location`) values ('" + nametxt.Text + "', '" + desctxt.Text + "', '" + loctxt.Text + "')";
-            obj.nonQuery(cmd);
+            if (nametxtok && desctxtok && status == true)
+            {
+                cmd = "insert into food (`name`, `description`, `location`) values ('" + nametxt.Text + "', '" + desctxt.Text + "', 'C:\\Vkashmir\\food\\" + nametxt.Text + ".jpg')";
+                dpbox.BackgroundImage.Save("C:\\Vkashmir\\food\\" + nametxt.Text + ".jpg");
 
-            MessageBox.Show("New Food item added succesfully!");
-            nametxt.Text = "";
-            desctxt.Text = "";
-            loctxt.Text = "";
-            readfood();
+                obj.nonQuery(cmd);
+
+                MessageBox.Show("New Food item added succesfully!");
+                nametxt.Text = "";
+                desctxt.Text = "";
+                dpbox.BackgroundImage = null;
+                readfood();
+            }
+
+            else
+            {
+                inclbl.Visible = true;
+            }
         }
 
         private void cancelbtn_Click(object sender, EventArgs e)
         {
             nametxt.Text = "";
             desctxt.Text = "";
-            loctxt.Text = "";
+            inclbl.Visible = false;
+            dpbox.BackgroundImage = null;
+
 
         }
 
         private void updatefdbtn_Click(object sender, EventArgs e)
         {
-            cmd = ("update food set `name`='" + editnametxt.Text + "', `description`='" + editdesctxt.Text + "', `pic`='" + editloctxt.Text + "' where `name`='" + foodbox.Text + "';");
-            obj.nonQuery(cmd);
+            if (editnametxt.Text.Contains("'") || editnametxt.Text.Contains("\\"))
+                MessageBox.Show("Name cannot contain ' & \\");
+            else
+            {
+                if (agree.Checked && editnametxtok && editdesctxtok == true)
+                {
+                    if (status == true)
+                    {
+                        cmd = ("update food set `name`='" + editnametxt.Text + "', `description`='" + editdesctxt.Text + "', `pic`='C:\\Vkashmir\\food\\" + editnametxt.Text + ".jpg' where `name`='" + foodbox.Text + "';");
+                        dpbox.BackgroundImage.Save("C:\\Vkashmir\\food\\" + editnametxt.Text + ".jpg");
+                    }
+                    else
+                    {
+                        cmd = ("update food set `name`='" + editnametxt.Text + "', `description`='" + editdesctxt.Text + "' where `name`='" + foodbox.Text + "';");
 
-            MessageBox.Show("Food item updated succesfully!");
-            editnametxt.Text = "";
-            editdesctxt.Text = "";
-            editloctxt.Text = "";
-            readfood();
+                    }
+                    obj.nonQuery(cmd);
+
+                    MessageBox.Show("Food item updated succesfully!");
+                    editnametxt.Text = "";
+                    editdesctxt.Text = "";
+                    edpbox.BackgroundImage = null;
+                    agree.Checked = false;
+                    readfood();
+                }
+                else
+                    inclbl2.Visible = true;
+            }
         }
 
         private void editcancelbtn_Click(object sender, EventArgs e)
         {
             editnametxt.Text = "";
             editdesctxt.Text = "";
-            editloctxt.Text = "";
+            inclbl2.Visible = false;
+            edpbox.BackgroundImage = null;
+            agree.Checked = false;
 
             readfood();
         }
@@ -145,20 +179,26 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void addwordbtn_Click(object sender, EventArgs e)
         {
-            cmd = "insert into dictionary (`keyword`, `meaning`) values ('" + wordtxt.Text + "', '" + meaningtxt.Text + "')";
-            obj.nonQuery(cmd);
+            if (wordtxtok && meaningtxtok == true)
+            {
+                cmd = "insert into dictionary (`keyword`, `meaning`) values ('" + wordtxt.Text + "', '" + meaningtxt.Text + "')";
+                obj.nonQuery(cmd);
 
-            MessageBox.Show("New Word entry added succesfully!");
-            wordtxt.Text = "";
-            meaningtxt.Text = "";
+                MessageBox.Show("New Word entry added succesfully!");
+                wordtxt.Text = "";
+                meaningtxt.Text = "";
 
-            readwords();
+                readwords();
+            }
+            else
+                inclblw.Visible = true;
         }
 
         private void wordcancelbtn_Click(object sender, EventArgs e)
         {
             wordtxt.Text = "";
             meaningtxt.Text = "";
+            inclblw.Visible = false;
 
             readwords();
         }
@@ -169,19 +209,33 @@ namespace Veiled_Kashmir_Admin_Panel
             dr.Read();
             editwordtxt.Text = dr[0].ToString();
             editmeaningtxt.Text = dr[1].ToString();
+            inclblew.Visible = false;
             obj.closeConnection();
         }
 
         private void updatewordbtn_Click(object sender, EventArgs e)
         {
-            cmd = ("update dictionary set `keyword`='" + editwordtxt.Text + "', `meaning`='" + editmeaningtxt.Text + "' where `keyword`='" + wordbox.Text + "'");
-            obj.nonQuery(cmd);
+            if (editwordtxt.Text.Contains("'") || editwordtxt.Text.Contains("\\"))
+                MessageBox.Show("Word cannot contain ' & \\");
+            else
+            {
+                if (wagree.Checked && editwordtxtok && editmeaningtxtok == true)
+                {
 
-            MessageBox.Show("Word entry updated succesfully!");
-            editwordtxt.Text = "";
-            editmeaningtxt.Text = "";
-            
-            readwords();
+                    cmd = ("update dictionary set `keyword`='" + editwordtxt.Text + "', `meaning`='" + editmeaningtxt.Text + "' where `keyword`='" + wordbox.Text + "'");
+                    obj.nonQuery(cmd);
+
+                    MessageBox.Show("Word entry updated succesfully!");
+                    editwordtxt.Text = "";
+                    editmeaningtxt.Text = "";
+                    wagree.Checked = false;
+                    readwords();
+                }
+                else
+                {
+                    inclblew.Visible = true;
+                }
+            }
         }
 
         private void rvmwordbtn_Click(object sender, EventArgs e)
@@ -194,21 +248,27 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void addphrasebtn_Click(object sender, EventArgs e)
         {
-            cmd = "insert into phrases (`phrases`, `meaning`) values ('" + phrasetxt.Text + "', '" + phraseentxt.Text + "')";
-            obj.nonQuery(cmd);
+            if (phrasetxtok && phraseentxtok == true)
+            {
+                cmd = "insert into phrases (`phrases`, `meaning`) values ('" + phrasetxt.Text + "', '" + phraseentxt.Text + "')";
+                obj.nonQuery(cmd);
 
-            MessageBox.Show("New Phrase added succesfully!");
-            phrasetxt.Text = "";
-            phraseentxt.Text = "";
-
-            readphrases();
+                MessageBox.Show("New Phrase added succesfully!");
+                phrasetxt.Text = "";
+                phraseentxt.Text = "";
+                
+                readphrases();
+            }
+            else
+                inclblp.Visible = true;
         }
 
         private void phrasecancelbtn_Click(object sender, EventArgs e)
         {
             phrasetxt.Text = "";
             phraseentxt.Text = "";
-
+            inclblp.Visible = false;
+           
             readphrases();
         }
 
@@ -218,26 +278,148 @@ namespace Veiled_Kashmir_Admin_Panel
             dr.Read();
             editphrasetxt.Text = dr[1].ToString();
             editphraseentxt.Text = dr[2].ToString();
+            inclblep.Visible = false;
             obj.closeConnection();
         }
 
         private void updatephrasebtn_Click(object sender, EventArgs e)
         {
-            cmd = ("update phrases set `phrases`='" + editphrasetxt.Text + "', `meaning`='" + editphraseentxt.Text + "' where `phrases`='" + phrasebox.Text + "'");
-            obj.nonQuery(cmd);
+            if (editphrasetxt.Text.Contains("'") || editphrasetxt.Text.Contains("\\"))
+                MessageBox.Show("Phrase cannot contain ' & \\");
+            else
+            {
+                if (pagree.Checked && editphrasetxtok && editphraseentxtok == true)
+                {
+                    cmd = ("update phrases set `phrases`='" + editphrasetxt.Text + "', `meaning`='" + editphraseentxt.Text + "' where `phrases`='" + phrasebox.Text + "'");
+                    obj.nonQuery(cmd);
 
-            MessageBox.Show("Phrase updated succesfully!");
-            editphrasetxt.Text = "";
-            editphraseentxt.Text = "";
+                    MessageBox.Show("Phrase updated succesfully!");
+                    editphrasetxt.Text = "";
+                    editphraseentxt.Text = "";
+                    pagree.Checked = false;
+                    readphrases();
+                }
+                else
+                {
+                    inclblep.Visible = true;
+                }
+            }
+        }
 
-            readphrases();
+        private void pagree_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (editphrasetxt.Text == "" && editphraseentxt.Text == "")
+            {
+                editphrasetxtok = false;
+                editphraseentxtok = false;
+            }
+            else
+            {
+                editphrasetxtok = true;
+                editphraseentxtok = true;
+            }
+        }
+
+        private void agree_CheckedChanged(object sender, EventArgs e)
+        {
+            if (editnametxt.Text == "" && editdesctxt.Text == "")
+            {
+                editnametxtok = false;
+                editdesctxtok = false;
+            }
+            else
+            {
+                editnametxtok = true;
+                editdesctxtok = true;
+            }
+        }
+
+        private void editwordcancelbtn_Click(object sender, EventArgs e)
+        {
+            editwordtxt.Text = "";
+            editmeaningtxt.Text = "";
+            wagree.Checked = false;
+            inclblew.Visible = false;
+            readwords();
+        }
+
+        private void phrasetxt_Leave(object sender, EventArgs e)
+        {
+            if (phrasetxt.Text == "")
+                phrasetxtok = false;
+            else
+                phrasetxtok = true;
+            if (phrasetxt.Text.Contains("\\") || phrasetxt.Text.Contains("'"))
+            {
+                MessageBox.Show("Phrase cannot contain special characters");
+                phrasetxt.Text = "";
+                phrasetxt.Focus();
+            }
+        }
+
+        private void phraseentxt_Leave(object sender, EventArgs e)
+        {
+            if (phraseentxt.Text == "")
+                phraseentxtok = false;
+            else
+                phraseentxtok = true;
+        }
+
+        private void edpbox_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                s = openFileDialog1.FileName;
+                Image myimage = new Bitmap(s);
+                dpbox.BackgroundImage = myimage;
+                dpbox.BackgroundImageLayout = ImageLayout.Stretch;
+                status = true;
+
+            }
+        }
+
+        private void wagree_CheckedChanged(object sender, EventArgs e)
+        {
+            if (editwordtxt.Text == "" && editmeaningtxt.Text == "")
+            {
+                editwordtxtok = false;
+                editmeaningtxtok = false;
+            }
+            else
+            {
+                editwordtxtok = true;
+                editmeaningtxtok = true;
+            }
+        }
+
+        private void wordtxt_Leave(object sender, EventArgs e)
+        {
+            if (wordtxt.Text == "")
+                wordtxtok = false;
+            else
+                wordtxtok = true;
+            if (wordtxt.Text.Contains("\\") || wordtxt.Text.Contains("'"))
+            {
+                MessageBox.Show("Word cannot contain special characters");
+                wordtxt.Text = "";
+                wordtxt.Focus();
+            }
+        }
+
+        private void meaningtxt_Leave(object sender, EventArgs e)
+        {
+            if (meaningtxt.Text == "")
+                meaningtxtok = false;
+            else
+                meaningtxtok = true;
         }
 
         private void editphrasecancelbtn_Click(object sender, EventArgs e)
         {
             editphrasetxt.Text = "";
             editphraseentxt.Text = "";
-
+            pagree.Checked = false;
             readphrases();
         }
 
@@ -247,6 +429,41 @@ namespace Veiled_Kashmir_Admin_Panel
             obj.nonQuery(cmd);
             MessageBox.Show("selected Phrase removed sucessfully.");
             readphrases();
+        }
+
+        private void nametxt_Leave(object sender, EventArgs e)
+        {
+            if (nametxt.Text == "")
+                nametxtok = false;
+            else
+                nametxtok = true;
+            if (nametxt.Text.Contains("\\") || nametxt.Text.Contains("'"))
+            {
+                MessageBox.Show("Name cannot contain special characters");
+                nametxt.Text = "";
+                nametxt.Focus();
+            }
+        }
+
+        private void desctxt_Leave(object sender, EventArgs e)
+        {
+            if (desctxt.Text == "")
+                desctxtok = false;
+            else
+                desctxtok = true;
+        }
+
+        private void dpbox_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                s = openFileDialog1.FileName;
+                Image myimage = new Bitmap(s);
+                dpbox.BackgroundImage = myimage;
+                dpbox.BackgroundImageLayout = ImageLayout.Stretch;
+                status = true;
+
+            }
         }
 
         private void culture_Load(object sender, EventArgs e)

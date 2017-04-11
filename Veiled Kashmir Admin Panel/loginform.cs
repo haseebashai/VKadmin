@@ -118,6 +118,10 @@ namespace Veiled_Kashmir_Admin_Panel
             }
         }
 
-       
+        private void forgotbtn_Click(object sender, EventArgs e)
+        {
+            forgotpwd fp = new forgotpwd();
+            fp.ShowDialog();
+        }
     }   
 }

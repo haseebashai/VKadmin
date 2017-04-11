@@ -21,6 +21,9 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void mainform_Load(object sender, EventArgs e)
         {
+            if (userinfo.loggedin == true)
+                signout();
+                changelabel("Welcome, " + userinfo.username +"");
 
         }
 
@@ -140,5 +143,59 @@ namespace Veiled_Kashmir_Admin_Panel
             signoutlbl.Cursor = Cursors.Hand;
         }
 
+        private void addadminbtn_Click(object sender, EventArgs e)
+        {
+            admin add = new admin(hp,this);
+            add.TopLevel = false;
+            hp.mainpnl.Controls.Clear();
+            hp.mainpnl.Controls.Add(add);
+            add.addpnl.Visible = true;
+            add.Show();
+        }
+
+        private void rvmadminbtn_Click(object sender, EventArgs e)
+        {
+            admin rvm = new admin(hp,this);
+            rvm.TopLevel = false;
+            hp.mainpnl.Controls.Clear();
+            hp.mainpnl.Controls.Add(rvm);
+            rvm.rvmpnl.Visible = true;
+            rvm.readadmins();
+            rvm.Show();
+        }
+
+        private void rvmuserbtn_Click(object sender, EventArgs e)
+        {
+            admin rvmuser = new admin(hp, this);
+            rvmuser.TopLevel = false;
+            hp.mainpnl.Controls.Clear();
+            hp.mainpnl.Controls.Add(rvmuser);
+            rvmuser.userpnl.Visible = true;
+            rvmuser.readusers();
+            rvmuser.Show();
+        }
+
+        private void sendmsgbtn_Click(object sender, EventArgs e)
+        {
+            notification nt = new notification(this,hp);
+            nt.TopLevel = false;
+            hp.mainpnl.Controls.Clear();
+            hp.mainpnl.Controls.Add(nt);
+            nt.Show();
+
+        }
+
+        private void logo_Click(object sender, EventArgs e)
+        {
+            AboutBox ab = new AboutBox();
+            ab.ShowDialog();
+        }
+
+        private void materialLabel1_Click(object sender, EventArgs e)
+        {
+
+            AboutBox ab = new AboutBox();
+            ab.ShowDialog();
+        }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace Veiled_Kashmir_Admin_Panel
 {
@@ -95,27 +96,42 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void adddeptbtn_Click(object sender, EventArgs e)
         {
-            cmd = "insert into contacts (`name`) values ('" + deptnametxt.Text + "')";
-            obj.nonQuery(cmd);
+            if (deptnametxt.Text != "")
+            {
+                cmd = "insert into contacts (`name`) values ('" + deptnametxt.Text + "')";
+                obj.nonQuery(cmd);
 
-            MessageBox.Show("New Department added succesfully!");
-            deptnametxt.Text = "";
-            readcontacts();
+                MessageBox.Show("New Department added succesfully!");
+                deptnametxt.Text = "";
+                readcontacts();
+            }
+            else
+                inclbld.Visible = true;
         }
 
         private void updatedeptbtn_Click(object sender, EventArgs e)
         {
-            cmd = ("update contacts set `name`='" + editdepttxt.Text + "' where `name`='" + deptbox.Text + "'");
-            obj.nonQuery(cmd);
-            MessageBox.Show("Details updated for the selected department.");
-            editdepttxt.Text = "";
-            readcontacts();
+            if (editdepttxt.Text.Contains("'") || editdepttxt.Text.Contains("\\"))
+                MessageBox.Show("Name cannot contain ' & \\");
+            else
+            {
+                if (editdepttxt.Text != "")
+                {
+                    cmd = ("update contacts set `name`='" + editdepttxt.Text + "' where `name`='" + deptbox.Text + "'");
+                    obj.nonQuery(cmd);
+                    MessageBox.Show("Details updated for the selected department.");
+                    editdepttxt.Text = "";
+                    readcontacts();
+                }
+                else
+                    inclbled.Visible = true;
+            }
         }
 
         private void editdeptcancelbtn_Click(object sender, EventArgs e)
         {
             editdepttxt.Text = "";
-            
+            inclbled.Visible = false;
         }
 
         private void rvmdeptbtn_Click(object sender, EventArgs e)
@@ -132,6 +148,7 @@ namespace Veiled_Kashmir_Admin_Panel
             dr.Read();
 
             deptlbl.Text = dr[0].ToString();
+            inclblec.Visible = false;
             
             obj.closeConnection();
 
@@ -153,32 +170,86 @@ namespace Veiled_Kashmir_Admin_Panel
             officenumbertxt.Text = dr4[2].ToString();
             dptlbl.Text = dr4[0].ToString();
             dptlbl.Visible = true;
+            inclblec.Visible = false;
             obj.closeConnection();
         }
 
         private void updateoffbtn_Click(object sender, EventArgs e)
         {
-
-            cmd = ("update contactdetails set `id`='"+ dptlbl.Text + "', `name`='" + officenametxt.Text + "', `phonenumber`='" + officenumbertxt.Text + "' where `name`='" + officebox.Text + "'");
-            obj.nonQuery(cmd);
-            MessageBox.Show("Details updated for the selected office.");
-            officenametxt.Text = "";
-            officenumbertxt.Text = "";
-            dptlbl.Visible = false;
-            readcontacts();
+            if (officenametxt.Text.Contains("'") || officenametxt.Text.Contains("\\"))
+                MessageBox.Show("Name cannot contain ' & \\");
+            else
+            {
+                if (officenametxt.Text != "" && officenumbertxt.Text != "")
+                {
+                    cmd = ("update contactdetails set `id`='" + dptlbl.Text + "', `name`='" + officenametxt.Text + "', `phonenumber`='" + officenumbertxt.Text + "' where `name`='" + officebox.Text + "'");
+                    obj.nonQuery(cmd);
+                    MessageBox.Show("Details updated for the selected office.");
+                    officenametxt.Text = "";
+                    officenumbertxt.Text = "";
+                    dptlbl.Visible = false;
+                    readcontacts();
+                }
+                else
+                    inclblec.Visible = false;
+            }
         }
 
         private void updatecancelbtn_Click(object sender, EventArgs e)
         {
             officenametxt.Text = "";
             officenumbertxt.Text = "";
+            inclblec.Visible = false;
             dptlbl.Visible = false;
+            phnelbl.Visible = false;
             
         }
 
         private void deptcancelbtn_Click(object sender, EventArgs e)
         {
             deptnametxt.Text = "";
+            inclbld.Visible = false;
+        }
+
+        private void editnumbertxt_Leave(object sender, EventArgs e)
+        {
+            if (!Regex.IsMatch(editnumbertxt.Text, @"^[0-9]{10}$"))
+            {
+                
+                phnlbl.Visible = true;
+                editnumbertxt.Text = "";
+            }
+        }
+
+        private void officenumbertxt_Leave(object sender, EventArgs e)
+        {
+
+            if (!Regex.IsMatch(officenumbertxt.Text, @"^[0-9]{10}$"))
+            {
+
+                phnelbl.Visible = true;
+                officenumbertxt.Text = "";
+            }
+        }
+
+        private void deptnametxt_Leave(object sender, EventArgs e)
+        {
+            if (deptnametxt.Text.Contains("\\") || deptnametxt.Text.Contains("'"))
+            {
+                MessageBox.Show("Name cannot contain special characters");
+                deptnametxt.Text = "";
+                deptnametxt.Focus();
+            }
+        }
+
+        private void editnametxt_Leave(object sender, EventArgs e)
+        {
+            if (editnametxt.Text.Contains("\\") || editnametxt.Text.Contains("'"))
+            {
+                MessageBox.Show("Name cannot contain special characters");
+                editnametxt.Text = "";
+                editnametxt.Focus();
+            }
         }
 
         private void rvmsofficebtn_Click(object sender, EventArgs e)
@@ -194,18 +265,26 @@ namespace Veiled_Kashmir_Admin_Panel
         {
             editnametxt.Text = "";
             editnumbertxt.Text = "";
+            inclblc.Visible = false;
+            phnlbl.Visible = false;
         }
 
         private void addoffbtn_Click(object sender, EventArgs e)
         {
-            cmd = "insert into contactdetails (`id`, `name`, `phonenumber`) values ('"+ deptlbl.Text + "', '" + editnametxt.Text + "', '" + editnumbertxt.Text + "')";
-            obj.nonQuery(cmd);
+            if (editnametxt.Text != "" && editnumbertxt.Text != "")
+            {
+                cmd = "insert into contactdetails (`id`, `name`, `phonenumber`) values ('" + deptlbl.Text + "', '" + editnametxt.Text + "', '" + editnumbertxt.Text + "')";
+                obj.nonQuery(cmd);
 
-            MessageBox.Show("New Office added succesfully!");
-            editnametxt.Text = "";
-            editnumbertxt.Text = "";
-            readoffices();
+                MessageBox.Show("New Office added succesfully!");
+                editnametxt.Text = "";
+                editnumbertxt.Text = "";
+                readoffices();
+            }
+            else
+                inclblc.Visible = true;
         }
+
 
         
 
@@ -215,6 +294,7 @@ namespace Veiled_Kashmir_Admin_Panel
             dr5.Read();
             editdepttxt.Text = dr5[1].ToString();
             obj.closeConnection();
+            inclbled.Visible = false;
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Veiled_Kashmir_Admin_Panel
     {
         DBConnect obj = new DBConnect();
         String cmd;
-
+        bool nametxtok, desctxtok, editnametxtok, editdesctxtok;
         MySqlDataReader dr;
         private Homepage hp = null;
         public research(Form hpcopy)
@@ -46,6 +46,7 @@ namespace Veiled_Kashmir_Admin_Panel
             obj.nonQuery(cmd);
             MessageBox.Show("selected Research entry removed sucessfully.");
             readresearch();
+            ragree.Checked = false;
         }
 
         private void back_Click(object sender, EventArgs e)
@@ -64,21 +65,26 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void addresbtn_Click(object sender, EventArgs e)
         {
-            cmd = "insert into research (`name`, `description`) values ('" + nametxt.Text + "', '" + desctxt.Text + "')";
-            obj.nonQuery(cmd);
+            if (nametxtok && desctxtok == true)
+            {
+                cmd = "insert into research (`name`, `description`) values ('" + nametxt.Text + "', '" + desctxt.Text + "')";
+                obj.nonQuery(cmd);
 
-            MessageBox.Show("New Research entry added succesfully!");
-            nametxt.Text = "";
-            desctxt.Text = "";
-            
-            readresearch();
+                MessageBox.Show("New Research entry added succesfully!");
+                nametxt.Text = "";
+                desctxt.Text = "";
+
+                readresearch();
+            }
+            else
+                inclblr.Visible = true;
         }
 
         private void cancelbtn_Click(object sender, EventArgs e)
         {
             nametxt.Text = "";
             desctxt.Text = "";
-
+            inclblr.Visible = false;
             readresearch();
         }
 
@@ -88,27 +94,78 @@ namespace Veiled_Kashmir_Admin_Panel
             dr.Read();
             editnametxt.Text = dr[1].ToString();
             editdesctxt.Text = dr[2].ToString();
+            inclbler.Visible = false;
             obj.closeConnection();
         }
 
         private void updateresbtn_Click(object sender, EventArgs e)
         {
-            cmd = ("update research set `name`='" + editnametxt.Text + "', `description`='" + editdesctxt.Text + "' where `name`='" + resbox.Text + "'");
-            obj.nonQuery(cmd);
+            if (editnametxt.Text.Contains("'") || editnametxt.Text.Contains("\\"))
+                MessageBox.Show("Topic cannot contain ' & \\");
+            else
+            {
 
-            MessageBox.Show("Research entry updated succesfully!");
-            editnametxt.Text = "";
-            editdesctxt.Text = "";
-            
-            readresearch();
+                if (ragree.Checked && editnametxtok && editdesctxtok == true)
+                {
+                    cmd = ("update research set `name`='" + editnametxt.Text + "', `description`='" + editdesctxt.Text + "' where `name`='" + resbox.Text + "'");
+                    obj.nonQuery(cmd);
+
+                    MessageBox.Show("Research entry updated succesfully!");
+                    editnametxt.Text = "";
+                    editdesctxt.Text = "";
+                    ragree.Checked = false;
+                    readresearch();
+                }
+                else
+                {
+                    inclbler.Visible = true;
+                }
+            }
         }
 
         private void editcancelbtn_Click(object sender, EventArgs e)
         {
             editnametxt.Text = "";
             editdesctxt.Text = "";
-
+            inclbler.Visible = false;
+            ragree.Checked = false;
             readresearch();
+        }
+
+        private void nametxt_Leave(object sender, EventArgs e)
+        {
+            if (nametxt.Text == "")
+                nametxtok = false;
+            else
+                nametxtok = true;
+            if (nametxt.Text.Contains("\\") || nametxt.Text.Contains("'"))
+            {
+                MessageBox.Show("Name cannot contain special characters");
+                nametxt.Text = "";
+                nametxt.Focus();
+            }
+        }
+
+        private void ragree_CheckedChanged(object sender, EventArgs e)
+        {
+            if (editnametxt.Text == "" && editdesctxt.Text == "")
+            {
+                editnametxtok = false;
+                editdesctxtok = false;
+            }
+            else
+            {
+                editnametxtok = true;
+                editdesctxtok = true;
+            }
+        }
+
+        private void desctxt_Leave(object sender, EventArgs e)
+        {
+            if (desctxt.Text == "")
+                desctxtok = false;
+            else
+                desctxtok = true;
         }
     }
 }

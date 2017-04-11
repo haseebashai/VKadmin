@@ -73,6 +73,16 @@ namespace Veiled_Kashmir_Admin_Panel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap culture2 {
+            get {
+                object obj = ResourceManager.GetObject("culture2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap diminish {
             get {
                 object obj = ResourceManager.GetObject("diminish", resourceCulture);
@@ -93,6 +103,36 @@ namespace Veiled_Kashmir_Admin_Panel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap map {
+            get {
+                object obj = ResourceManager.GetObject("map", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reindeer {
+            get {
+                object obj = ResourceManager.GetObject("reindeer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tick {
+            get {
+                object obj = ResourceManager.GetObject("tick", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap turn_on {
             get {
                 object obj = ResourceManager.GetObject("turn-on", resourceCulture);
@@ -106,6 +146,16 @@ namespace Veiled_Kashmir_Admin_Panel.Properties {
         internal static System.Drawing.Bitmap user_20 {
             get {
                 object obj = ResourceManager.GetObject("user-20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap video_chat {
+            get {
+                object obj = ResourceManager.GetObject("video-chat", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

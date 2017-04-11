@@ -66,7 +66,7 @@
             // 
             this.inclbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inclbl.ForeColor = System.Drawing.Color.Red;
-            this.inclbl.Location = new System.Drawing.Point(752, 346);
+            this.inclbl.Location = new System.Drawing.Point(569, 460);
             this.inclbl.Name = "inclbl";
             this.inclbl.Size = new System.Drawing.Size(122, 13);
             this.inclbl.TabIndex = 121;
@@ -79,7 +79,7 @@
             this.usrlbl.AutoSize = true;
             this.usrlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usrlbl.ForeColor = System.Drawing.Color.Gray;
-            this.usrlbl.Location = new System.Drawing.Point(293, 171);
+            this.usrlbl.Location = new System.Drawing.Point(436, 187);
             this.usrlbl.Name = "usrlbl";
             this.usrlbl.Size = new System.Drawing.Size(85, 13);
             this.usrlbl.TabIndex = 120;
@@ -88,7 +88,7 @@
             // cancelbtn
             // 
             this.cancelbtn.Depth = 0;
-            this.cancelbtn.Location = new System.Drawing.Point(655, 362);
+            this.cancelbtn.Location = new System.Drawing.Point(472, 479);
             this.cancelbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Primary = true;
@@ -101,7 +101,7 @@
             // updatebtn
             // 
             this.updatebtn.Depth = 0;
-            this.updatebtn.Location = new System.Drawing.Point(755, 362);
+            this.updatebtn.Location = new System.Drawing.Point(572, 479);
             this.updatebtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.updatebtn.Name = "updatebtn";
             this.updatebtn.Primary = true;
@@ -115,7 +115,7 @@
             // 
             this.dlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dlbl.ForeColor = System.Drawing.Color.Red;
-            this.dlbl.Location = new System.Drawing.Point(716, 288);
+            this.dlbl.Location = new System.Drawing.Point(477, 422);
             this.dlbl.Name = "dlbl";
             this.dlbl.Size = new System.Drawing.Size(122, 13);
             this.dlbl.TabIndex = 116;
@@ -127,7 +127,7 @@
             // 
             this.plbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plbl.ForeColor = System.Drawing.Color.Red;
-            this.plbl.Location = new System.Drawing.Point(268, 283);
+            this.plbl.Location = new System.Drawing.Point(411, 370);
             this.plbl.Name = "plbl";
             this.plbl.Size = new System.Drawing.Size(192, 14);
             this.plbl.TabIndex = 115;
@@ -139,7 +139,7 @@
             // 
             this.confirmlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmlbl.ForeColor = System.Drawing.Color.Red;
-            this.confirmlbl.Location = new System.Drawing.Point(688, 232);
+            this.confirmlbl.Location = new System.Drawing.Point(447, 329);
             this.confirmlbl.Name = "confirmlbl";
             this.confirmlbl.Size = new System.Drawing.Size(152, 12);
             this.confirmlbl.TabIndex = 113;
@@ -151,7 +151,7 @@
             // 
             this.elbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.elbl.ForeColor = System.Drawing.Color.Red;
-            this.elbl.Location = new System.Drawing.Point(708, 185);
+            this.elbl.Location = new System.Drawing.Point(465, 241);
             this.elbl.Name = "elbl";
             this.elbl.Size = new System.Drawing.Size(222, 10);
             this.elbl.TabIndex = 112;
@@ -163,7 +163,7 @@
             // 
             this.confirmtxt.Depth = 0;
             this.confirmtxt.Hint = "";
-            this.confirmtxt.Location = new System.Drawing.Point(679, 210);
+            this.confirmtxt.Location = new System.Drawing.Point(438, 306);
             this.confirmtxt.MouseState = MaterialSkin.MouseState.HOVER;
             this.confirmtxt.Name = "confirmtxt";
             this.confirmtxt.PasswordChar = '*';
@@ -181,12 +181,12 @@
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel4.Location = new System.Drawing.Point(602, 214);
+            this.materialLabel4.Location = new System.Drawing.Point(289, 310);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(54, 19);
+            this.materialLabel4.Size = new System.Drawing.Size(124, 19);
             this.materialLabel4.TabIndex = 93;
-            this.materialLabel4.Text = "Retype";
+            this.materialLabel4.Text = "Retype Password";
             // 
             // materialLabel3
             // 
@@ -194,7 +194,7 @@
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(781, 266);
+            this.materialLabel3.Location = new System.Drawing.Point(542, 400);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(15, 19);
@@ -207,7 +207,7 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(738, 266);
+            this.materialLabel2.Location = new System.Drawing.Point(499, 400);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(15, 19);
@@ -219,7 +219,7 @@
             this.yeartxt.Depth = 0;
             this.yeartxt.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.yeartxt.Hint = "";
-            this.yeartxt.Location = new System.Drawing.Point(796, 265);
+            this.yeartxt.Location = new System.Drawing.Point(557, 399);
             this.yeartxt.MouseState = MaterialSkin.MouseState.HOVER;
             this.yeartxt.Name = "yeartxt";
             this.yeartxt.PasswordChar = '\0';
@@ -237,7 +237,7 @@
             this.montxt.Depth = 0;
             this.montxt.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.montxt.Hint = "";
-            this.montxt.Location = new System.Drawing.Point(754, 265);
+            this.montxt.Location = new System.Drawing.Point(515, 399);
             this.montxt.MouseState = MaterialSkin.MouseState.HOVER;
             this.montxt.Name = "montxt";
             this.montxt.PasswordChar = '\0';
@@ -256,7 +256,7 @@
             this.daytxt.Depth = 0;
             this.daytxt.ForeColor = System.Drawing.Color.Black;
             this.daytxt.Hint = "";
-            this.daytxt.Location = new System.Drawing.Point(714, 265);
+            this.daytxt.Location = new System.Drawing.Point(475, 399);
             this.daytxt.MouseState = MaterialSkin.MouseState.HOVER;
             this.daytxt.Name = "daytxt";
             this.daytxt.PasswordChar = '\0';
@@ -275,7 +275,7 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(618, 266);
+            this.materialLabel1.Location = new System.Drawing.Point(379, 400);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(38, 19);
@@ -287,7 +287,7 @@
             this.phonetxt.Depth = 0;
             this.phonetxt.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.phonetxt.Hint = "";
-            this.phonetxt.Location = new System.Drawing.Point(293, 261);
+            this.phonetxt.Location = new System.Drawing.Point(436, 348);
             this.phonetxt.MouseState = MaterialSkin.MouseState.HOVER;
             this.phonetxt.Name = "phonetxt";
             this.phonetxt.PasswordChar = '\0';
@@ -305,7 +305,7 @@
             this.phonelbl.Depth = 0;
             this.phonelbl.Font = new System.Drawing.Font("Roboto", 11F);
             this.phonelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.phonelbl.Location = new System.Drawing.Point(167, 264);
+            this.phonelbl.Location = new System.Drawing.Point(310, 351);
             this.phonelbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.phonelbl.Name = "phonelbl";
             this.phonelbl.Size = new System.Drawing.Size(108, 19);
@@ -316,7 +316,7 @@
             // 
             this.pwdtxt.Depth = 0;
             this.pwdtxt.Hint = "";
-            this.pwdtxt.Location = new System.Drawing.Point(294, 210);
+            this.pwdtxt.Location = new System.Drawing.Point(437, 263);
             this.pwdtxt.MouseState = MaterialSkin.MouseState.HOVER;
             this.pwdtxt.Name = "pwdtxt";
             this.pwdtxt.PasswordChar = '*';
@@ -332,7 +332,7 @@
             // 
             this.emailtxt.Depth = 0;
             this.emailtxt.Hint = "";
-            this.emailtxt.Location = new System.Drawing.Point(679, 163);
+            this.emailtxt.Location = new System.Drawing.Point(436, 219);
             this.emailtxt.MouseState = MaterialSkin.MouseState.HOVER;
             this.emailtxt.Name = "emailtxt";
             this.emailtxt.PasswordChar = '\0';
@@ -348,7 +348,7 @@
             // 
             this.lnametxt.Depth = 0;
             this.lnametxt.Hint = "";
-            this.lnametxt.Location = new System.Drawing.Point(679, 120);
+            this.lnametxt.Location = new System.Drawing.Point(436, 136);
             this.lnametxt.MouseState = MaterialSkin.MouseState.HOVER;
             this.lnametxt.Name = "lnametxt";
             this.lnametxt.PasswordChar = '\0';
@@ -366,7 +366,7 @@
             this.pwdlbl.Depth = 0;
             this.pwdlbl.Font = new System.Drawing.Font("Roboto", 11F);
             this.pwdlbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.pwdlbl.Location = new System.Drawing.Point(198, 214);
+            this.pwdlbl.Location = new System.Drawing.Point(341, 267);
             this.pwdlbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.pwdlbl.Name = "pwdlbl";
             this.pwdlbl.Size = new System.Drawing.Size(75, 19);
@@ -379,7 +379,7 @@
             this.emaillbl.Depth = 0;
             this.emaillbl.Font = new System.Drawing.Font("Roboto", 11F);
             this.emaillbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.emaillbl.Location = new System.Drawing.Point(591, 167);
+            this.emaillbl.Location = new System.Drawing.Point(348, 223);
             this.emaillbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.emaillbl.Name = "emaillbl";
             this.emaillbl.Size = new System.Drawing.Size(65, 19);
@@ -392,7 +392,7 @@
             this.usernamelbl.Depth = 0;
             this.usernamelbl.Font = new System.Drawing.Font("Roboto", 11F);
             this.usernamelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.usernamelbl.Location = new System.Drawing.Point(196, 167);
+            this.usernamelbl.Location = new System.Drawing.Point(339, 183);
             this.usernamelbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.usernamelbl.Name = "usernamelbl";
             this.usernamelbl.Size = new System.Drawing.Size(77, 19);
@@ -405,7 +405,7 @@
             this.lnamelbl.Depth = 0;
             this.lnamelbl.Font = new System.Drawing.Font("Roboto", 11F);
             this.lnamelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lnamelbl.Location = new System.Drawing.Point(575, 125);
+            this.lnamelbl.Location = new System.Drawing.Point(332, 141);
             this.lnamelbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.lnamelbl.Name = "lnamelbl";
             this.lnamelbl.Size = new System.Drawing.Size(82, 19);
@@ -416,7 +416,7 @@
             // 
             this.fnametxt.Depth = 0;
             this.fnametxt.Hint = "";
-            this.fnametxt.Location = new System.Drawing.Point(294, 120);
+            this.fnametxt.Location = new System.Drawing.Point(438, 95);
             this.fnametxt.MouseState = MaterialSkin.MouseState.HOVER;
             this.fnametxt.Name = "fnametxt";
             this.fnametxt.PasswordChar = '\0';
@@ -434,7 +434,7 @@
             this.fnamelbl.Depth = 0;
             this.fnamelbl.Font = new System.Drawing.Font("Roboto", 11F);
             this.fnamelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.fnamelbl.Location = new System.Drawing.Point(191, 124);
+            this.fnamelbl.Location = new System.Drawing.Point(335, 99);
             this.fnamelbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.fnamelbl.Name = "fnamelbl";
             this.fnamelbl.Size = new System.Drawing.Size(83, 19);
@@ -446,7 +446,7 @@
             this.llbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llbl.ForeColor = System.Drawing.Color.Red;
             this.llbl.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.llbl.Location = new System.Drawing.Point(752, 138);
+            this.llbl.Location = new System.Drawing.Point(509, 154);
             this.llbl.Name = "llbl";
             this.llbl.Size = new System.Drawing.Size(180, 22);
             this.llbl.TabIndex = 111;
@@ -458,7 +458,7 @@
             // 
             this.flbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flbl.ForeColor = System.Drawing.Color.Red;
-            this.flbl.Location = new System.Drawing.Point(369, 139);
+            this.flbl.Location = new System.Drawing.Point(513, 114);
             this.flbl.Name = "flbl";
             this.flbl.Size = new System.Drawing.Size(182, 19);
             this.flbl.TabIndex = 110;
@@ -470,7 +470,7 @@
             // 
             this.passlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passlbl.ForeColor = System.Drawing.Color.Red;
-            this.passlbl.Location = new System.Drawing.Point(296, 227);
+            this.passlbl.Location = new System.Drawing.Point(439, 280);
             this.passlbl.Name = "passlbl";
             this.passlbl.Size = new System.Drawing.Size(166, 25);
             this.passlbl.TabIndex = 114;

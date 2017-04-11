@@ -14,9 +14,9 @@ namespace Veiled_Kashmir_Admin_Panel
     public partial class destinations : Form
     {
         DBConnect obj = new DBConnect();
-        String cmd;
+        String cmd,s;
         int exp;
-
+        bool status, nametxtok, desctxtok, chkok, editnametxtok, editdesctxtok, chkok2, status2;
         MySqlDataReader dr;
 
         private Homepage hp = null;
@@ -42,36 +42,52 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void addplbtn_Click(object sender, EventArgs e)
         {
-            cmd= "insert into places (`name`, `description`, `location`, `explored`) values ('"+nametxt.Text+"', '"+desctxt.Text+"', '"+loctxt.Text+"', '"+exp+"')";
-            obj.nonQuery(cmd);
-            
-            MessageBox.Show("New Place added succesfully!");
-            nametxt.Text = "";
-            desctxt.Text = "";
-            loctxt.Text = "";
-            exbtn.Checked = false;
-            unexbtn.Checked = false;
+            if (nametxtok && desctxtok && chkok && status == true)
+            {
+    
+                cmd = "insert into places (`name`, `description`, `location`, `explored`) values ('" + nametxt.Text + "', '" + desctxt.Text + "', 'C:\\Vkashmir\\places\\"+nametxt.Text+ ".jpg', '" + exp + "')";
+                dpbox.BackgroundImage.Save("C:\\Vkashmir\\places\\" + nametxt.Text + ".jpg");
+                obj.nonQuery(cmd);
+                
+
+                MessageBox.Show("New Place added succesfully!");
+                nametxt.Text = "";
+                desctxt.Text = "";
+                exbtn.Checked = false;
+                unexbtn.Checked = false;
+                inclbl.Visible = false;
+                dpbox.BackgroundImage = null;
+            }
+            else
+            {
+                inclbl.Visible = true;
+            }
 
         }
 
         private void exbtn_CheckedChanged(object sender, EventArgs e)
         {
             if (exbtn.Checked)
+            {
                 exp = 1;
+                chkok = true;
+            }
+            else
+                chkok = false;
         }
 
         private void unexbtn_CheckedChanged(object sender, EventArgs e)
         {
             if (unexbtn.Checked)
+            {
                 exp = 0;
+                chkok = true;
+            }
+            else
+                chkok = false;
         }
-
-        private void editbtn_Click(object sender, EventArgs e)
+        private void readplaces()
         {
-            addpnl.Visible = false;
-            editpnl.Visible = true;
-            removepnl.Visible = false;
-            
             dr = obj.Query("select name from places");
             DataTable dt = new DataTable();
             dt.Columns.Add("name", typeof(String));
@@ -79,6 +95,16 @@ namespace Veiled_Kashmir_Admin_Panel
             obj.closeConnection();
             selectbox.DisplayMember = "name";
             selectbox.DataSource = dt;
+            
+        }
+
+        private void editbtn_Click(object sender, EventArgs e)
+        {
+            addpnl.Visible = false;
+            editpnl.Visible = true;
+            removepnl.Visible = false;
+
+            readplaces();
             
 
            
@@ -91,12 +117,8 @@ namespace Veiled_Kashmir_Admin_Panel
             addpnl.Visible = true;
         }
 
-        private void removebtn_Click(object sender, EventArgs e)
+        private void readplaces2()
         {
-            editpnl.Visible = false;
-            addpnl.Visible = false;
-            removepnl.Visible = true;
-
             dr = obj.Query("select name from places");
             DataTable dt = new DataTable();
             dt.Columns.Add("name", typeof(String));
@@ -104,8 +126,16 @@ namespace Veiled_Kashmir_Admin_Panel
             obj.closeConnection();
             selectbox2.DisplayMember = "name";
             selectbox2.DataSource = dt;
+        }
+        private void removebtn_Click(object sender, EventArgs e)
+        {
+            editpnl.Visible = false;
+            addpnl.Visible = false;
+            removepnl.Visible = true;
 
-            obj.closeConnection();
+            readplaces2();
+
+            
 
         }
 
@@ -113,7 +143,7 @@ namespace Veiled_Kashmir_Admin_Panel
         {
             nametxt.Text = "";
             desctxt.Text = "";
-            loctxt.Text = "";
+            dpbox.BackgroundImage = null;
             exbtn.Checked = false;
             unexbtn.Checked = false;
 
@@ -127,13 +157,18 @@ namespace Veiled_Kashmir_Admin_Panel
             editpanel.Visible = true;
                 editnametxt.Text = dr[1].ToString();
                 editdesctxt.Text = dr[2].ToString();
-                editimgtxt.Text = dr[3].ToString();
+                edpbox.BackgroundImage = new Bitmap(dr[3].ToString());
                 exp = Convert.ToInt32(dr[4]);
-                if (exp == 1)
-                    exbtn.Checked = true;
-                else
-                    unexbtn.Checked = true;
-                
+            if (exp == 1)
+            {
+                exbtn1.Checked = true;
+                unexbtn1.Checked = false;
+            }
+            else
+            {
+                unexbtn1.Checked = true;
+                exbtn1.Checked = false;
+            }
 
             
             obj.closeConnection(); 
@@ -141,23 +176,142 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void updatebtn_Click(object sender, EventArgs e)
         {
-            cmd = ("update places set `name`='"+editnametxt.Text+"', `description`='"+editdesctxt.Text+"', `location`='"+editimgtxt.Text+"', `explored`='"+exp+"' where `name`='"+selectbox.Text+"';");
-            obj.nonQuery(cmd);
-            MessageBox.Show("Details updated for the selected place.");
-            editnametxt.Text = "";
-            editdesctxt.Text = "";
-            editimgtxt.Text = "";
-            exbtn.Checked = false;
-            unexbtn.Checked = false;
+            if (editnametxt.Text.Contains("'") || editnametxt.Text.Contains("\\"))
+                MessageBox.Show("Name cannot contacin ' & \\");
+            else
+            {
+                if (agree.Checked && editnametxtok && editdesctxtok && chkok2 == true)
+                {
+                    if (status2 == true)
+                    {
+                        cmd = ("update places set `name`='" + editnametxt.Text + "', `description`='" + editdesctxt.Text + "', `location`='C:\\Vkashmir\\places\\" + editnametxt.Text + ".jpg', `explored`='" + exp + "' where `name`='" + selectbox.Text + "';");
+                        edpbox.BackgroundImage.Save("C:\\Vkashmir\\places\\" + editnametxt.Text + ".jpg");
+
+                    }
+                    else
+                    {
+                        StringBuilder s, s1;
+                        s = new StringBuilder(editnametxt.Text);
+                        s.Replace("'", "\\'");
+                        s1 = new StringBuilder(editdesctxt.Text);
+                        s.Replace("'", "\\'");
+                        cmd = ("update places set `name`='" + editnametxt.Text + "', `description`='" + editdesctxt.Text + "', `explored`='" + exp + "' where `name`='" + selectbox.Text + "';");
+                    }
+
+                    MessageBox.Show("Details updated for the selected place.");
+                    editnametxt.Text = "";
+                    editdesctxt.Text = "";
+                    exbtn1.Checked = false;
+                    unexbtn1.Checked = false;
+                    inclbl2.Visible = false;
+                    edpbox.BackgroundImage = null;
+                    agree.Checked = false;
+                    obj.nonQuery(cmd);
+                }
+                else
+                {
+                    inclbl2.Visible = true;
+                }
+
+            }
+        }
+
+        
+
+        private void exbtn1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (exbtn1.Checked)
+            {
+                exp = 1;
+                chkok2 = true;
+            }
+            else
+                chkok2 = false;
+        }
+
+        private void unexbtn1_CheckedChanged(object sender, EventArgs e)
+        {
+
+           if (unexbtn1.Checked)
+           {
+                 exp = 0;
+                 chkok2 = true;
+           }
+           else
+                 chkok2 = false;
+        }
+
+        private void agree_CheckedChanged(object sender, EventArgs e)
+        {
+            if (editnametxt.Text == "" && editdesctxt.Text == "")
+            {
+                editnametxtok = false;
+                editdesctxtok = false;
+            }
+            else
+            {
+                editnametxtok = true;
+                editdesctxtok = true;
+            }
+            
+
+        }
+
+        private void editnametxt_Leave(object sender, EventArgs e)
+        {
+            if (editnametxt.Text.Contains("\\") || editnametxt.Text.Contains("'"))
+            {
+                MessageBox.Show("Name cannot contain special characters");
+                editnametxt.Text = "";
+                editnametxt.Focus();
+            }
+
         }
 
         private void editcancelbtn_Click(object sender, EventArgs e)
         {
             editnametxt.Text = "";
             editdesctxt.Text = "";
-            editimgtxt.Text = "";
-            exbtn.Checked = false;
-            unexbtn.Checked = false;
+            
+            exbtn1.Checked = false;
+            unexbtn1.Checked = false;
+        }
+
+        private void nametxt_Leave(object sender, EventArgs e)
+        {
+            if (nametxt.Text == "")
+                nametxtok = false;
+            else
+                nametxtok = true;
+            if (nametxt.Text.Contains("\\")|| nametxt.Text.Contains("'"))
+            {
+                MessageBox.Show("Name cannot contain special characters");
+                nametxt.Text = "";
+                nametxt.Focus();
+            }
+
+        }
+
+        private void desctxt_Leave(object sender, EventArgs e)
+        {
+            if (desctxt.Text == "")
+                desctxtok = false;
+            else
+                desctxtok = true;
+        }
+
+        private void edpbox_Click(object sender, EventArgs e)
+        {
+
+            if (openFileDialog2.ShowDialog() == DialogResult.OK)
+            {
+                s = openFileDialog2.FileName;
+                Image myimage = new Bitmap(s);
+                edpbox.BackgroundImage = myimage;
+                edpbox.BackgroundImageLayout = ImageLayout.Stretch;
+                status2 = true;
+
+            }
         }
 
         private void selectbox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -177,7 +331,9 @@ namespace Veiled_Kashmir_Admin_Panel
             cmd = ("delete from places where name= '" + selectbox2.Text + "';");
             obj.nonQuery(cmd);
             MessageBox.Show("selected place removed sucessfully.");
+            readplaces2();
             rvmpnl.Visible = false;
+
             
 
         }
@@ -188,6 +344,17 @@ namespace Veiled_Kashmir_Admin_Panel
 
         }
 
-        
+        private void dpbox_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                s = openFileDialog1.FileName;
+                Image myimage = new Bitmap(s);
+                dpbox.BackgroundImage = myimage;
+                dpbox.BackgroundImageLayout = ImageLayout.Stretch;
+                status = true;
+
+            }
+        }
     }
 }

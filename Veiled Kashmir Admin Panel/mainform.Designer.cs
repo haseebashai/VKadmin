@@ -39,16 +39,19 @@
             this.desbtn = new MaterialSkin.Controls.MaterialRaisedButton();
             this.busbtn = new MaterialSkin.Controls.MaterialRaisedButton();
             this.wldbtn = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.materialFlatButton3 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.materialFlatButton4 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.addadminbtn = new MaterialSkin.Controls.MaterialFlatButton();
+            this.rvmuserbtn = new MaterialSkin.Controls.MaterialFlatButton();
+            this.rvmadminbtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.materialFlatButton9 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.sendmsgbtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.signinlbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.profilebtn = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.logo = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
             // signoutlbl
@@ -78,9 +81,9 @@
             this.groupBox1.Controls.Add(this.busbtn);
             this.groupBox1.Controls.Add(this.wldbtn);
             this.groupBox1.Font = new System.Drawing.Font("Trajan Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(125, 43);
+            this.groupBox1.Location = new System.Drawing.Point(103, 69);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(273, 481);
+            this.groupBox1.Size = new System.Drawing.Size(811, 223);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Edit Content";
@@ -88,7 +91,7 @@
             // revbtn
             // 
             this.revbtn.Depth = 0;
-            this.revbtn.Location = new System.Drawing.Point(18, 415);
+            this.revbtn.Location = new System.Drawing.Point(550, 154);
             this.revbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.revbtn.Name = "revbtn";
             this.revbtn.Primary = true;
@@ -101,7 +104,7 @@
             // conbtn
             // 
             this.conbtn.Depth = 0;
-            this.conbtn.Location = new System.Drawing.Point(18, 367);
+            this.conbtn.Location = new System.Drawing.Point(286, 154);
             this.conbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.conbtn.Name = "conbtn";
             this.conbtn.Primary = true;
@@ -114,7 +117,7 @@
             // evtbtn
             // 
             this.evtbtn.Depth = 0;
-            this.evtbtn.Location = new System.Drawing.Point(18, 319);
+            this.evtbtn.Location = new System.Drawing.Point(18, 154);
             this.evtbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.evtbtn.Name = "evtbtn";
             this.evtbtn.Primary = true;
@@ -127,7 +130,7 @@
             // frmbtn
             // 
             this.frmbtn.Depth = 0;
-            this.frmbtn.Location = new System.Drawing.Point(18, 271);
+            this.frmbtn.Location = new System.Drawing.Point(550, 93);
             this.frmbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.frmbtn.Name = "frmbtn";
             this.frmbtn.Primary = true;
@@ -140,7 +143,7 @@
             // resbtn
             // 
             this.resbtn.Depth = 0;
-            this.resbtn.Location = new System.Drawing.Point(18, 223);
+            this.resbtn.Location = new System.Drawing.Point(286, 93);
             this.resbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.resbtn.Name = "resbtn";
             this.resbtn.Primary = true;
@@ -153,7 +156,7 @@
             // culbtn
             // 
             this.culbtn.Depth = 0;
-            this.culbtn.Location = new System.Drawing.Point(18, 175);
+            this.culbtn.Location = new System.Drawing.Point(18, 93);
             this.culbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.culbtn.Name = "culbtn";
             this.culbtn.Primary = true;
@@ -179,7 +182,7 @@
             // busbtn
             // 
             this.busbtn.Depth = 0;
-            this.busbtn.Location = new System.Drawing.Point(18, 79);
+            this.busbtn.Location = new System.Drawing.Point(286, 31);
             this.busbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.busbtn.Name = "busbtn";
             this.busbtn.Primary = true;
@@ -192,7 +195,7 @@
             // wldbtn
             // 
             this.wldbtn.Depth = 0;
-            this.wldbtn.Location = new System.Drawing.Point(18, 127);
+            this.wldbtn.Location = new System.Drawing.Point(550, 31);
             this.wldbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.wldbtn.Name = "wldbtn";
             this.wldbtn.Primary = true;
@@ -202,76 +205,80 @@
             this.wldbtn.UseVisualStyleBackColor = true;
             this.wldbtn.Click += new System.EventHandler(this.wldbtn_Click);
             // 
-            // materialFlatButton1
+            // addadminbtn
             // 
-            this.materialFlatButton1.AutoSize = true;
-            this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton1.Depth = 0;
-            this.materialFlatButton1.Location = new System.Drawing.Point(37, 76);
-            this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton1.Name = "materialFlatButton1";
-            this.materialFlatButton1.Primary = false;
-            this.materialFlatButton1.Size = new System.Drawing.Size(125, 36);
-            this.materialFlatButton1.TabIndex = 0;
-            this.materialFlatButton1.Text = "add sub-admins";
-            this.materialFlatButton1.UseVisualStyleBackColor = true;
+            this.addadminbtn.AutoSize = true;
+            this.addadminbtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.addadminbtn.Depth = 0;
+            this.addadminbtn.Location = new System.Drawing.Point(37, 61);
+            this.addadminbtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.addadminbtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.addadminbtn.Name = "addadminbtn";
+            this.addadminbtn.Primary = false;
+            this.addadminbtn.Size = new System.Drawing.Size(125, 36);
+            this.addadminbtn.TabIndex = 0;
+            this.addadminbtn.Text = "add sub-admins";
+            this.addadminbtn.UseVisualStyleBackColor = true;
+            this.addadminbtn.Click += new System.EventHandler(this.addadminbtn_Click);
             // 
-            // materialFlatButton3
+            // rvmuserbtn
             // 
-            this.materialFlatButton3.AutoSize = true;
-            this.materialFlatButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton3.Depth = 0;
-            this.materialFlatButton3.Location = new System.Drawing.Point(37, 148);
-            this.materialFlatButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton3.Name = "materialFlatButton3";
-            this.materialFlatButton3.Primary = false;
-            this.materialFlatButton3.Size = new System.Drawing.Size(103, 36);
-            this.materialFlatButton3.TabIndex = 2;
-            this.materialFlatButton3.Text = "remove user";
-            this.materialFlatButton3.UseVisualStyleBackColor = true;
+            this.rvmuserbtn.AutoSize = true;
+            this.rvmuserbtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.rvmuserbtn.Depth = 0;
+            this.rvmuserbtn.Location = new System.Drawing.Point(37, 133);
+            this.rvmuserbtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.rvmuserbtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.rvmuserbtn.Name = "rvmuserbtn";
+            this.rvmuserbtn.Primary = false;
+            this.rvmuserbtn.Size = new System.Drawing.Size(103, 36);
+            this.rvmuserbtn.TabIndex = 2;
+            this.rvmuserbtn.Text = "remove user";
+            this.rvmuserbtn.UseVisualStyleBackColor = true;
+            this.rvmuserbtn.Click += new System.EventHandler(this.rvmuserbtn_Click);
             // 
-            // materialFlatButton4
+            // rvmadminbtn
             // 
-            this.materialFlatButton4.AutoSize = true;
-            this.materialFlatButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton4.Depth = 0;
-            this.materialFlatButton4.Location = new System.Drawing.Point(280, 76);
-            this.materialFlatButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton4.Name = "materialFlatButton4";
-            this.materialFlatButton4.Primary = false;
-            this.materialFlatButton4.Size = new System.Drawing.Size(152, 36);
-            this.materialFlatButton4.TabIndex = 3;
-            this.materialFlatButton4.Text = "remove sub-admins";
-            this.materialFlatButton4.UseVisualStyleBackColor = true;
+            this.rvmadminbtn.AutoSize = true;
+            this.rvmadminbtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.rvmadminbtn.Depth = 0;
+            this.rvmadminbtn.Location = new System.Drawing.Point(280, 61);
+            this.rvmadminbtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.rvmadminbtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.rvmadminbtn.Name = "rvmadminbtn";
+            this.rvmadminbtn.Primary = false;
+            this.rvmadminbtn.Size = new System.Drawing.Size(152, 36);
+            this.rvmadminbtn.TabIndex = 3;
+            this.rvmadminbtn.Text = "remove sub-admins";
+            this.rvmadminbtn.UseVisualStyleBackColor = true;
+            this.rvmadminbtn.Click += new System.EventHandler(this.rvmadminbtn_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trajan Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(653, 131);
+            this.label2.Location = new System.Drawing.Point(244, 319);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(162, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Admin Controls";
             // 
-            // materialFlatButton9
+            // sendmsgbtn
             // 
-            this.materialFlatButton9.AutoSize = true;
-            this.materialFlatButton9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton9.Depth = 0;
-            this.materialFlatButton9.Location = new System.Drawing.Point(280, 148);
-            this.materialFlatButton9.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton9.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton9.Name = "materialFlatButton9";
-            this.materialFlatButton9.Primary = false;
-            this.materialFlatButton9.Size = new System.Drawing.Size(113, 36);
-            this.materialFlatButton9.TabIndex = 8;
-            this.materialFlatButton9.Text = "send message";
-            this.materialFlatButton9.UseVisualStyleBackColor = true;
+            this.sendmsgbtn.AutoSize = true;
+            this.sendmsgbtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.sendmsgbtn.Depth = 0;
+            this.sendmsgbtn.Location = new System.Drawing.Point(280, 133);
+            this.sendmsgbtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.sendmsgbtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.sendmsgbtn.Name = "sendmsgbtn";
+            this.sendmsgbtn.Primary = false;
+            this.sendmsgbtn.Size = new System.Drawing.Size(113, 36);
+            this.sendmsgbtn.TabIndex = 8;
+            this.sendmsgbtn.Text = "send message";
+            this.sendmsgbtn.UseVisualStyleBackColor = true;
+            this.sendmsgbtn.Click += new System.EventHandler(this.sendmsgbtn_Click);
             // 
             // signinlbl
             // 
@@ -289,13 +296,13 @@
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.profilebtn);
-            this.panel1.Controls.Add(this.materialFlatButton4);
-            this.panel1.Controls.Add(this.materialFlatButton1);
-            this.panel1.Controls.Add(this.materialFlatButton9);
-            this.panel1.Controls.Add(this.materialFlatButton3);
-            this.panel1.Location = new System.Drawing.Point(485, 164);
+            this.panel1.Controls.Add(this.rvmadminbtn);
+            this.panel1.Controls.Add(this.addadminbtn);
+            this.panel1.Controls.Add(this.sendmsgbtn);
+            this.panel1.Controls.Add(this.rvmuserbtn);
+            this.panel1.Location = new System.Drawing.Point(103, 352);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(465, 192);
+            this.panel1.Size = new System.Drawing.Size(465, 181);
             this.panel1.TabIndex = 10;
             // 
             // profilebtn
@@ -303,7 +310,7 @@
             this.profilebtn.AutoSize = true;
             this.profilebtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.profilebtn.Depth = 0;
-            this.profilebtn.Location = new System.Drawing.Point(37, 6);
+            this.profilebtn.Location = new System.Drawing.Point(171, 6);
             this.profilebtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.profilebtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.profilebtn.Name = "profilebtn";
@@ -314,12 +321,41 @@
             this.profilebtn.UseVisualStyleBackColor = true;
             this.profilebtn.Click += new System.EventHandler(this.profilebtn_Click);
             // 
+            // materialLabel1
+            // 
+            this.materialLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(598, 482);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(312, 51);
+            this.materialLabel1.TabIndex = 12;
+            this.materialLabel1.Text = "For any help and suggestions or errors please contact \" veiledkashmir@gmail.com \"" +
+    "";
+            this.materialLabel1.Click += new System.EventHandler(this.materialLabel1_Click);
+            // 
+            // logo
+            // 
+            this.logo.BackgroundImage = global::Veiled_Kashmir_Admin_Panel.Properties.Resources.Logo;
+            this.logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.logo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logo.Location = new System.Drawing.Point(674, 352);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(118, 112);
+            this.logo.TabIndex = 11;
+            this.logo.TabStop = false;
+            this.logo.Click += new System.EventHandler(this.logo_Click);
+            // 
             // mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1022, 558);
+            this.Controls.Add(this.materialLabel1);
+            this.Controls.Add(this.logo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.signinlbl);
             this.Controls.Add(this.label2);
@@ -332,6 +368,7 @@
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,9 +378,9 @@
 
         private System.Windows.Forms.Label signoutlbl;
         private System.Windows.Forms.GroupBox groupBox1;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton4;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton3;
+        private MaterialSkin.Controls.MaterialFlatButton addadminbtn;
+        private MaterialSkin.Controls.MaterialFlatButton rvmadminbtn;
+        private MaterialSkin.Controls.MaterialFlatButton rvmuserbtn;
         private System.Windows.Forms.Label label2;
         private MaterialSkin.Controls.MaterialRaisedButton desbtn;
         private MaterialSkin.Controls.MaterialRaisedButton busbtn;
@@ -354,9 +391,11 @@
         private MaterialSkin.Controls.MaterialRaisedButton frmbtn;
         private MaterialSkin.Controls.MaterialRaisedButton resbtn;
         private MaterialSkin.Controls.MaterialRaisedButton culbtn;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton9;
+        private MaterialSkin.Controls.MaterialFlatButton sendmsgbtn;
         private System.Windows.Forms.Label signinlbl;
         private System.Windows.Forms.Panel panel1;
         private MaterialSkin.Controls.MaterialFlatButton profilebtn;
+        private System.Windows.Forms.PictureBox logo;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
     }
 }

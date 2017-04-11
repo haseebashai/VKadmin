@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.officepnl = new System.Windows.Forms.Panel();
+            this.phnelbl = new System.Windows.Forms.Label();
+            this.phnlbl = new System.Windows.Forms.Label();
+            this.inclblec = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.inclblc = new System.Windows.Forms.Label();
             this.updatecancelbtn = new MaterialSkin.Controls.MaterialRaisedButton();
             this.updateoffbtn = new MaterialSkin.Controls.MaterialRaisedButton();
             this.dptlbl = new System.Windows.Forms.Label();
@@ -54,6 +59,8 @@
             this.adddptbtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.back = new System.Windows.Forms.PictureBox();
             this.deptpnl = new System.Windows.Forms.Panel();
+            this.inclbled = new System.Windows.Forms.Label();
+            this.inclbld = new System.Windows.Forms.Label();
             this.editdepttxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label4 = new System.Windows.Forms.Label();
             this.rvmdeptbtn = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -73,6 +80,11 @@
             // 
             // officepnl
             // 
+            this.officepnl.Controls.Add(this.phnelbl);
+            this.officepnl.Controls.Add(this.phnlbl);
+            this.officepnl.Controls.Add(this.inclblec);
+            this.officepnl.Controls.Add(this.panel1);
+            this.officepnl.Controls.Add(this.inclblc);
             this.officepnl.Controls.Add(this.updatecancelbtn);
             this.officepnl.Controls.Add(this.updateoffbtn);
             this.officepnl.Controls.Add(this.dptlbl);
@@ -100,10 +112,66 @@
             this.officepnl.TabIndex = 25;
             this.officepnl.Visible = false;
             // 
+            // phnelbl
+            // 
+            this.phnelbl.AutoSize = true;
+            this.phnelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phnelbl.ForeColor = System.Drawing.Color.Red;
+            this.phnelbl.Location = new System.Drawing.Point(798, 210);
+            this.phnelbl.Name = "phnelbl";
+            this.phnelbl.Size = new System.Drawing.Size(99, 13);
+            this.phnelbl.TabIndex = 74;
+            this.phnelbl.Text = "incorrect phone no.";
+            this.phnelbl.Visible = false;
+            // 
+            // phnlbl
+            // 
+            this.phnlbl.AutoSize = true;
+            this.phnlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phnlbl.ForeColor = System.Drawing.Color.Red;
+            this.phnlbl.Location = new System.Drawing.Point(253, 163);
+            this.phnlbl.Name = "phnlbl";
+            this.phnlbl.Size = new System.Drawing.Size(99, 13);
+            this.phnlbl.TabIndex = 73;
+            this.phnlbl.Text = "incorrect phone no.";
+            this.phnlbl.Visible = false;
+            // 
+            // inclblec
+            // 
+            this.inclblec.AutoSize = true;
+            this.inclblec.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inclblec.ForeColor = System.Drawing.Color.Red;
+            this.inclblec.Location = new System.Drawing.Point(807, 332);
+            this.inclblec.Name = "inclblec";
+            this.inclblec.Size = new System.Drawing.Size(136, 20);
+            this.inclblec.TabIndex = 72;
+            this.inclblec.Text = "incomplete details";
+            this.inclblec.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Location = new System.Drawing.Point(457, 56);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1, 350);
+            this.panel1.TabIndex = 71;
+            // 
+            // inclblc
+            // 
+            this.inclblc.AutoSize = true;
+            this.inclblc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inclblc.ForeColor = System.Drawing.Color.Red;
+            this.inclblc.Location = new System.Drawing.Point(216, 309);
+            this.inclblc.Name = "inclblc";
+            this.inclblc.Size = new System.Drawing.Size(136, 20);
+            this.inclblc.TabIndex = 70;
+            this.inclblc.Text = "incomplete details";
+            this.inclblc.Visible = false;
+            // 
             // updatecancelbtn
             // 
             this.updatecancelbtn.Depth = 0;
-            this.updatecancelbtn.Location = new System.Drawing.Point(605, 293);
+            this.updatecancelbtn.Location = new System.Drawing.Point(651, 294);
             this.updatecancelbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.updatecancelbtn.Name = "updatecancelbtn";
             this.updatecancelbtn.Primary = true;
@@ -116,7 +184,7 @@
             // updateoffbtn
             // 
             this.updateoffbtn.Depth = 0;
-            this.updateoffbtn.Location = new System.Drawing.Point(754, 293);
+            this.updateoffbtn.Location = new System.Drawing.Point(800, 294);
             this.updateoffbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.updateoffbtn.Name = "updateoffbtn";
             this.updateoffbtn.Primary = true;
@@ -160,6 +228,7 @@
             this.officenumbertxt.Size = new System.Drawing.Size(223, 23);
             this.officenumbertxt.TabIndex = 31;
             this.officenumbertxt.UseSystemPasswordChar = false;
+            this.officenumbertxt.Leave += new System.EventHandler(this.officenumbertxt_Leave);
             // 
             // label8
             // 
@@ -199,11 +268,11 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(535, 89);
+            this.label15.Location = new System.Drawing.Point(547, 87);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(68, 13);
+            this.label15.Size = new System.Drawing.Size(56, 13);
             this.label15.TabIndex = 27;
-            this.label15.Text = "Select Office";
+            this.label15.Text = "Edit Office";
             // 
             // officebox
             // 
@@ -248,6 +317,7 @@
             this.editnumbertxt.Size = new System.Drawing.Size(223, 23);
             this.editnumbertxt.TabIndex = 23;
             this.editnumbertxt.UseSystemPasswordChar = false;
+            this.editnumbertxt.Leave += new System.EventHandler(this.editnumbertxt_Leave);
             // 
             // label1
             // 
@@ -262,11 +332,11 @@
             // rvmofficebtn
             // 
             this.rvmofficebtn.Depth = 0;
-            this.rvmofficebtn.Location = new System.Drawing.Point(683, 344);
+            this.rvmofficebtn.Location = new System.Drawing.Point(508, 294);
             this.rvmofficebtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.rvmofficebtn.Name = "rvmofficebtn";
             this.rvmofficebtn.Primary = true;
-            this.rvmofficebtn.Size = new System.Drawing.Size(143, 31);
+            this.rvmofficebtn.Size = new System.Drawing.Size(111, 35);
             this.rvmofficebtn.TabIndex = 21;
             this.rvmofficebtn.Text = "Remove office";
             this.rvmofficebtn.UseVisualStyleBackColor = true;
@@ -312,6 +382,7 @@
             this.editnametxt.Size = new System.Drawing.Size(236, 23);
             this.editnametxt.TabIndex = 14;
             this.editnametxt.UseSystemPasswordChar = false;
+            this.editnametxt.Leave += new System.EventHandler(this.editnametxt_Leave);
             // 
             // label12
             // 
@@ -386,6 +457,8 @@
             // 
             // deptpnl
             // 
+            this.deptpnl.Controls.Add(this.inclbled);
+            this.deptpnl.Controls.Add(this.inclbld);
             this.deptpnl.Controls.Add(this.editdepttxt);
             this.deptpnl.Controls.Add(this.label4);
             this.deptpnl.Controls.Add(this.rvmdeptbtn);
@@ -402,6 +475,30 @@
             this.deptpnl.Name = "deptpnl";
             this.deptpnl.Size = new System.Drawing.Size(998, 420);
             this.deptpnl.TabIndex = 26;
+            // 
+            // inclbled
+            // 
+            this.inclbled.AutoSize = true;
+            this.inclbled.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inclbled.ForeColor = System.Drawing.Color.Red;
+            this.inclbled.Location = new System.Drawing.Point(807, 309);
+            this.inclbled.Name = "inclbled";
+            this.inclbled.Size = new System.Drawing.Size(136, 20);
+            this.inclbled.TabIndex = 71;
+            this.inclbled.Text = "incomplete details";
+            this.inclbled.Visible = false;
+            // 
+            // inclbld
+            // 
+            this.inclbld.AutoSize = true;
+            this.inclbld.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inclbld.ForeColor = System.Drawing.Color.Red;
+            this.inclbld.Location = new System.Drawing.Point(242, 309);
+            this.inclbld.Name = "inclbld";
+            this.inclbld.Size = new System.Drawing.Size(136, 20);
+            this.inclbld.TabIndex = 70;
+            this.inclbld.Text = "incomplete details";
+            this.inclbld.Visible = false;
             // 
             // editdepttxt
             // 
@@ -435,7 +532,7 @@
             this.rvmdeptbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.rvmdeptbtn.Name = "rvmdeptbtn";
             this.rvmdeptbtn.Primary = true;
-            this.rvmdeptbtn.Size = new System.Drawing.Size(143, 36);
+            this.rvmdeptbtn.Size = new System.Drawing.Size(116, 36);
             this.rvmdeptbtn.TabIndex = 40;
             this.rvmdeptbtn.Text = "Remove Department";
             this.rvmdeptbtn.UseVisualStyleBackColor = true;
@@ -481,9 +578,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(549, 19);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 13);
+            this.label6.Size = new System.Drawing.Size(83, 13);
             this.label6.TabIndex = 31;
-            this.label6.Text = "Select Department";
+            this.label6.Text = "Edit Department";
             // 
             // panel2
             // 
@@ -496,7 +593,7 @@
             // deptcancelbtn
             // 
             this.deptcancelbtn.Depth = 0;
-            this.deptcancelbtn.Location = new System.Drawing.Point(73, 270);
+            this.deptcancelbtn.Location = new System.Drawing.Point(86, 270);
             this.deptcancelbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.deptcancelbtn.Name = "deptcancelbtn";
             this.deptcancelbtn.Primary = true;
@@ -509,7 +606,7 @@
             // adddeptbtn
             // 
             this.adddeptbtn.Depth = 0;
-            this.adddeptbtn.Location = new System.Drawing.Point(222, 270);
+            this.adddeptbtn.Location = new System.Drawing.Point(235, 270);
             this.adddeptbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.adddeptbtn.Name = "adddeptbtn";
             this.adddeptbtn.Primary = true;
@@ -533,6 +630,7 @@
             this.deptnametxt.Size = new System.Drawing.Size(287, 23);
             this.deptnametxt.TabIndex = 23;
             this.deptnametxt.UseSystemPasswordChar = false;
+            this.deptnametxt.Leave += new System.EventHandler(this.deptnametxt_Leave);
             // 
             // label11
             // 
@@ -609,5 +707,12 @@
         private System.Windows.Forms.Label label8;
         private MaterialSkin.Controls.MaterialSingleLineTextField officenametxt;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label inclbled;
+        private System.Windows.Forms.Label inclbld;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label inclblc;
+        private System.Windows.Forms.Label inclblec;
+        private System.Windows.Forms.Label phnlbl;
+        private System.Windows.Forms.Label phnelbl;
     }
 }

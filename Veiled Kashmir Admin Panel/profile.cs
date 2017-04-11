@@ -17,8 +17,6 @@ namespace Veiled_Kashmir_Admin_Panel
     {
         bool fnameok = true, lnameok = true, emailok = true, passwordok = true, confirmok = true, phoneok = true, dobok = true;
         DBConnect obj = new DBConnect();
-        bool status; 
-        String s;
         
         MySqlDataReader dr;
         private Homepage hp = null;
@@ -165,11 +163,7 @@ namespace Veiled_Kashmir_Admin_Panel
             mf.Show();
         }
 
-        private void usrlbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
 
         private void montxt_Leave(object sender, EventArgs e)
         {

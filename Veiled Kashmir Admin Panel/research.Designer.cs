@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.foodpnl = new System.Windows.Forms.Panel();
+            this.ragree = new System.Windows.Forms.CheckBox();
+            this.inclbler = new System.Windows.Forms.Label();
+            this.inclblr = new System.Windows.Forms.Label();
             this.rvmresbtn = new MaterialSkin.Controls.MaterialRaisedButton();
             this.editcancelbtn = new MaterialSkin.Controls.MaterialRaisedButton();
             this.updateresbtn = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -52,6 +55,9 @@
             // 
             // foodpnl
             // 
+            this.foodpnl.Controls.Add(this.ragree);
+            this.foodpnl.Controls.Add(this.inclbler);
+            this.foodpnl.Controls.Add(this.inclblr);
             this.foodpnl.Controls.Add(this.rvmresbtn);
             this.foodpnl.Controls.Add(this.editcancelbtn);
             this.foodpnl.Controls.Add(this.updateresbtn);
@@ -72,14 +78,49 @@
             this.foodpnl.Size = new System.Drawing.Size(998, 420);
             this.foodpnl.TabIndex = 25;
             // 
+            // ragree
+            // 
+            this.ragree.AutoSize = true;
+            this.ragree.Location = new System.Drawing.Point(751, 328);
+            this.ragree.Name = "ragree";
+            this.ragree.Size = new System.Drawing.Size(182, 17);
+            this.ragree.TabIndex = 48;
+            this.ragree.Text = "I have entered the correct details";
+            this.ragree.UseVisualStyleBackColor = true;
+            this.ragree.CheckedChanged += new System.EventHandler(this.ragree_CheckedChanged);
+            // 
+            // inclbler
+            // 
+            this.inclbler.AutoSize = true;
+            this.inclbler.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inclbler.ForeColor = System.Drawing.Color.Red;
+            this.inclbler.Location = new System.Drawing.Point(800, 399);
+            this.inclbler.Name = "inclbler";
+            this.inclbler.Size = new System.Drawing.Size(136, 20);
+            this.inclbler.TabIndex = 47;
+            this.inclbler.Text = "incomplete details";
+            this.inclbler.Visible = false;
+            // 
+            // inclblr
+            // 
+            this.inclblr.AutoSize = true;
+            this.inclblr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inclblr.ForeColor = System.Drawing.Color.Red;
+            this.inclblr.Location = new System.Drawing.Point(229, 399);
+            this.inclblr.Name = "inclblr";
+            this.inclblr.Size = new System.Drawing.Size(136, 20);
+            this.inclblr.TabIndex = 46;
+            this.inclblr.Text = "incomplete details";
+            this.inclblr.Visible = false;
+            // 
             // rvmresbtn
             // 
             this.rvmresbtn.Depth = 0;
-            this.rvmresbtn.Location = new System.Drawing.Point(836, 367);
+            this.rvmresbtn.Location = new System.Drawing.Point(484, 361);
             this.rvmresbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.rvmresbtn.Name = "rvmresbtn";
             this.rvmresbtn.Primary = true;
-            this.rvmresbtn.Size = new System.Drawing.Size(143, 23);
+            this.rvmresbtn.Size = new System.Drawing.Size(107, 35);
             this.rvmresbtn.TabIndex = 21;
             this.rvmresbtn.Text = "Remove item";
             this.rvmresbtn.UseVisualStyleBackColor = true;
@@ -88,7 +129,7 @@
             // editcancelbtn
             // 
             this.editcancelbtn.Depth = 0;
-            this.editcancelbtn.Location = new System.Drawing.Point(483, 361);
+            this.editcancelbtn.Location = new System.Drawing.Point(644, 361);
             this.editcancelbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.editcancelbtn.Name = "editcancelbtn";
             this.editcancelbtn.Primary = true;
@@ -101,7 +142,7 @@
             // updateresbtn
             // 
             this.updateresbtn.Depth = 0;
-            this.updateresbtn.Location = new System.Drawing.Point(632, 361);
+            this.updateresbtn.Location = new System.Drawing.Point(793, 361);
             this.updateresbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.updateresbtn.Name = "updateresbtn";
             this.updateresbtn.Primary = true;
@@ -117,7 +158,7 @@
             this.editdesctxt.Location = new System.Drawing.Point(484, 85);
             this.editdesctxt.Multiline = true;
             this.editdesctxt.Name = "editdesctxt";
-            this.editdesctxt.Size = new System.Drawing.Size(449, 243);
+            this.editdesctxt.Size = new System.Drawing.Size(449, 224);
             this.editdesctxt.TabIndex = 16;
             // 
             // editnametxt
@@ -148,20 +189,20 @@
             // resbox
             // 
             this.resbox.FormattingEnabled = true;
-            this.resbox.Location = new System.Drawing.Point(651, 10);
+            this.resbox.Location = new System.Drawing.Point(632, 10);
             this.resbox.Name = "resbox";
-            this.resbox.Size = new System.Drawing.Size(285, 21);
+            this.resbox.Size = new System.Drawing.Size(304, 21);
             this.resbox.TabIndex = 12;
             this.resbox.SelectedIndexChanged += new System.EventHandler(this.resbox_SelectedIndexChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(510, 13);
+            this.label9.Location = new System.Drawing.Point(522, 13);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(116, 13);
+            this.label9.Size = new System.Drawing.Size(104, 13);
             this.label9.TabIndex = 11;
-            this.label9.Text = "Select Research Topic";
+            this.label9.Text = "Edit Research Topic";
             // 
             // panel1
             // 
@@ -205,6 +246,7 @@
             this.desctxt.Name = "desctxt";
             this.desctxt.Size = new System.Drawing.Size(375, 243);
             this.desctxt.TabIndex = 3;
+            this.desctxt.Leave += new System.EventHandler(this.desctxt_Leave);
             // 
             // label2
             // 
@@ -230,6 +272,7 @@
             this.nametxt.Size = new System.Drawing.Size(322, 23);
             this.nametxt.TabIndex = 1;
             this.nametxt.UseSystemPasswordChar = false;
+            this.nametxt.Leave += new System.EventHandler(this.nametxt_Leave);
             // 
             // label1
             // 
@@ -274,9 +317,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1022, 558);
+            this.Controls.Add(this.foodpnl);
             this.Controls.Add(this.resbtn);
             this.Controls.Add(this.back);
-            this.Controls.Add(this.foodpnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "research";
             this.Text = "research";
@@ -308,5 +351,8 @@
         private System.Windows.Forms.Label label1;
         private MaterialSkin.Controls.MaterialFlatButton resbtn;
         private System.Windows.Forms.PictureBox back;
+        private System.Windows.Forms.Label inclbler;
+        private System.Windows.Forms.Label inclblr;
+        private System.Windows.Forms.CheckBox ragree;
     }
 }

@@ -15,7 +15,6 @@ namespace Veiled_Kashmir_Admin_Panel
     {
         DBConnect obj = new DBConnect();
         String cmd;
-
         MySqlDataReader dr;
         private Homepage hp = null;
 
@@ -38,21 +37,37 @@ namespace Veiled_Kashmir_Admin_Panel
         }
         private void addevbtn_Click(object sender, EventArgs e)
         {
-
-            StringBuilder s = new StringBuilder(nametxt.Text);
-            s.Replace("'", "\\'");
-            s = new StringBuilder(loctxt.Text);
-            s.Replace("'", "\\'");
-            cmd = "Insert into events(name, location, eventstart, eventend, user) values ('" + nametxt.Text + "','" + loctxt.Text + "','" + eventstart.Value.ToString("yyyy-MM-dd HH:mm") + "','" + eventend.Value.ToString("yyyy-MM-dd HH:mm") + "','Admin')";
-            obj.nonQuery(cmd);
-            MessageBox.Show("Event added sucessfully.");
-
+            if (nametxt.Text.Contains("'") || nametxt.Text.Contains("\\") || loctxt.Text.Contains("'") || loctxt.Text.Contains("\\"))
+                MessageBox.Show("Details cannot contain ' & \\");
+            else
+            {
+                if (eventend.Value < eventstart.Value)
+                {
+                    inclble.Text = "The event can't end before it starts.";
+                    inclble.Visible = true;
+                }
+                else
+                {
+                    if (nametxt.Text != "" && loctxt.Text != "")
+                    {
+                        cmd = "Insert into events(name, location, eventstart, eventend, user) values ('" + nametxt.Text + "','" + loctxt.Text + "','" + eventstart.Value.ToString("yyyy-MM-dd HH:mm") + "','" + eventend.Value.ToString("yyyy-MM-dd HH:mm") + "','" + userinfo.username + "')";
+                        obj.nonQuery(cmd);
+                        MessageBox.Show("Event added sucessfully.");
+                        nametxt.Text = "";
+                        loctxt.Text = "";
+                        inclble.Visible = false;
+                    }
+                    else
+                        inclble.Visible = true;
+                }
+            }
         }
 
         private void cancelbtn_Click(object sender, EventArgs e)
         {
             nametxt.Text = "";
             loctxt.Text = "";
+            inclble.Visible = false;
         }
 
         private void back_Click(object sender, EventArgs e)
@@ -82,22 +97,7 @@ namespace Veiled_Kashmir_Admin_Panel
             obj.closeConnection();
         }
 
-        private void updatevbtn_Click(object sender, EventArgs e)
-        {
-            string admin = " - edited by admin";
-            StringBuilder s1 = new StringBuilder(editeventtxt.Text);
-            s1.Replace("'", "\\'");
-            s1 = new StringBuilder(editeventloctxt.Text);
-            s1.Replace("'", "\\'");
-            cmd = ("update events set `name`='" + editeventtxt.Text + admin + "', `location`='" + editeventloctxt.Text + "', `eventstart`='" + editdatestart.Value.ToString("yyyy-MM-dd HH:mm") + "', `eventend`='" + editdateend.Value.ToString("yyyy-MM-dd HH:mm") + "' where `name`='" + eventbox.Text + "'");
-            obj.nonQuery(cmd);
-
-            MessageBox.Show("Event updated succesfully!");
-            editeventtxt.Text = "";
-            editeventloctxt.Text = "";
-
-            readevents();
-        }
+       
 
         private void editcancelbtn_Click(object sender, EventArgs e)
         {
@@ -110,6 +110,7 @@ namespace Veiled_Kashmir_Admin_Panel
             cmd = ("delete from events where name= '" + eventbox.Text + "'");
             obj.nonQuery(cmd);
             MessageBox.Show("selected Event removed sucessfully.");
+            readevents();
         }
 
         private void editeventbtn_Click(object sender, EventArgs e)
@@ -130,5 +131,7 @@ namespace Veiled_Kashmir_Admin_Panel
 
            
         }
+
+      
     }
 }
