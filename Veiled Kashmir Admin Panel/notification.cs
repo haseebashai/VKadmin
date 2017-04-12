@@ -99,7 +99,7 @@ namespace Veiled_Kashmir_Admin_Panel
                 StringBuilder s;
                 s = new StringBuilder(msgbox.Text);
                 s.Replace("'", "\\'");
-                cmd = ("update notifications set `notification`='" + msgboxtxt.Text + "'where `notification`='" + msgbox.Text + "'");
+                cmd = ("update notifications set `notification`='" + s + "'where `notification`='" + msgbox.Text + "'");
                 obj.nonQuery(cmd);
                 MessageBox.Show("Message updated sucessfully.");
                 readmsg();
