@@ -84,7 +84,7 @@
             this.ragree.Location = new System.Drawing.Point(751, 328);
             this.ragree.Name = "ragree";
             this.ragree.Size = new System.Drawing.Size(182, 17);
-            this.ragree.TabIndex = 48;
+            this.ragree.TabIndex = 8;
             this.ragree.Text = "I have entered the correct details";
             this.ragree.UseVisualStyleBackColor = true;
             this.ragree.CheckedChanged += new System.EventHandler(this.ragree_CheckedChanged);
@@ -121,7 +121,7 @@
             this.rvmresbtn.Name = "rvmresbtn";
             this.rvmresbtn.Primary = true;
             this.rvmresbtn.Size = new System.Drawing.Size(107, 35);
-            this.rvmresbtn.TabIndex = 21;
+            this.rvmresbtn.TabIndex = 11;
             this.rvmresbtn.Text = "Remove item";
             this.rvmresbtn.UseVisualStyleBackColor = true;
             this.rvmresbtn.Click += new System.EventHandler(this.rvmfdbtn_Click);
@@ -134,7 +134,7 @@
             this.editcancelbtn.Name = "editcancelbtn";
             this.editcancelbtn.Primary = true;
             this.editcancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.editcancelbtn.TabIndex = 20;
+            this.editcancelbtn.TabIndex = 10;
             this.editcancelbtn.Text = "cancel";
             this.editcancelbtn.UseVisualStyleBackColor = true;
             this.editcancelbtn.Click += new System.EventHandler(this.editcancelbtn_Click);
@@ -147,7 +147,7 @@
             this.updateresbtn.Name = "updateresbtn";
             this.updateresbtn.Primary = true;
             this.updateresbtn.Size = new System.Drawing.Size(143, 35);
-            this.updateresbtn.TabIndex = 19;
+            this.updateresbtn.TabIndex = 9;
             this.updateresbtn.Text = "update information";
             this.updateresbtn.UseVisualStyleBackColor = true;
             this.updateresbtn.Click += new System.EventHandler(this.updateresbtn_Click);
@@ -159,7 +159,7 @@
             this.editdesctxt.Multiline = true;
             this.editdesctxt.Name = "editdesctxt";
             this.editdesctxt.Size = new System.Drawing.Size(449, 224);
-            this.editdesctxt.TabIndex = 16;
+            this.editdesctxt.TabIndex = 7;
             // 
             // editnametxt
             // 
@@ -173,7 +173,7 @@
             this.editnametxt.SelectionLength = 0;
             this.editnametxt.SelectionStart = 0;
             this.editnametxt.Size = new System.Drawing.Size(396, 23);
-            this.editnametxt.TabIndex = 14;
+            this.editnametxt.TabIndex = 6;
             this.editnametxt.UseSystemPasswordChar = false;
             // 
             // label12
@@ -192,7 +192,7 @@
             this.resbox.Location = new System.Drawing.Point(632, 10);
             this.resbox.Name = "resbox";
             this.resbox.Size = new System.Drawing.Size(304, 21);
-            this.resbox.TabIndex = 12;
+            this.resbox.TabIndex = 5;
             this.resbox.SelectedIndexChanged += new System.EventHandler(this.resbox_SelectedIndexChanged);
             // 
             // label9
@@ -220,7 +220,7 @@
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Primary = true;
             this.cancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.cancelbtn.TabIndex = 9;
+            this.cancelbtn.TabIndex = 4;
             this.cancelbtn.Text = "cancel";
             this.cancelbtn.UseVisualStyleBackColor = true;
             this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
@@ -233,7 +233,7 @@
             this.addresbtn.Name = "addresbtn";
             this.addresbtn.Primary = true;
             this.addresbtn.Size = new System.Drawing.Size(143, 35);
-            this.addresbtn.TabIndex = 8;
+            this.addresbtn.TabIndex = 3;
             this.addresbtn.Text = "add item";
             this.addresbtn.UseVisualStyleBackColor = true;
             this.addresbtn.Click += new System.EventHandler(this.addresbtn_Click);
@@ -245,7 +245,7 @@
             this.desctxt.Multiline = true;
             this.desctxt.Name = "desctxt";
             this.desctxt.Size = new System.Drawing.Size(375, 243);
-            this.desctxt.TabIndex = 3;
+            this.desctxt.TabIndex = 2;
             this.desctxt.Leave += new System.EventHandler(this.desctxt_Leave);
             // 
             // label2

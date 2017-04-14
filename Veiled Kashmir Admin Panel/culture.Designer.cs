@@ -112,7 +112,7 @@
             this.rvmfdbtn.Name = "rvmfdbtn";
             this.rvmfdbtn.Primary = true;
             this.rvmfdbtn.Size = new System.Drawing.Size(98, 35);
-            this.rvmfdbtn.TabIndex = 21;
+            this.rvmfdbtn.TabIndex = 11;
             this.rvmfdbtn.Text = "Remove item";
             this.rvmfdbtn.UseVisualStyleBackColor = true;
             this.rvmfdbtn.Click += new System.EventHandler(this.rvmfdbtn_Click);
@@ -125,7 +125,7 @@
             this.updatefdbtn.Name = "updatefdbtn";
             this.updatefdbtn.Primary = true;
             this.updatefdbtn.Size = new System.Drawing.Size(143, 35);
-            this.updatefdbtn.TabIndex = 19;
+            this.updatefdbtn.TabIndex = 9;
             this.updatefdbtn.Text = "update food";
             this.updatefdbtn.UseVisualStyleBackColor = true;
             this.updatefdbtn.Click += new System.EventHandler(this.updatefdbtn_Click);
@@ -137,7 +137,7 @@
             this.editdesctxt.Multiline = true;
             this.editdesctxt.Name = "editdesctxt";
             this.editdesctxt.Size = new System.Drawing.Size(449, 175);
-            this.editdesctxt.TabIndex = 16;
+            this.editdesctxt.TabIndex = 7;
             // 
             // wordspnl
             // 
@@ -172,7 +172,7 @@
             this.wagree.Location = new System.Drawing.Point(752, 233);
             this.wagree.Name = "wagree";
             this.wagree.Size = new System.Drawing.Size(182, 17);
-            this.wagree.TabIndex = 52;
+            this.wagree.TabIndex = 8;
             this.wagree.Text = "I have entered the correct details";
             this.wagree.UseVisualStyleBackColor = true;
             this.wagree.CheckedChanged += new System.EventHandler(this.wagree_CheckedChanged);
@@ -213,7 +213,7 @@
             this.editmeaningtxt.SelectionLength = 0;
             this.editmeaningtxt.SelectionStart = 0;
             this.editmeaningtxt.Size = new System.Drawing.Size(267, 23);
-            this.editmeaningtxt.TabIndex = 45;
+            this.editmeaningtxt.TabIndex = 7;
             this.editmeaningtxt.UseSystemPasswordChar = false;
             // 
             // label4
@@ -238,7 +238,7 @@
             this.editwordtxt.SelectionLength = 0;
             this.editwordtxt.SelectionStart = 0;
             this.editwordtxt.Size = new System.Drawing.Size(287, 23);
-            this.editwordtxt.TabIndex = 43;
+            this.editwordtxt.TabIndex = 6;
             this.editwordtxt.UseSystemPasswordChar = false;
             // 
             // label5
@@ -263,7 +263,7 @@
             this.meaningtxt.SelectionLength = 0;
             this.meaningtxt.SelectionStart = 0;
             this.meaningtxt.Size = new System.Drawing.Size(267, 23);
-            this.meaningtxt.TabIndex = 41;
+            this.meaningtxt.TabIndex = 2;
             this.meaningtxt.UseSystemPasswordChar = false;
             this.meaningtxt.Leave += new System.EventHandler(this.meaningtxt_Leave);
             // 
@@ -275,7 +275,7 @@
             this.rvmwordbtn.Name = "rvmwordbtn";
             this.rvmwordbtn.Primary = true;
             this.rvmwordbtn.Size = new System.Drawing.Size(106, 35);
-            this.rvmwordbtn.TabIndex = 40;
+            this.rvmwordbtn.TabIndex = 11;
             this.rvmwordbtn.Text = "Remove word";
             this.rvmwordbtn.UseVisualStyleBackColor = true;
             this.rvmwordbtn.Click += new System.EventHandler(this.rvmwordbtn_Click);
@@ -288,7 +288,7 @@
             this.editwordcancelbtn.Name = "editwordcancelbtn";
             this.editwordcancelbtn.Primary = true;
             this.editwordcancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.editwordcancelbtn.TabIndex = 39;
+            this.editwordcancelbtn.TabIndex = 10;
             this.editwordcancelbtn.Text = "cancel";
             this.editwordcancelbtn.UseVisualStyleBackColor = true;
             this.editwordcancelbtn.Click += new System.EventHandler(this.editwordcancelbtn_Click);
@@ -301,7 +301,7 @@
             this.updatewordbtn.Name = "updatewordbtn";
             this.updatewordbtn.Primary = true;
             this.updatewordbtn.Size = new System.Drawing.Size(143, 35);
-            this.updatewordbtn.TabIndex = 38;
+            this.updatewordbtn.TabIndex = 9;
             this.updatewordbtn.Text = "update word";
             this.updatewordbtn.UseVisualStyleBackColor = true;
             this.updatewordbtn.Click += new System.EventHandler(this.updatewordbtn_Click);
@@ -312,7 +312,7 @@
             this.wordbox.Location = new System.Drawing.Point(619, 14);
             this.wordbox.Name = "wordbox";
             this.wordbox.Size = new System.Drawing.Size(257, 21);
-            this.wordbox.TabIndex = 32;
+            this.wordbox.TabIndex = 5;
             this.wordbox.SelectedIndexChanged += new System.EventHandler(this.wordbox_SelectedIndexChanged);
             // 
             // label6
@@ -340,7 +340,7 @@
             this.wordcancelbtn.Name = "wordcancelbtn";
             this.wordcancelbtn.Primary = true;
             this.wordcancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.wordcancelbtn.TabIndex = 29;
+            this.wordcancelbtn.TabIndex = 4;
             this.wordcancelbtn.Text = "cancel";
             this.wordcancelbtn.UseVisualStyleBackColor = true;
             this.wordcancelbtn.Click += new System.EventHandler(this.wordcancelbtn_Click);
@@ -353,7 +353,7 @@
             this.addwordbtn.Name = "addwordbtn";
             this.addwordbtn.Primary = true;
             this.addwordbtn.Size = new System.Drawing.Size(143, 35);
-            this.addwordbtn.TabIndex = 28;
+            this.addwordbtn.TabIndex = 3;
             this.addwordbtn.Text = "add Word";
             this.addwordbtn.UseVisualStyleBackColor = true;
             this.addwordbtn.Click += new System.EventHandler(this.addwordbtn_Click);
@@ -380,7 +380,7 @@
             this.wordtxt.SelectionLength = 0;
             this.wordtxt.SelectionStart = 0;
             this.wordtxt.Size = new System.Drawing.Size(287, 23);
-            this.wordtxt.TabIndex = 23;
+            this.wordtxt.TabIndex = 1;
             this.wordtxt.UseSystemPasswordChar = false;
             this.wordtxt.Leave += new System.EventHandler(this.wordtxt_Leave);
             // 
@@ -402,7 +402,7 @@
             this.editcancelbtn.Name = "editcancelbtn";
             this.editcancelbtn.Primary = true;
             this.editcancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.editcancelbtn.TabIndex = 20;
+            this.editcancelbtn.TabIndex = 10;
             this.editcancelbtn.Text = "cancel";
             this.editcancelbtn.UseVisualStyleBackColor = true;
             this.editcancelbtn.Click += new System.EventHandler(this.editcancelbtn_Click);
@@ -419,7 +419,7 @@
             this.editnametxt.SelectionLength = 0;
             this.editnametxt.SelectionStart = 0;
             this.editnametxt.Size = new System.Drawing.Size(396, 23);
-            this.editnametxt.TabIndex = 14;
+            this.editnametxt.TabIndex = 6;
             this.editnametxt.UseSystemPasswordChar = false;
             // 
             // foodpnl
@@ -457,7 +457,7 @@
             this.agree.Location = new System.Drawing.Point(761, 324);
             this.agree.Name = "agree";
             this.agree.Size = new System.Drawing.Size(182, 17);
-            this.agree.TabIndex = 38;
+            this.agree.TabIndex = 8;
             this.agree.Text = "I have entered the correct details";
             this.agree.UseVisualStyleBackColor = true;
             this.agree.CheckedChanged += new System.EventHandler(this.agree_CheckedChanged);
@@ -550,7 +550,7 @@
             this.foodbox.Location = new System.Drawing.Point(605, 11);
             this.foodbox.Name = "foodbox";
             this.foodbox.Size = new System.Drawing.Size(257, 21);
-            this.foodbox.TabIndex = 12;
+            this.foodbox.TabIndex = 5;
             this.foodbox.SelectedIndexChanged += new System.EventHandler(this.foodbox_SelectedIndexChanged);
             // 
             // label9
@@ -578,7 +578,7 @@
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Primary = true;
             this.cancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.cancelbtn.TabIndex = 9;
+            this.cancelbtn.TabIndex = 4;
             this.cancelbtn.Text = "cancel";
             this.cancelbtn.UseVisualStyleBackColor = true;
             this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
@@ -591,7 +591,7 @@
             this.addfdbtn.Name = "addfdbtn";
             this.addfdbtn.Primary = true;
             this.addfdbtn.Size = new System.Drawing.Size(143, 35);
-            this.addfdbtn.TabIndex = 8;
+            this.addfdbtn.TabIndex = 3;
             this.addfdbtn.Text = "add food";
             this.addfdbtn.UseVisualStyleBackColor = true;
             this.addfdbtn.Click += new System.EventHandler(this.addfdbtn_Click);
@@ -603,7 +603,7 @@
             this.desctxt.Multiline = true;
             this.desctxt.Name = "desctxt";
             this.desctxt.Size = new System.Drawing.Size(375, 188);
-            this.desctxt.TabIndex = 3;
+            this.desctxt.TabIndex = 2;
             this.desctxt.Leave += new System.EventHandler(this.desctxt_Leave);
             // 
             // label2
@@ -699,7 +699,7 @@
             this.pagree.Location = new System.Drawing.Point(740, 270);
             this.pagree.Name = "pagree";
             this.pagree.Size = new System.Drawing.Size(182, 17);
-            this.pagree.TabIndex = 68;
+            this.pagree.TabIndex = 8;
             this.pagree.Text = "I have entered the correct details";
             this.pagree.UseVisualStyleBackColor = true;
             this.pagree.CheckedChanged += new System.EventHandler(this.pagree_CheckedChanged);
@@ -710,7 +710,7 @@
             this.editphraseentxt.Multiline = true;
             this.editphraseentxt.Name = "editphraseentxt";
             this.editphraseentxt.Size = new System.Drawing.Size(315, 79);
-            this.editphraseentxt.TabIndex = 67;
+            this.editphraseentxt.TabIndex = 7;
             // 
             // editphrasetxt
             // 
@@ -718,7 +718,7 @@
             this.editphrasetxt.Multiline = true;
             this.editphrasetxt.Name = "editphrasetxt";
             this.editphrasetxt.Size = new System.Drawing.Size(315, 79);
-            this.editphrasetxt.TabIndex = 66;
+            this.editphrasetxt.TabIndex = 6;
             // 
             // label7
             // 
@@ -746,7 +746,7 @@
             this.phraseentxt.Multiline = true;
             this.phraseentxt.Name = "phraseentxt";
             this.phraseentxt.Size = new System.Drawing.Size(291, 79);
-            this.phraseentxt.TabIndex = 63;
+            this.phraseentxt.TabIndex = 2;
             this.phraseentxt.Leave += new System.EventHandler(this.phraseentxt_Leave);
             // 
             // phrasetxt
@@ -755,7 +755,7 @@
             this.phrasetxt.Multiline = true;
             this.phrasetxt.Name = "phrasetxt";
             this.phrasetxt.Size = new System.Drawing.Size(291, 79);
-            this.phrasetxt.TabIndex = 62;
+            this.phrasetxt.TabIndex = 1;
             this.phrasetxt.Leave += new System.EventHandler(this.phrasetxt_Leave);
             // 
             // rvmphrasebtn
@@ -766,7 +766,7 @@
             this.rvmphrasebtn.Name = "rvmphrasebtn";
             this.rvmphrasebtn.Primary = true;
             this.rvmphrasebtn.Size = new System.Drawing.Size(116, 35);
-            this.rvmphrasebtn.TabIndex = 56;
+            this.rvmphrasebtn.TabIndex = 11;
             this.rvmphrasebtn.Text = "Remove phrase";
             this.rvmphrasebtn.UseVisualStyleBackColor = true;
             this.rvmphrasebtn.Click += new System.EventHandler(this.rvmphrasebtn_Click);
@@ -779,7 +779,7 @@
             this.editphrasecancelbtn.Name = "editphrasecancelbtn";
             this.editphrasecancelbtn.Primary = true;
             this.editphrasecancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.editphrasecancelbtn.TabIndex = 55;
+            this.editphrasecancelbtn.TabIndex = 10;
             this.editphrasecancelbtn.Text = "cancel";
             this.editphrasecancelbtn.UseVisualStyleBackColor = true;
             this.editphrasecancelbtn.Click += new System.EventHandler(this.editphrasecancelbtn_Click);
@@ -792,7 +792,7 @@
             this.updatephrasebtn.Name = "updatephrasebtn";
             this.updatephrasebtn.Primary = true;
             this.updatephrasebtn.Size = new System.Drawing.Size(143, 35);
-            this.updatephrasebtn.TabIndex = 54;
+            this.updatephrasebtn.TabIndex = 9;
             this.updatephrasebtn.Text = "update phrase";
             this.updatephrasebtn.UseVisualStyleBackColor = true;
             this.updatephrasebtn.Click += new System.EventHandler(this.updatephrasebtn_Click);
@@ -803,7 +803,7 @@
             this.phrasebox.Location = new System.Drawing.Point(592, 12);
             this.phrasebox.Name = "phrasebox";
             this.phrasebox.Size = new System.Drawing.Size(330, 21);
-            this.phrasebox.TabIndex = 53;
+            this.phrasebox.TabIndex = 5;
             this.phrasebox.SelectedIndexChanged += new System.EventHandler(this.phrasebox_SelectedIndexChanged);
             // 
             // label14
@@ -831,7 +831,7 @@
             this.phrasecancelbtn.Name = "phrasecancelbtn";
             this.phrasecancelbtn.Primary = true;
             this.phrasecancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.phrasecancelbtn.TabIndex = 50;
+            this.phrasecancelbtn.TabIndex = 4;
             this.phrasecancelbtn.Text = "cancel";
             this.phrasecancelbtn.UseVisualStyleBackColor = true;
             this.phrasecancelbtn.Click += new System.EventHandler(this.phrasecancelbtn_Click);
@@ -844,7 +844,7 @@
             this.addphrasebtn.Name = "addphrasebtn";
             this.addphrasebtn.Primary = true;
             this.addphrasebtn.Size = new System.Drawing.Size(143, 35);
-            this.addphrasebtn.TabIndex = 49;
+            this.addphrasebtn.TabIndex = 3;
             this.addphrasebtn.Text = "add Phrase";
             this.addphrasebtn.UseVisualStyleBackColor = true;
             this.addphrasebtn.Click += new System.EventHandler(this.addphrasebtn_Click);
@@ -943,9 +943,9 @@
             this.Controls.Add(this.addwordsbtn);
             this.Controls.Add(this.addfoodbtn);
             this.Controls.Add(this.back);
+            this.Controls.Add(this.phrasespnl);
             this.Controls.Add(this.wordspnl);
             this.Controls.Add(this.foodpnl);
-            this.Controls.Add(this.phrasespnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "culture";
             this.Text = "culture";

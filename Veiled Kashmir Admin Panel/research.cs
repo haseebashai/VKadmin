@@ -67,7 +67,10 @@ namespace Veiled_Kashmir_Admin_Panel
         {
             if (nametxtok && desctxtok == true)
             {
-                cmd = "insert into research (`name`, `description`) values ('" + nametxt.Text + "', '" + desctxt.Text + "')";
+                StringBuilder s1 = new StringBuilder(desctxt.Text);
+                s1.Replace(@"\", @"\\");
+                s1.Replace("'", "\\'");
+                cmd = "insert into research (`name`, `description`) values ('" + nametxt.Text + "', '" + s1 + "')";
                 obj.nonQuery(cmd);
 
                 MessageBox.Show("New Research entry added succesfully!");
@@ -107,7 +110,10 @@ namespace Veiled_Kashmir_Admin_Panel
 
                 if (ragree.Checked && editnametxtok && editdesctxtok == true)
                 {
-                    cmd = ("update research set `name`='" + editnametxt.Text + "', `description`='" + editdesctxt.Text + "' where `name`='" + resbox.Text + "'");
+                    StringBuilder s1 = new StringBuilder(editdesctxt.Text);
+                    s1.Replace(@"\", @"\\");
+                    s1.Replace("'", "\\'");
+                    cmd = ("update research set `name`='" + editnametxt.Text + "', `description`='" + s1 + "' where `name`='" + resbox.Text + "'");
                     obj.nonQuery(cmd);
 
                     MessageBox.Show("Research entry updated succesfully!");

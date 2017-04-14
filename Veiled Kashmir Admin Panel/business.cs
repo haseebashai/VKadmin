@@ -44,7 +44,10 @@ namespace Veiled_Kashmir_Admin_Panel
         {
             if (nametxtok && desctxtok && status == true)
             {
-                cmd = "insert into business (`name`, `description`, `pic`) values ('" + nametxt.Text + "', '" + desctxt.Text + "', 'C:\\Vkashmir\\business\\" + nametxt.Text + ".jpg')";
+                StringBuilder s1 = new StringBuilder(desctxt.Text);
+                s1.Replace(@"\", @"\\");
+                s1.Replace("'", "\\'");
+                cmd = "insert into business (`name`, `description`, `pic`) values ('" + nametxt.Text + "', '" + s1 + @"', 'C:\\Vkashmir\\business\\" + nametxt.Text + ".jpg')";
                 dpbox.BackgroundImage.Save("C:\\Vkashmir\\business\\" + nametxt.Text + ".jpg");
                 obj.nonQuery(cmd);
 
@@ -118,16 +121,26 @@ namespace Veiled_Kashmir_Admin_Panel
         {
             
             dr = obj.Query("select * from business where name='" + selectbox3.Text + "'");
+
             dr.Read();
             
-            bidlbl.Text = dr[0].ToString();
-            inclbls.Visible = false;
-            addshoppnl.Visible = true;
 
-            obj.closeConnection();
+                bidlbl.Text = dr[0].ToString();
+                inclbls.Visible = false;
+                addshoppnl.Visible = true;
 
+                obj.closeConnection();
+                shopbox.DataSource = null;
+                foreach (DataRowView items in shopbox.Items)
+                    shopbox.Items.Remove(items);
+            shopeditnametxt.Text = "";
+            shopeditaddresstxt.Text = "";
+            shopeditnotxt.Text = "";
+            shopeditemailtxt.Text = "";
+            bideditlbl.Text="0";
             readshops();
 
+            
         }
         private void addshopdetbtn_Click(object sender, EventArgs e)
         {
@@ -140,7 +153,10 @@ namespace Veiled_Kashmir_Admin_Panel
             {
                 if (shopnametxt.Text != "" && shopnotxt.Text != "" && shopaddtxt.Text != "" && shopemailtxt.Text != "")
                 {
-                    cmd = "insert into businessdetails (`bid`, `name`, `location`, `phone`, `email`) values ('" + bidlbl.Text + "', '" + shopnametxt.Text + "', '" + shopaddtxt.Text + "', '" + shopnotxt.Text + "', '" + shopemailtxt.Text + "')";
+                    StringBuilder s1 = new StringBuilder(shopaddtxt.Text);
+                    s1.Replace(@"\", @"\\");
+                    s1.Replace("'", "\\'");
+                    cmd = "insert into businessdetails (`bid`, `name`, `location`, `phone`, `email`) values ('" + bidlbl.Text + "', '" + shopnametxt.Text + "', '" + s1 + "', '" + shopnotxt.Text + "', '" + shopemailtxt.Text + "')";
                     obj.nonQuery(cmd);
 
                     MessageBox.Show("New Shop added succesfully!");
@@ -155,19 +171,24 @@ namespace Veiled_Kashmir_Admin_Panel
             }
         }
 
+
+
         private void shopbox_SelectedIndexChanged(object sender, EventArgs e)
         {
             dr2 = obj.Query("select * from businessdetails where name='" + shopbox.Text + "'");
-            dr2.Read();
-            shopeditnametxt.Text = dr2[2].ToString();
-            shopeditaddresstxt.Text = dr2[3].ToString();
-            shopeditnotxt.Text = dr2[4].ToString();
-            shopeditemailtxt.Text = dr2[5].ToString();
-            bideditlbl.Text = dr2[1].ToString();
-            rvmpnl.Visible = true;
+            if (dr2.Read())
+            {
+                shopeditnametxt.Text = dr2[2].ToString();
+                shopeditaddresstxt.Text = dr2[3].ToString();
+                shopeditnotxt.Text = dr2[4].ToString();
+                shopeditemailtxt.Text = dr2[5].ToString();
+                bideditlbl.Text = dr2[1].ToString();
+                rvmpnl.Visible = true;
 
 
 
+                
+            }
             obj.closeConnection();
         }
 
@@ -210,13 +231,19 @@ namespace Veiled_Kashmir_Admin_Panel
                 {
                     if (status == true)
                     {
-                        cmd = ("update business set `name`='" + editnametxt.Text + "', `description`='" + editdesctxt.Text + "', `pic`='C:\\Vkashmir\\business\\" + editnametxt.Text + ".jpg' where `name`='" + selectbox.Text + "';");
+                        StringBuilder s1 = new StringBuilder(editdesctxt.Text);
+                        s1.Replace(@"\", @"\\");
+                        s1.Replace("'", "\\'");
+                        cmd = ("update business set `name`='" + editnametxt.Text + "', `description`='" + s1 + @"', `pic`='C:\\Vkashmir\\business\\" + editnametxt.Text + ".jpg' where `name`='" + selectbox.Text + "';");
                         dpbox.BackgroundImage.Save("C:\\Vkashmir\\business\\" + editnametxt.Text + ".jpg");
 
                     }
                     else
                     {
-                        cmd = ("update business set `name`='" + editnametxt.Text + "', `description`='" + editdesctxt.Text + "' where `name`='" + selectbox.Text + "';");
+                        StringBuilder s1 = new StringBuilder(editdesctxt.Text);
+                        s1.Replace(@"\", @"\\");
+                        s1.Replace("'", "\\'");
+                        cmd = ("update business set `name`='" + editnametxt.Text + "', `description`='" + s1 + "' where `name`='" + selectbox.Text + "';");
 
                     }
                     obj.nonQuery(cmd);
@@ -291,7 +318,10 @@ namespace Veiled_Kashmir_Admin_Panel
             {
                 if (shopeditnametxt.Text != "" && shopeditnotxt.Text != "" && shopeditaddresstxt.Text != "" && shopeditemailtxt.Text != "")
                 {
-                    cmd = ("update businessdetails set `bid`='" + bideditlbl.Text + "', `name`='" + shopeditnametxt.Text + "', `location`='" + shopeditaddresstxt.Text + "', `phone`='" + shopeditnotxt.Text + "', `email`='" + shopeditemailtxt.Text + "' where `name`='" + shopbox.Text + "'");
+                    StringBuilder s1 = new StringBuilder(shopeditaddresstxt.Text);
+                    s1.Replace(@"\", @"\\");
+                    s1.Replace("'", "\\'");
+                    cmd = ("update businessdetails set `bid`='" + bideditlbl.Text + "', `name`='" + shopeditnametxt.Text + "', `location`='" + s1 + "', `phone`='" + shopeditnotxt.Text + "', `email`='" + shopeditemailtxt.Text + "' where `name`='" + shopbox.Text + "'");
                     obj.nonQuery(cmd);
                     MessageBox.Show("Details updated for the selected shop.");
                     shopeditnametxt.Text = "";
@@ -329,6 +359,7 @@ namespace Veiled_Kashmir_Admin_Panel
             shopeditnotxt.Text = "";
             shopeditaddresstxt.Text = "";
             shopeditemailtxt.Text = "";
+
             bideditlbl.Visible = false;
             phnelbl.Visible = false;
         }
@@ -365,6 +396,32 @@ namespace Veiled_Kashmir_Admin_Panel
                 editnametxt.Focus();
             }
 
+        }
+
+        private void shopemailtxt_Leave(object sender, EventArgs e)
+        {
+            if (!Regex.IsMatch(shopemailtxt.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,4})+)$"))
+            {
+
+                elbl.Visible = true;
+                shopemailtxt.Text = "";
+            }
+        }
+
+        private void elbl2_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void shopeditemailtxt_Leave(object sender, EventArgs e)
+        {
+
+            if (!Regex.IsMatch(shopeditemailtxt.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,4})+)$"))
+            {
+
+                elbl2.Visible = true;
+                shopeditemailtxt.Text = "";
+            }
         }
 
         private void agree_CheckedChanged(object sender, EventArgs e)

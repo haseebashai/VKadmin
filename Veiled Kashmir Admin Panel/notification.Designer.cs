@@ -32,6 +32,8 @@
             this.cancelbtn = new MaterialSkin.Controls.MaterialRaisedButton();
             this.sendbtn = new MaterialSkin.Controls.MaterialRaisedButton();
             this.addevpnl = new System.Windows.Forms.Panel();
+            this.inclblem = new System.Windows.Forms.Label();
+            this.inclblm = new System.Windows.Forms.Label();
             this.msgupdatebtn = new MaterialSkin.Controls.MaterialRaisedButton();
             this.msgbox = new System.Windows.Forms.ComboBox();
             this.msgcancelbtn = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -41,8 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.msgtxt = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.inclblm = new System.Windows.Forms.Label();
-            this.inclblem = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.back)).BeginInit();
             this.addevpnl.SuspendLayout();
             this.SuspendLayout();
@@ -66,7 +66,7 @@
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Primary = true;
             this.cancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.cancelbtn.TabIndex = 9;
+            this.cancelbtn.TabIndex = 3;
             this.cancelbtn.Text = "cancel";
             this.cancelbtn.UseVisualStyleBackColor = true;
             this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
@@ -79,7 +79,7 @@
             this.sendbtn.Name = "sendbtn";
             this.sendbtn.Primary = true;
             this.sendbtn.Size = new System.Drawing.Size(143, 35);
-            this.sendbtn.TabIndex = 8;
+            this.sendbtn.TabIndex = 2;
             this.sendbtn.Text = "send";
             this.sendbtn.UseVisualStyleBackColor = true;
             this.sendbtn.Click += new System.EventHandler(this.sendbtn_Click);
@@ -104,6 +104,30 @@
             this.addevpnl.Size = new System.Drawing.Size(998, 420);
             this.addevpnl.TabIndex = 30;
             // 
+            // inclblem
+            // 
+            this.inclblem.AutoSize = true;
+            this.inclblem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inclblem.ForeColor = System.Drawing.Color.Red;
+            this.inclblem.Location = new System.Drawing.Point(795, 339);
+            this.inclblem.Name = "inclblem";
+            this.inclblem.Size = new System.Drawing.Size(136, 20);
+            this.inclblem.TabIndex = 71;
+            this.inclblem.Text = "incomplete details";
+            this.inclblem.Visible = false;
+            // 
+            // inclblm
+            // 
+            this.inclblm.AutoSize = true;
+            this.inclblm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inclblm.ForeColor = System.Drawing.Color.Red;
+            this.inclblm.Location = new System.Drawing.Point(236, 339);
+            this.inclblm.Name = "inclblm";
+            this.inclblm.Size = new System.Drawing.Size(136, 20);
+            this.inclblm.TabIndex = 70;
+            this.inclblm.Text = "incomplete details";
+            this.inclblm.Visible = false;
+            // 
             // msgupdatebtn
             // 
             this.msgupdatebtn.Depth = 0;
@@ -112,7 +136,7 @@
             this.msgupdatebtn.Name = "msgupdatebtn";
             this.msgupdatebtn.Primary = true;
             this.msgupdatebtn.Size = new System.Drawing.Size(143, 35);
-            this.msgupdatebtn.TabIndex = 21;
+            this.msgupdatebtn.TabIndex = 6;
             this.msgupdatebtn.Text = "update ";
             this.msgupdatebtn.UseVisualStyleBackColor = true;
             this.msgupdatebtn.Click += new System.EventHandler(this.msgupdatebtn_Click);
@@ -123,7 +147,7 @@
             this.msgbox.Location = new System.Drawing.Point(544, 31);
             this.msgbox.Name = "msgbox";
             this.msgbox.Size = new System.Drawing.Size(387, 21);
-            this.msgbox.TabIndex = 20;
+            this.msgbox.TabIndex = 4;
             this.msgbox.SelectedIndexChanged += new System.EventHandler(this.msgbox_SelectedIndexChanged);
             // 
             // msgcancelbtn
@@ -134,7 +158,7 @@
             this.msgcancelbtn.Name = "msgcancelbtn";
             this.msgcancelbtn.Primary = true;
             this.msgcancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.msgcancelbtn.TabIndex = 18;
+            this.msgcancelbtn.TabIndex = 7;
             this.msgcancelbtn.Text = "cancel";
             this.msgcancelbtn.UseVisualStyleBackColor = true;
             this.msgcancelbtn.Click += new System.EventHandler(this.msgcancelbtn_Click);
@@ -145,7 +169,7 @@
             this.msgboxtxt.Multiline = true;
             this.msgboxtxt.Name = "msgboxtxt";
             this.msgboxtxt.Size = new System.Drawing.Size(387, 187);
-            this.msgboxtxt.TabIndex = 17;
+            this.msgboxtxt.TabIndex = 5;
             // 
             // rvmbtn
             // 
@@ -155,7 +179,7 @@
             this.rvmbtn.Name = "rvmbtn";
             this.rvmbtn.Primary = true;
             this.rvmbtn.Size = new System.Drawing.Size(65, 35);
-            this.rvmbtn.TabIndex = 15;
+            this.rvmbtn.TabIndex = 8;
             this.rvmbtn.Text = "remove";
             this.rvmbtn.UseVisualStyleBackColor = true;
             this.rvmbtn.Click += new System.EventHandler(this.rvmbtn_Click);
@@ -184,7 +208,7 @@
             this.msgtxt.Multiline = true;
             this.msgtxt.Name = "msgtxt";
             this.msgtxt.Size = new System.Drawing.Size(387, 187);
-            this.msgtxt.TabIndex = 11;
+            this.msgtxt.TabIndex = 1;
             // 
             // panel1
             // 
@@ -193,30 +217,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1, 397);
             this.panel1.TabIndex = 10;
-            // 
-            // inclblm
-            // 
-            this.inclblm.AutoSize = true;
-            this.inclblm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inclblm.ForeColor = System.Drawing.Color.Red;
-            this.inclblm.Location = new System.Drawing.Point(236, 339);
-            this.inclblm.Name = "inclblm";
-            this.inclblm.Size = new System.Drawing.Size(136, 20);
-            this.inclblm.TabIndex = 70;
-            this.inclblm.Text = "incomplete details";
-            this.inclblm.Visible = false;
-            // 
-            // inclblem
-            // 
-            this.inclblem.AutoSize = true;
-            this.inclblem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inclblem.ForeColor = System.Drawing.Color.Red;
-            this.inclblem.Location = new System.Drawing.Point(795, 339);
-            this.inclblem.Name = "inclblem";
-            this.inclblem.Size = new System.Drawing.Size(136, 20);
-            this.inclblem.TabIndex = 71;
-            this.inclblem.Text = "incomplete details";
-            this.inclblem.Visible = false;
             // 
             // notification
             // 

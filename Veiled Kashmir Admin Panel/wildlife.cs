@@ -106,7 +106,10 @@ namespace Veiled_Kashmir_Admin_Panel
         {
             if (nametxtok && desctxtok && status == true)
             {
-                cmd = "insert into animals (`name`, `description`, `pic`) values ('" + nametxt.Text + "', '" + desctxt.Text + "', 'C:\\Vkashmir\\animals\\" + nametxt.Text + ".jpg')";
+                StringBuilder s1 = new StringBuilder(desctxt.Text);
+                s1.Replace(@"\", @"\\");
+                s1.Replace("'", "\\'");
+                cmd = "insert into animals (`name`, `description`, `pic`) values ('" + nametxt.Text + "', '" + s1 + @"', 'C:\\Vkashmir\\animals\\" + nametxt.Text + ".jpg')";
                 dpbox.BackgroundImage.Save("C:\\Vkashmir\\animals\\" + nametxt.Text + ".jpg");
 
                 obj.nonQuery(cmd);
@@ -152,12 +155,18 @@ namespace Veiled_Kashmir_Admin_Panel
                 {
                     if (status == true)
                     {
-                        cmd = ("update animals set `name`='" + editnametxt.Text + "', `description`='" + editdesctxt.Text + "', `pic`='C:\\Vkashmir\\animals\\" + editnametxt.Text + ".jpg' where `name`='" + animalbox.Text + "';");
+                        StringBuilder s1 = new StringBuilder(editdesctxt.Text);
+                        s1.Replace(@"\", @"\\");
+                        s1.Replace("'", "\\'");
+                        cmd = ("update animals set `name`='" + editnametxt.Text + "', `description`='" + s1 + @"', `pic`='C:\\Vkashmir\\animals\\" + editnametxt.Text + ".jpg' where `name`='" + animalbox.Text + "';");
                         dpbox.BackgroundImage.Save("C:\\Vkashmir\\animals\\" + editnametxt.Text + ".jpg");
                     }
                     else
                     {
-                        cmd = ("update animals set `name`='" + editnametxt.Text + "', `description`='" + editdesctxt.Text + "' where `name`='" + animalbox.Text + "';");
+                        StringBuilder s1 = new StringBuilder(editdesctxt.Text);
+                        s1.Replace(@"\", @"\\");
+                        s1.Replace("'", "\\'");
+                        cmd = ("update animals set `name`='" + editnametxt.Text + "', `description`='" + s1 + "' where `name`='" + animalbox.Text + "';");
 
                     }
                     obj.nonQuery(cmd);
@@ -224,12 +233,18 @@ namespace Veiled_Kashmir_Admin_Panel
                 {
                     if (status == true)
                     {
-                        cmd = ("update wildlife set `name`='" + editparktxt.Text + "', `description`='" + editparkdesctxt.Text + "', `pic`='C:\\Vkashmir\\wildlife\\" + editparktxt.Text + ".jpg', `class`='2' where `name`='" + parkbox.Text + "'");
+                        StringBuilder s1 = new StringBuilder(editparkdesctxt.Text);
+                        s1.Replace(@"\", @"\\");
+                        s1.Replace("'", "\\'");
+                        cmd = ("update wildlife set `name`='" + editparktxt.Text + "', `description`='" + s1 + @"', `pic`='C:\\Vkashmir\\wildlife\\" + editparktxt.Text + ".jpg', `class`='2' where `name`='" + parkbox.Text + "'");
                         epdpbox.BackgroundImage.Save("C:\\Vkashmir\\wildlife\\" + editparktxt.Text + ".jpg");
                     }
                     else
                     {
-                        cmd = ("update wildlife set `name`='" + editparktxt.Text + "', `description`='" + editparkdesctxt.Text + "', `class`='2' where `name`='" + parkbox.Text + "'");
+                        StringBuilder s1 = new StringBuilder(editparkdesctxt.Text);
+                        s1.Replace(@"\", @"\\");
+                        s1.Replace("'", "\\'");
+                        cmd = ("update wildlife set `name`='" + editparktxt.Text + "', `description`='" + s1 + "', `class`='2' where `name`='" + parkbox.Text + "'");
 
                     }
                     obj.nonQuery(cmd);
@@ -260,7 +275,10 @@ namespace Veiled_Kashmir_Admin_Panel
         {
             if (sancnametxtok && sancdesctxtok && status == true)
             {
-                cmd = "insert into wildlife (`name`, `description`, `pic`, `class`) values ('" + sancnametxt.Text + "', '" + sancdesctxt.Text + "', 'C:\\Vkashmir\\wildlife\\" + sancnametxt.Text + ".jpg', '1')";
+                StringBuilder s1 = new StringBuilder(sancdesctxt.Text);
+                s1.Replace(@"\", @"\\");
+                s1.Replace("'", "\\'");
+                cmd = "insert into wildlife (`name`, `description`, `pic`, `class`) values ('" + sancnametxt.Text + "', '" + s1 + @"', 'C:\\Vkashmir\\wildlife\\" + sancnametxt.Text + ".jpg', '1')";
                 dpbox.BackgroundImage.Save("C:\\Vkashmir\\wildlife\\" + sancnametxt.Text + ".jpg");
 
                 obj.nonQuery(cmd);
@@ -313,12 +331,18 @@ namespace Veiled_Kashmir_Admin_Panel
                 {
                     if (status == true)
                     {
-                        cmd = ("update wildlife set `name`='" + editsanctnametxt.Text + "', `description`='" + editsancdesctxt.Text + "', `pic`='C:\\Vkashmir\\wildlife\\" + editsanctnametxt.Text + ".jpg', `class`='1' where `name`='" + sancbox.Text + "'");
+                        StringBuilder s1 = new StringBuilder(editsancdesctxt.Text);
+                        s1.Replace(@"\", @"\\");
+                        s1.Replace("'", "\\'");
+                        cmd = ("update wildlife set `name`='" + editsanctnametxt.Text + "', `description`='" + s1 + @"', `pic`='C:\\Vkashmir\\wildlife\\" + editsanctnametxt.Text + ".jpg', `class`='1' where `name`='" + sancbox.Text + "'");
                         dpbox.BackgroundImage.Save("C:\\Vkashmir\\wildlife\\" + editsanctnametxt.Text + ".jpg");
                     }
                     else
                     {
-                        cmd = ("update wildlife set `name`='" + editsanctnametxt.Text + "', `description`='" + editsancdesctxt.Text + "', `class`='1' where `name`='" + sancbox.Text + "'");
+                        StringBuilder s1 = new StringBuilder(editsancdesctxt.Text);
+                        s1.Replace(@"\", @"\\");
+                        s1.Replace("'", "\\'");
+                        cmd = ("update wildlife set `name`='" + editsanctnametxt.Text + "', `description`='" + s1 + "', `class`='1' where `name`='" + sancbox.Text + "'");
 
                     }
                     obj.nonQuery(cmd);
@@ -533,7 +557,10 @@ namespace Veiled_Kashmir_Admin_Panel
         {
             if (parknametxtok && parkdesctxtok && status == true)
             {
-                cmd = "insert into wildlife (`name`, `description`, `pic`, `class`) values ('" + parknametxt.Text + "', '" + parkdesctxt.Text + "', 'C:\\Vkashmir\\wildlife\\" + parknametxt.Text + ".jpg', '2')";
+                StringBuilder s1 = new StringBuilder(parkdesctxt.Text);
+                s1.Replace(@"\", @"\\");
+                s1.Replace("'", "\\'");
+                cmd = "insert into wildlife (`name`, `description`, `pic`, `class`) values ('" + parknametxt.Text + "', '" + s1 + @"', 'C:\\Vkashmir\\wildlife\\" + parknametxt.Text + ".jpg', '2')";
                 dpbox.BackgroundImage.Save("C:\\Vkashmir\\wildlife\\" + parknametxt.Text + ".jpg");
                 obj.nonQuery(cmd);
 

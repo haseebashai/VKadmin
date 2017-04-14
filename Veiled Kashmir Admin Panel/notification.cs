@@ -32,8 +32,11 @@ namespace Veiled_Kashmir_Admin_Panel
         {
             if (msgtxt.Text != "")
             {
+                StringBuilder s1 = new StringBuilder(msgtxt.Text);
+                s1.Replace(@"\", @"\\");
+                s1.Replace("'", "\\'");
                 string cmd;
-                cmd = ("insert into notifications (notification) values ('" + msgtxt.Text + "')");
+                cmd = ("insert into notifications (notification) values ('" + s1 + "')");
                 obj.nonQuery(cmd);
                 MessageBox.Show("Notification sent sucessfully.");
                 msgtxt.Text = "";
@@ -96,10 +99,10 @@ namespace Veiled_Kashmir_Admin_Panel
             if (msgboxtxt.Text != "")
             {
                 string cmd;
-                StringBuilder s;
-                s = new StringBuilder(msgbox.Text);
-                s.Replace("'", "\\'");
-                cmd = ("update notifications set `notification`='" + s + "'where `notification`='" + msgbox.Text + "'");
+                StringBuilder s1 = new StringBuilder(msgboxtxt.Text);
+                s1.Replace(@"\", @"\\");
+                s1.Replace("'", "\\'");
+                cmd = ("update notifications set `notification`='" + s1 + "'where `notification`='" + msgbox.Text + "'");
                 obj.nonQuery(cmd);
                 MessageBox.Show("Message updated sucessfully.");
                 readmsg();

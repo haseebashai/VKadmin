@@ -181,7 +181,7 @@
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Primary = true;
             this.cancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.cancelbtn.TabIndex = 9;
+            this.cancelbtn.TabIndex = 6;
             this.cancelbtn.Text = "cancel";
             this.cancelbtn.UseVisualStyleBackColor = true;
             this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
@@ -194,7 +194,7 @@
             this.addplbtn.Name = "addplbtn";
             this.addplbtn.Primary = true;
             this.addplbtn.Size = new System.Drawing.Size(143, 35);
-            this.addplbtn.TabIndex = 8;
+            this.addplbtn.TabIndex = 5;
             this.addplbtn.Text = "add place";
             this.addplbtn.UseVisualStyleBackColor = true;
             this.addplbtn.Click += new System.EventHandler(this.addplbtn_Click);
@@ -211,7 +211,7 @@
             this.unexbtn.Name = "unexbtn";
             this.unexbtn.Ripple = true;
             this.unexbtn.Size = new System.Drawing.Size(99, 30);
-            this.unexbtn.TabIndex = 7;
+            this.unexbtn.TabIndex = 4;
             this.unexbtn.TabStop = true;
             this.unexbtn.Text = "Unexplored";
             this.unexbtn.UseVisualStyleBackColor = true;
@@ -229,7 +229,7 @@
             this.exbtn.Name = "exbtn";
             this.exbtn.Ripple = true;
             this.exbtn.Size = new System.Drawing.Size(83, 30);
-            this.exbtn.TabIndex = 6;
+            this.exbtn.TabIndex = 3;
             this.exbtn.TabStop = true;
             this.exbtn.Text = "Explored";
             this.exbtn.UseVisualStyleBackColor = true;
@@ -252,7 +252,7 @@
             this.desctxt.Multiline = true;
             this.desctxt.Name = "desctxt";
             this.desctxt.Size = new System.Drawing.Size(446, 339);
-            this.desctxt.TabIndex = 3;
+            this.desctxt.TabIndex = 2;
             this.desctxt.Leave += new System.EventHandler(this.desctxt_Leave);
             // 
             // label2
@@ -308,7 +308,7 @@
             this.selectbox.Location = new System.Drawing.Point(305, 17);
             this.selectbox.Name = "selectbox";
             this.selectbox.Size = new System.Drawing.Size(461, 21);
-            this.selectbox.TabIndex = 1;
+            this.selectbox.TabIndex = 8;
             this.selectbox.SelectedIndexChanged += new System.EventHandler(this.selectbox_SelectedIndexChanged);
             // 
             // label4
@@ -346,7 +346,7 @@
             this.agree.Location = new System.Drawing.Point(653, 264);
             this.agree.Name = "agree";
             this.agree.Size = new System.Drawing.Size(182, 17);
-            this.agree.TabIndex = 28;
+            this.agree.TabIndex = 5;
             this.agree.Text = "I have entered the correct details";
             this.agree.UseVisualStyleBackColor = true;
             this.agree.CheckedChanged += new System.EventHandler(this.agree_CheckedChanged);
@@ -385,7 +385,7 @@
             this.editcancelbtn.Name = "editcancelbtn";
             this.editcancelbtn.Primary = true;
             this.editcancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.editcancelbtn.TabIndex = 9;
+            this.editcancelbtn.TabIndex = 7;
             this.editcancelbtn.Text = "cancel";
             this.editcancelbtn.UseVisualStyleBackColor = true;
             this.editcancelbtn.Click += new System.EventHandler(this.editcancelbtn_Click);
@@ -398,7 +398,7 @@
             this.updatebtn.Name = "updatebtn";
             this.updatebtn.Primary = true;
             this.updatebtn.Size = new System.Drawing.Size(143, 35);
-            this.updatebtn.TabIndex = 8;
+            this.updatebtn.TabIndex = 6;
             this.updatebtn.Text = "Update Details";
             this.updatebtn.UseVisualStyleBackColor = true;
             this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
@@ -415,7 +415,7 @@
             this.unexbtn1.Name = "unexbtn1";
             this.unexbtn1.Ripple = true;
             this.unexbtn1.Size = new System.Drawing.Size(99, 30);
-            this.unexbtn1.TabIndex = 7;
+            this.unexbtn1.TabIndex = 4;
             this.unexbtn1.TabStop = true;
             this.unexbtn1.Text = "Unexplored";
             this.unexbtn1.UseVisualStyleBackColor = true;
@@ -433,7 +433,7 @@
             this.exbtn1.Name = "exbtn1";
             this.exbtn1.Ripple = true;
             this.exbtn1.Size = new System.Drawing.Size(83, 30);
-            this.exbtn1.TabIndex = 6;
+            this.exbtn1.TabIndex = 3;
             this.exbtn1.TabStop = true;
             this.exbtn1.Text = "Explored";
             this.exbtn1.UseVisualStyleBackColor = true;
@@ -456,7 +456,7 @@
             this.editdesctxt.Multiline = true;
             this.editdesctxt.Name = "editdesctxt";
             this.editdesctxt.Size = new System.Drawing.Size(446, 316);
-            this.editdesctxt.TabIndex = 3;
+            this.editdesctxt.TabIndex = 2;
             // 
             // label6
             // 
@@ -511,7 +511,7 @@
             this.selectbox2.Location = new System.Drawing.Point(305, 17);
             this.selectbox2.Name = "selectbox2";
             this.selectbox2.Size = new System.Drawing.Size(461, 21);
-            this.selectbox2.TabIndex = 5;
+            this.selectbox2.TabIndex = 1;
             this.selectbox2.SelectedIndexChanged += new System.EventHandler(this.selectbox2_SelectedIndexChanged);
             // 
             // label8
@@ -552,7 +552,7 @@
             this.rvmcancel.Name = "rvmcancel";
             this.rvmcancel.Primary = true;
             this.rvmcancel.Size = new System.Drawing.Size(143, 35);
-            this.rvmcancel.TabIndex = 9;
+            this.rvmcancel.TabIndex = 3;
             this.rvmcancel.Text = "cancel";
             this.rvmcancel.UseVisualStyleBackColor = true;
             this.rvmcancel.Click += new System.EventHandler(this.rvmcancel_Click);
@@ -565,7 +565,7 @@
             this.rmvbtn.Name = "rmvbtn";
             this.rmvbtn.Primary = true;
             this.rmvbtn.Size = new System.Drawing.Size(143, 35);
-            this.rmvbtn.TabIndex = 8;
+            this.rmvbtn.TabIndex = 2;
             this.rmvbtn.Text = "Remove place";
             this.rmvbtn.UseVisualStyleBackColor = true;
             this.rmvbtn.Click += new System.EventHandler(this.rmvbtn_Click);
@@ -611,9 +611,9 @@
             this.Controls.Add(this.editbtn);
             this.Controls.Add(this.addbtn);
             this.Controls.Add(this.back);
+            this.Controls.Add(this.removepnl);
             this.Controls.Add(this.editpnl);
             this.Controls.Add(this.addpnl);
-            this.Controls.Add(this.removepnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "destinations";
             this.Text = "destinations";

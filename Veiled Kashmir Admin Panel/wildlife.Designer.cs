@@ -150,7 +150,7 @@
             this.sagree.Location = new System.Drawing.Point(756, 322);
             this.sagree.Name = "sagree";
             this.sagree.Size = new System.Drawing.Size(182, 17);
-            this.sagree.TabIndex = 47;
+            this.sagree.TabIndex = 8;
             this.sagree.Text = "I have entered the correct details";
             this.sagree.UseVisualStyleBackColor = true;
             this.sagree.CheckedChanged += new System.EventHandler(this.sagree_CheckedChanged);
@@ -235,7 +235,7 @@
             this.sancrvmbtn.Name = "sancrvmbtn";
             this.sancrvmbtn.Primary = true;
             this.sancrvmbtn.Size = new System.Drawing.Size(142, 35);
-            this.sancrvmbtn.TabIndex = 40;
+            this.sancrvmbtn.TabIndex = 11;
             this.sancrvmbtn.Text = "Remove Sanctuary";
             this.sancrvmbtn.UseVisualStyleBackColor = true;
             this.sancrvmbtn.Click += new System.EventHandler(this.sancrvmbtn_Click);
@@ -248,7 +248,7 @@
             this.sanceditcancelbtn.Name = "sanceditcancelbtn";
             this.sanceditcancelbtn.Primary = true;
             this.sanceditcancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.sanceditcancelbtn.TabIndex = 39;
+            this.sanceditcancelbtn.TabIndex = 10;
             this.sanceditcancelbtn.Text = "cancel";
             this.sanceditcancelbtn.UseVisualStyleBackColor = true;
             this.sanceditcancelbtn.Click += new System.EventHandler(this.sanceditcancelbtn_Click);
@@ -261,7 +261,7 @@
             this.updatesancbtn.Name = "updatesancbtn";
             this.updatesancbtn.Primary = true;
             this.updatesancbtn.Size = new System.Drawing.Size(143, 35);
-            this.updatesancbtn.TabIndex = 38;
+            this.updatesancbtn.TabIndex = 9;
             this.updatesancbtn.Text = "update Sanctuary";
             this.updatesancbtn.UseVisualStyleBackColor = true;
             this.updatesancbtn.Click += new System.EventHandler(this.updatesancbtn_Click);
@@ -273,7 +273,7 @@
             this.editsancdesctxt.Multiline = true;
             this.editsancdesctxt.Name = "editsancdesctxt";
             this.editsancdesctxt.Size = new System.Drawing.Size(449, 175);
-            this.editsancdesctxt.TabIndex = 35;
+            this.editsancdesctxt.TabIndex = 7;
             // 
             // editsanctnametxt
             // 
@@ -287,7 +287,7 @@
             this.editsanctnametxt.SelectionLength = 0;
             this.editsanctnametxt.SelectionStart = 0;
             this.editsanctnametxt.Size = new System.Drawing.Size(396, 23);
-            this.editsanctnametxt.TabIndex = 34;
+            this.editsanctnametxt.TabIndex = 6;
             this.editsanctnametxt.UseSystemPasswordChar = false;
             // 
             // label14
@@ -306,7 +306,7 @@
             this.sancbox.Location = new System.Drawing.Point(605, 7);
             this.sancbox.Name = "sancbox";
             this.sancbox.Size = new System.Drawing.Size(257, 21);
-            this.sancbox.TabIndex = 32;
+            this.sancbox.TabIndex = 5;
             this.sancbox.SelectedIndexChanged += new System.EventHandler(this.sancbox_SelectedIndexChanged);
             // 
             // label15
@@ -334,7 +334,7 @@
             this.sanccancelbtn.Name = "sanccancelbtn";
             this.sanccancelbtn.Primary = true;
             this.sanccancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.sanccancelbtn.TabIndex = 29;
+            this.sanccancelbtn.TabIndex = 4;
             this.sanccancelbtn.Text = "cancel";
             this.sanccancelbtn.UseVisualStyleBackColor = true;
             this.sanccancelbtn.Click += new System.EventHandler(this.sanccancelbtn_Click);
@@ -347,7 +347,7 @@
             this.addsancbtn.Name = "addsancbtn";
             this.addsancbtn.Primary = true;
             this.addsancbtn.Size = new System.Drawing.Size(143, 35);
-            this.addsancbtn.TabIndex = 28;
+            this.addsancbtn.TabIndex = 3;
             this.addsancbtn.Text = "add Sanctuary";
             this.addsancbtn.UseVisualStyleBackColor = true;
             this.addsancbtn.Click += new System.EventHandler(this.addsancbtn_Click);
@@ -359,7 +359,7 @@
             this.sancdesctxt.Multiline = true;
             this.sancdesctxt.Name = "sancdesctxt";
             this.sancdesctxt.Size = new System.Drawing.Size(375, 188);
-            this.sancdesctxt.TabIndex = 25;
+            this.sancdesctxt.TabIndex = 2;
             this.sancdesctxt.Leave += new System.EventHandler(this.sancdesctxt_Leave);
             // 
             // label17
@@ -384,7 +384,7 @@
             this.sancnametxt.SelectionLength = 0;
             this.sancnametxt.SelectionStart = 0;
             this.sancnametxt.Size = new System.Drawing.Size(322, 23);
-            this.sancnametxt.TabIndex = 23;
+            this.sancnametxt.TabIndex = 1;
             this.sancnametxt.UseSystemPasswordChar = false;
             this.sancnametxt.Leave += new System.EventHandler(this.sancnametxt_Leave);
             // 
@@ -481,7 +481,7 @@
             this.agree.Location = new System.Drawing.Point(756, 327);
             this.agree.Name = "agree";
             this.agree.Size = new System.Drawing.Size(182, 17);
-            this.agree.TabIndex = 31;
+            this.agree.TabIndex = 8;
             this.agree.Text = "I have entered the correct details";
             this.agree.UseVisualStyleBackColor = true;
             this.agree.CheckedChanged += new System.EventHandler(this.agree_CheckedChanged);
@@ -545,7 +545,7 @@
             this.rvmanbtn.Name = "rvmanbtn";
             this.rvmanbtn.Primary = true;
             this.rvmanbtn.Size = new System.Drawing.Size(116, 35);
-            this.rvmanbtn.TabIndex = 21;
+            this.rvmanbtn.TabIndex = 11;
             this.rvmanbtn.Text = "Remove animal";
             this.rvmanbtn.UseVisualStyleBackColor = true;
             this.rvmanbtn.Click += new System.EventHandler(this.rvmanbtn_Click);
@@ -558,7 +558,7 @@
             this.editcancelbtn.Name = "editcancelbtn";
             this.editcancelbtn.Primary = true;
             this.editcancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.editcancelbtn.TabIndex = 20;
+            this.editcancelbtn.TabIndex = 10;
             this.editcancelbtn.Text = "cancel";
             this.editcancelbtn.UseVisualStyleBackColor = true;
             this.editcancelbtn.Click += new System.EventHandler(this.editcancelbtn_Click);
@@ -571,7 +571,7 @@
             this.updateanbtn.Name = "updateanbtn";
             this.updateanbtn.Primary = true;
             this.updateanbtn.Size = new System.Drawing.Size(143, 35);
-            this.updateanbtn.TabIndex = 19;
+            this.updateanbtn.TabIndex = 9;
             this.updateanbtn.Text = "update animal";
             this.updateanbtn.UseVisualStyleBackColor = true;
             this.updateanbtn.Click += new System.EventHandler(this.updateanbtn_Click);
@@ -593,7 +593,7 @@
             this.editdesctxt.Multiline = true;
             this.editdesctxt.Name = "editdesctxt";
             this.editdesctxt.Size = new System.Drawing.Size(449, 178);
-            this.editdesctxt.TabIndex = 16;
+            this.editdesctxt.TabIndex = 7;
             // 
             // editnametxt
             // 
@@ -607,7 +607,7 @@
             this.editnametxt.SelectionLength = 0;
             this.editnametxt.SelectionStart = 0;
             this.editnametxt.Size = new System.Drawing.Size(396, 23);
-            this.editnametxt.TabIndex = 14;
+            this.editnametxt.TabIndex = 6;
             this.editnametxt.UseSystemPasswordChar = false;
             // 
             // label12
@@ -626,7 +626,7 @@
             this.animalbox.Location = new System.Drawing.Point(570, 8);
             this.animalbox.Name = "animalbox";
             this.animalbox.Size = new System.Drawing.Size(292, 21);
-            this.animalbox.TabIndex = 12;
+            this.animalbox.TabIndex = 5;
             this.animalbox.SelectedIndexChanged += new System.EventHandler(this.animalbox_SelectedIndexChanged);
             // 
             // label9
@@ -654,7 +654,7 @@
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Primary = true;
             this.cancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.cancelbtn.TabIndex = 9;
+            this.cancelbtn.TabIndex = 4;
             this.cancelbtn.Text = "cancel";
             this.cancelbtn.UseVisualStyleBackColor = true;
             this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
@@ -667,7 +667,7 @@
             this.addanbtn.Name = "addanbtn";
             this.addanbtn.Primary = true;
             this.addanbtn.Size = new System.Drawing.Size(143, 35);
-            this.addanbtn.TabIndex = 8;
+            this.addanbtn.TabIndex = 3;
             this.addanbtn.Text = "add animal";
             this.addanbtn.UseVisualStyleBackColor = true;
             this.addanbtn.Click += new System.EventHandler(this.addanbtn_Click);
@@ -689,7 +689,7 @@
             this.desctxt.Multiline = true;
             this.desctxt.Name = "desctxt";
             this.desctxt.Size = new System.Drawing.Size(375, 191);
-            this.desctxt.TabIndex = 3;
+            this.desctxt.TabIndex = 2;
             this.desctxt.Leave += new System.EventHandler(this.desctxt_Leave);
             // 
             // label2
@@ -800,7 +800,7 @@
             this.pagree.Location = new System.Drawing.Point(754, 327);
             this.pagree.Name = "pagree";
             this.pagree.Size = new System.Drawing.Size(182, 17);
-            this.pagree.TabIndex = 44;
+            this.pagree.TabIndex = 8;
             this.pagree.Text = "I have entered the correct details";
             this.pagree.UseVisualStyleBackColor = true;
             this.pagree.CheckedChanged += new System.EventHandler(this.pagree_CheckedChanged);
@@ -849,7 +849,7 @@
             this.rvmparkbtn.Name = "rvmparkbtn";
             this.rvmparkbtn.Primary = true;
             this.rvmparkbtn.Size = new System.Drawing.Size(103, 35);
-            this.rvmparkbtn.TabIndex = 40;
+            this.rvmparkbtn.TabIndex = 11;
             this.rvmparkbtn.Text = "Remove Park";
             this.rvmparkbtn.UseVisualStyleBackColor = true;
             this.rvmparkbtn.Click += new System.EventHandler(this.rvmparkbtn_Click);
@@ -862,7 +862,7 @@
             this.editparkcancelbtn.Name = "editparkcancelbtn";
             this.editparkcancelbtn.Primary = true;
             this.editparkcancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.editparkcancelbtn.TabIndex = 39;
+            this.editparkcancelbtn.TabIndex = 10;
             this.editparkcancelbtn.Text = "cancel";
             this.editparkcancelbtn.UseVisualStyleBackColor = true;
             this.editparkcancelbtn.Click += new System.EventHandler(this.editparkcancelbtn_Click);
@@ -875,7 +875,7 @@
             this.updateparkbtn.Name = "updateparkbtn";
             this.updateparkbtn.Primary = true;
             this.updateparkbtn.Size = new System.Drawing.Size(143, 35);
-            this.updateparkbtn.TabIndex = 38;
+            this.updateparkbtn.TabIndex = 9;
             this.updateparkbtn.Text = "update Park";
             this.updateparkbtn.UseVisualStyleBackColor = true;
             this.updateparkbtn.Click += new System.EventHandler(this.updateparkbtn_Click);
@@ -887,7 +887,7 @@
             this.editparkdesctxt.Multiline = true;
             this.editparkdesctxt.Name = "editparkdesctxt";
             this.editparkdesctxt.Size = new System.Drawing.Size(449, 175);
-            this.editparkdesctxt.TabIndex = 35;
+            this.editparkdesctxt.TabIndex = 7;
             // 
             // editparktxt
             // 
@@ -901,7 +901,7 @@
             this.editparktxt.SelectionLength = 0;
             this.editparktxt.SelectionStart = 0;
             this.editparktxt.Size = new System.Drawing.Size(396, 23);
-            this.editparktxt.TabIndex = 34;
+            this.editparktxt.TabIndex = 6;
             this.editparktxt.UseSystemPasswordChar = false;
             // 
             // label5
@@ -920,7 +920,7 @@
             this.parkbox.Location = new System.Drawing.Point(599, 10);
             this.parkbox.Name = "parkbox";
             this.parkbox.Size = new System.Drawing.Size(292, 21);
-            this.parkbox.TabIndex = 32;
+            this.parkbox.TabIndex = 5;
             this.parkbox.SelectedIndexChanged += new System.EventHandler(this.parkbox_SelectedIndexChanged);
             // 
             // label6
@@ -948,7 +948,7 @@
             this.parkcancelbtn.Name = "parkcancelbtn";
             this.parkcancelbtn.Primary = true;
             this.parkcancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.parkcancelbtn.TabIndex = 29;
+            this.parkcancelbtn.TabIndex = 4;
             this.parkcancelbtn.Text = "cancel";
             this.parkcancelbtn.UseVisualStyleBackColor = true;
             this.parkcancelbtn.Click += new System.EventHandler(this.parkcancelbtn_Click);
@@ -961,7 +961,7 @@
             this.addparkbtn.Name = "addparkbtn";
             this.addparkbtn.Primary = true;
             this.addparkbtn.Size = new System.Drawing.Size(143, 35);
-            this.addparkbtn.TabIndex = 28;
+            this.addparkbtn.TabIndex = 3;
             this.addparkbtn.Text = "add Park";
             this.addparkbtn.UseVisualStyleBackColor = true;
             this.addparkbtn.Click += new System.EventHandler(this.addparkbtn_Click);
@@ -973,7 +973,7 @@
             this.parkdesctxt.Multiline = true;
             this.parkdesctxt.Name = "parkdesctxt";
             this.parkdesctxt.Size = new System.Drawing.Size(375, 188);
-            this.parkdesctxt.TabIndex = 25;
+            this.parkdesctxt.TabIndex = 2;
             this.parkdesctxt.Leave += new System.EventHandler(this.parkdesctxt_Leave);
             // 
             // label8
@@ -998,7 +998,7 @@
             this.parknametxt.SelectionLength = 0;
             this.parknametxt.SelectionStart = 0;
             this.parknametxt.Size = new System.Drawing.Size(322, 23);
-            this.parknametxt.TabIndex = 23;
+            this.parknametxt.TabIndex = 1;
             this.parknametxt.UseSystemPasswordChar = false;
             this.parknametxt.Leave += new System.EventHandler(this.parknametxt_Leave);
             // 
@@ -1038,9 +1038,9 @@
             this.Controls.Add(this.addparksbtn);
             this.Controls.Add(this.addanimalsbtn);
             this.Controls.Add(this.back);
+            this.Controls.Add(this.sancpnl);
             this.Controls.Add(this.animalpnl);
             this.Controls.Add(this.parkpnl);
-            this.Controls.Add(this.sancpnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "wildlife";
             this.Text = "wildlife";

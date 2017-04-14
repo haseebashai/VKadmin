@@ -49,13 +49,7 @@ namespace Veiled_Kashmir_Admin_Panel
             officebox.DisplayMember = "name";
             officebox.DataSource = dt;
 
-        /*    dr2 = obj.Query("select name from contactdetails");
-            DataTable dt = new DataTable();
-            dt.Columns.Add("name", typeof(String));
-            dt.Load(dr2);
-            obj.closeConnection();
-            officebox.DisplayMember = "name";
-            officebox.DataSource = dt; */
+        
         }
 
         private void contacts_Load(object sender, EventArgs e)
@@ -98,7 +92,10 @@ namespace Veiled_Kashmir_Admin_Panel
         {
             if (deptnametxt.Text != "")
             {
-                cmd = "insert into contacts (`name`) values ('" + deptnametxt.Text + "')";
+                StringBuilder s1 = new StringBuilder(deptnametxt.Text);
+                s1.Replace(@"\", @"\\");
+                s1.Replace("'", "\\'");
+                cmd = "insert into contacts (`name`) values ('" + s1 + "')";
                 obj.nonQuery(cmd);
 
                 MessageBox.Show("New Department added succesfully!");
@@ -117,6 +114,7 @@ namespace Veiled_Kashmir_Admin_Panel
             {
                 if (editdepttxt.Text != "")
                 {
+
                     cmd = ("update contacts set `name`='" + editdepttxt.Text + "' where `name`='" + deptbox.Text + "'");
                     obj.nonQuery(cmd);
                     MessageBox.Show("Details updated for the selected department.");

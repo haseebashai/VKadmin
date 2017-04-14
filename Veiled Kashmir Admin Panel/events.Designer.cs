@@ -45,6 +45,8 @@
             this.addeventbtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.back = new System.Windows.Forms.PictureBox();
             this.editevpnl = new System.Windows.Forms.Panel();
+            this.eventbox = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.editpnl = new System.Windows.Forms.Panel();
             this.userlbl = new System.Windows.Forms.Label();
             this.rvmevbtn = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -53,8 +55,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.editeventtxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label12 = new System.Windows.Forms.Label();
-            this.eventbox = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.addevpnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.back)).BeginInit();
             this.editevpnl.SuspendLayout();
@@ -97,14 +97,14 @@
             this.eventend.Location = new System.Drawing.Point(530, 176);
             this.eventend.Name = "eventend";
             this.eventend.Size = new System.Drawing.Size(200, 20);
-            this.eventend.TabIndex = 14;
+            this.eventend.TabIndex = 4;
             // 
             // eventstart
             // 
             this.eventstart.Location = new System.Drawing.Point(278, 176);
             this.eventstart.Name = "eventstart";
             this.eventstart.Size = new System.Drawing.Size(200, 20);
-            this.eventstart.TabIndex = 13;
+            this.eventstart.TabIndex = 3;
             // 
             // label10
             // 
@@ -138,7 +138,7 @@
             this.loctxt.SelectionLength = 0;
             this.loctxt.SelectionStart = 0;
             this.loctxt.Size = new System.Drawing.Size(303, 23);
-            this.loctxt.TabIndex = 10;
+            this.loctxt.TabIndex = 2;
             this.loctxt.UseSystemPasswordChar = false;
             // 
             // cancelbtn
@@ -149,7 +149,7 @@
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Primary = true;
             this.cancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.cancelbtn.TabIndex = 9;
+            this.cancelbtn.TabIndex = 6;
             this.cancelbtn.Text = "cancel";
             this.cancelbtn.UseVisualStyleBackColor = true;
             this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
@@ -162,7 +162,7 @@
             this.addevbtn.Name = "addevbtn";
             this.addevbtn.Primary = true;
             this.addevbtn.Size = new System.Drawing.Size(143, 35);
-            this.addevbtn.TabIndex = 8;
+            this.addevbtn.TabIndex = 5;
             this.addevbtn.Text = "add Event";
             this.addevbtn.UseVisualStyleBackColor = true;
             this.addevbtn.Click += new System.EventHandler(this.addevbtn_Click);
@@ -267,6 +267,24 @@
             this.editevpnl.TabIndex = 26;
             this.editevpnl.Visible = false;
             // 
+            // eventbox
+            // 
+            this.eventbox.FormattingEnabled = true;
+            this.eventbox.Location = new System.Drawing.Point(372, 26);
+            this.eventbox.Name = "eventbox";
+            this.eventbox.Size = new System.Drawing.Size(332, 21);
+            this.eventbox.TabIndex = 1;
+            this.eventbox.SelectedIndexChanged += new System.EventHandler(this.eventbox_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(285, 29);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 13);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "Select Event";
+            // 
             // editpnl
             // 
             this.editpnl.Controls.Add(this.userlbl);
@@ -287,7 +305,7 @@
             this.userlbl.AutoSize = true;
             this.userlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userlbl.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.userlbl.Location = new System.Drawing.Point(424, 43);
+            this.userlbl.Location = new System.Drawing.Point(433, 43);
             this.userlbl.Name = "userlbl";
             this.userlbl.Size = new System.Drawing.Size(51, 20);
             this.userlbl.TabIndex = 63;
@@ -301,7 +319,7 @@
             this.rvmevbtn.Name = "rvmevbtn";
             this.rvmevbtn.Primary = true;
             this.rvmevbtn.Size = new System.Drawing.Size(143, 35);
-            this.rvmevbtn.TabIndex = 40;
+            this.rvmevbtn.TabIndex = 2;
             this.rvmevbtn.Text = "Remove event";
             this.rvmevbtn.UseVisualStyleBackColor = true;
             this.rvmevbtn.Click += new System.EventHandler(this.rvmevbtn_Click);
@@ -330,7 +348,7 @@
             this.editcancelbtn.Name = "editcancelbtn";
             this.editcancelbtn.Primary = true;
             this.editcancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.editcancelbtn.TabIndex = 57;
+            this.editcancelbtn.TabIndex = 3;
             this.editcancelbtn.Text = "cancel";
             this.editcancelbtn.UseVisualStyleBackColor = true;
             this.editcancelbtn.Click += new System.EventHandler(this.editcancelbtn_Click);
@@ -371,24 +389,6 @@
             this.label12.TabIndex = 52;
             this.label12.Text = "Name";
             // 
-            // eventbox
-            // 
-            this.eventbox.FormattingEnabled = true;
-            this.eventbox.Location = new System.Drawing.Point(372, 26);
-            this.eventbox.Name = "eventbox";
-            this.eventbox.Size = new System.Drawing.Size(332, 21);
-            this.eventbox.TabIndex = 32;
-            this.eventbox.SelectedIndexChanged += new System.EventHandler(this.eventbox_SelectedIndexChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(285, 29);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 13);
-            this.label6.TabIndex = 31;
-            this.label6.Text = "Select Event";
-            // 
             // events
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -398,8 +398,8 @@
             this.Controls.Add(this.editeventbtn);
             this.Controls.Add(this.addeventbtn);
             this.Controls.Add(this.back);
-            this.Controls.Add(this.addevpnl);
             this.Controls.Add(this.editevpnl);
+            this.Controls.Add(this.addevpnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "events";
             this.Text = "events";

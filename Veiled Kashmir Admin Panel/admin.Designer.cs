@@ -298,7 +298,7 @@
             this.addcancelbtn.Name = "addcancelbtn";
             this.addcancelbtn.Primary = true;
             this.addcancelbtn.Size = new System.Drawing.Size(107, 31);
-            this.addcancelbtn.TabIndex = 86;
+            this.addcancelbtn.TabIndex = 13;
             this.addcancelbtn.TabStop = false;
             this.addcancelbtn.Text = "Cancel";
             this.addcancelbtn.UseVisualStyleBackColor = false;
@@ -387,7 +387,7 @@
             this.tcbox.Name = "tcbox";
             this.tcbox.Ripple = true;
             this.tcbox.Size = new System.Drawing.Size(250, 30);
-            this.tcbox.TabIndex = 71;
+            this.tcbox.TabIndex = 11;
             this.tcbox.TabStop = false;
             this.tcbox.Text = "I agree to the Terms and Conditions";
             this.tcbox.UseVisualStyleBackColor = true;
@@ -404,7 +404,7 @@
             this.confirmtxt.SelectionLength = 0;
             this.confirmtxt.SelectionStart = 0;
             this.confirmtxt.Size = new System.Drawing.Size(162, 23);
-            this.confirmtxt.TabIndex = 65;
+            this.confirmtxt.TabIndex = 6;
             this.confirmtxt.TabStop = false;
             this.confirmtxt.UseSystemPasswordChar = false;
             this.confirmtxt.Leave += new System.EventHandler(this.confirmtxt_Leave);
@@ -431,7 +431,7 @@
             this.signupbtn.Name = "signupbtn";
             this.signupbtn.Primary = true;
             this.signupbtn.Size = new System.Drawing.Size(107, 31);
-            this.signupbtn.TabIndex = 72;
+            this.signupbtn.TabIndex = 12;
             this.signupbtn.TabStop = false;
             this.signupbtn.Text = "Sign Up";
             this.signupbtn.UseVisualStyleBackColor = false;
@@ -476,7 +476,7 @@
             this.yeartxt.SelectionLength = 0;
             this.yeartxt.SelectionStart = 0;
             this.yeartxt.Size = new System.Drawing.Size(42, 23);
-            this.yeartxt.TabIndex = 70;
+            this.yeartxt.TabIndex = 10;
             this.yeartxt.TabStop = false;
             this.yeartxt.Text = "YYYY";
             this.yeartxt.UseSystemPasswordChar = false;
@@ -496,7 +496,7 @@
             this.montxt.SelectionLength = 0;
             this.montxt.SelectionStart = 0;
             this.montxt.Size = new System.Drawing.Size(27, 23);
-            this.montxt.TabIndex = 69;
+            this.montxt.TabIndex = 9;
             this.montxt.TabStop = false;
             this.montxt.Text = "MM";
             this.montxt.UseSystemPasswordChar = false;
@@ -517,7 +517,7 @@
             this.daytxt.SelectionLength = 0;
             this.daytxt.SelectionStart = 0;
             this.daytxt.Size = new System.Drawing.Size(21, 23);
-            this.daytxt.TabIndex = 68;
+            this.daytxt.TabIndex = 8;
             this.daytxt.TabStop = false;
             this.daytxt.Text = "DD";
             this.daytxt.UseSystemPasswordChar = false;
@@ -550,7 +550,7 @@
             this.phonetxt.SelectionLength = 0;
             this.phonetxt.SelectionStart = 0;
             this.phonetxt.Size = new System.Drawing.Size(166, 23);
-            this.phonetxt.TabIndex = 67;
+            this.phonetxt.TabIndex = 7;
             this.phonetxt.TabStop = false;
             this.phonetxt.UseSystemPasswordChar = false;
             this.phonetxt.Leave += new System.EventHandler(this.phonetxt_Leave);
@@ -580,7 +580,7 @@
             this.pwdtxt.SelectionLength = 0;
             this.pwdtxt.SelectionStart = 0;
             this.pwdtxt.Size = new System.Drawing.Size(167, 23);
-            this.pwdtxt.TabIndex = 64;
+            this.pwdtxt.TabIndex = 5;
             this.pwdtxt.TabStop = false;
             this.pwdtxt.UseSystemPasswordChar = false;
             this.pwdtxt.Leave += new System.EventHandler(this.pwdtxt_Leave);
@@ -597,7 +597,7 @@
             this.emailtxt.SelectionLength = 0;
             this.emailtxt.SelectionStart = 0;
             this.emailtxt.Size = new System.Drawing.Size(162, 23);
-            this.emailtxt.TabIndex = 63;
+            this.emailtxt.TabIndex = 4;
             this.emailtxt.TabStop = false;
             this.emailtxt.UseSystemPasswordChar = false;
             this.emailtxt.Leave += new System.EventHandler(this.emailtxt_Leave);
@@ -614,7 +614,7 @@
             this.usernametxt.SelectionLength = 0;
             this.usernametxt.SelectionStart = 0;
             this.usernametxt.Size = new System.Drawing.Size(168, 23);
-            this.usernametxt.TabIndex = 62;
+            this.usernametxt.TabIndex = 3;
             this.usernametxt.TabStop = false;
             this.usernametxt.UseSystemPasswordChar = false;
             this.usernametxt.Leave += new System.EventHandler(this.usernametxt_Leave);
@@ -631,7 +631,7 @@
             this.lnametxt.SelectionLength = 0;
             this.lnametxt.SelectionStart = 0;
             this.lnametxt.Size = new System.Drawing.Size(252, 23);
-            this.lnametxt.TabIndex = 61;
+            this.lnametxt.TabIndex = 2;
             this.lnametxt.TabStop = false;
             this.lnametxt.UseSystemPasswordChar = false;
             this.lnametxt.Leave += new System.EventHandler(this.lnametxt_Leave);
@@ -700,7 +700,7 @@
             this.fnametxt.SelectionLength = 0;
             this.fnametxt.SelectionStart = 0;
             this.fnametxt.Size = new System.Drawing.Size(253, 23);
-            this.fnametxt.TabIndex = 60;
+            this.fnametxt.TabIndex = 1;
             this.fnametxt.TabStop = false;
             this.fnametxt.UseSystemPasswordChar = false;
             this.fnametxt.Leave += new System.EventHandler(this.fnametxt_Leave);

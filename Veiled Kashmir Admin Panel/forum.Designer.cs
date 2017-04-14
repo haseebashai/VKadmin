@@ -80,7 +80,7 @@
             this.threadbtn.Name = "threadbtn";
             this.threadbtn.Primary = true;
             this.threadbtn.Size = new System.Drawing.Size(143, 35);
-            this.threadbtn.TabIndex = 40;
+            this.threadbtn.TabIndex = 2;
             this.threadbtn.Text = "Add Thread";
             this.threadbtn.UseVisualStyleBackColor = true;
             this.threadbtn.Click += new System.EventHandler(this.threadbtn_Click);
@@ -93,7 +93,7 @@
             this.addcancelbtn.Name = "addcancelbtn";
             this.addcancelbtn.Primary = true;
             this.addcancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.addcancelbtn.TabIndex = 57;
+            this.addcancelbtn.TabIndex = 3;
             this.addcancelbtn.Text = "cancel";
             this.addcancelbtn.UseVisualStyleBackColor = true;
             this.addcancelbtn.Click += new System.EventHandler(this.addcancelbtn_Click);
@@ -147,7 +147,7 @@
             this.threadbox.Location = new System.Drawing.Point(591, 27);
             this.threadbox.Name = "threadbox";
             this.threadbox.Size = new System.Drawing.Size(365, 21);
-            this.threadbox.TabIndex = 32;
+            this.threadbox.TabIndex = 4;
             this.threadbox.SelectedIndexChanged += new System.EventHandler(this.threadbox_SelectedIndexChanged);
             // 
             // rvmrepbtn
@@ -190,7 +190,7 @@
             this.fagree.Location = new System.Drawing.Point(774, 260);
             this.fagree.Name = "fagree";
             this.fagree.Size = new System.Drawing.Size(182, 17);
-            this.fagree.TabIndex = 72;
+            this.fagree.TabIndex = 6;
             this.fagree.Text = "I have entered the correct details";
             this.fagree.UseVisualStyleBackColor = true;
             this.fagree.CheckedChanged += new System.EventHandler(this.fagree_CheckedChanged);
@@ -227,7 +227,7 @@
             this.rvmbtn.Name = "rvmbtn";
             this.rvmbtn.Primary = true;
             this.rvmbtn.Size = new System.Drawing.Size(76, 35);
-            this.rvmbtn.TabIndex = 64;
+            this.rvmbtn.TabIndex = 9;
             this.rvmbtn.Text = "remove";
             this.rvmbtn.UseVisualStyleBackColor = true;
             this.rvmbtn.Click += new System.EventHandler(this.rvmbtn_Click);
@@ -240,7 +240,7 @@
             this.updatebtn.Name = "updatebtn";
             this.updatebtn.Primary = true;
             this.updatebtn.Size = new System.Drawing.Size(143, 35);
-            this.updatebtn.TabIndex = 62;
+            this.updatebtn.TabIndex = 7;
             this.updatebtn.Text = "update Thread";
             this.updatebtn.UseVisualStyleBackColor = true;
             this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
@@ -253,7 +253,7 @@
             this.updatecancelbtn.Name = "updatecancelbtn";
             this.updatecancelbtn.Primary = true;
             this.updatecancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.updatecancelbtn.TabIndex = 63;
+            this.updatecancelbtn.TabIndex = 8;
             this.updatecancelbtn.Text = "cancel";
             this.updatecancelbtn.UseVisualStyleBackColor = true;
             this.updatecancelbtn.Click += new System.EventHandler(this.updatecancelbtn_Click);
@@ -264,7 +264,7 @@
             this.updatethreadtxt.Multiline = true;
             this.updatethreadtxt.Name = "updatethreadtxt";
             this.updatethreadtxt.Size = new System.Drawing.Size(426, 165);
-            this.updatethreadtxt.TabIndex = 61;
+            this.updatethreadtxt.TabIndex = 5;
             // 
             // panel1
             // 
@@ -289,7 +289,7 @@
             this.threadtxt.Multiline = true;
             this.threadtxt.Name = "threadtxt";
             this.threadtxt.Size = new System.Drawing.Size(354, 165);
-            this.threadtxt.TabIndex = 58;
+            this.threadtxt.TabIndex = 1;
             this.threadtxt.Leave += new System.EventHandler(this.threadtxt_Leave);
             // 
             // repliespnl

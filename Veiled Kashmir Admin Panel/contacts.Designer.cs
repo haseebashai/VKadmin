@@ -176,7 +176,7 @@
             this.updatecancelbtn.Name = "updatecancelbtn";
             this.updatecancelbtn.Primary = true;
             this.updatecancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.updatecancelbtn.TabIndex = 35;
+            this.updatecancelbtn.TabIndex = 10;
             this.updatecancelbtn.Text = "cancel";
             this.updatecancelbtn.UseVisualStyleBackColor = true;
             this.updatecancelbtn.Click += new System.EventHandler(this.updatecancelbtn_Click);
@@ -189,7 +189,7 @@
             this.updateoffbtn.Name = "updateoffbtn";
             this.updateoffbtn.Primary = true;
             this.updateoffbtn.Size = new System.Drawing.Size(143, 35);
-            this.updateoffbtn.TabIndex = 34;
+            this.updateoffbtn.TabIndex = 9;
             this.updateoffbtn.Text = "update office";
             this.updateoffbtn.UseVisualStyleBackColor = true;
             this.updateoffbtn.Click += new System.EventHandler(this.updateoffbtn_Click);
@@ -226,7 +226,7 @@
             this.officenumbertxt.SelectionLength = 0;
             this.officenumbertxt.SelectionStart = 0;
             this.officenumbertxt.Size = new System.Drawing.Size(223, 23);
-            this.officenumbertxt.TabIndex = 31;
+            this.officenumbertxt.TabIndex = 8;
             this.officenumbertxt.UseSystemPasswordChar = false;
             this.officenumbertxt.Leave += new System.EventHandler(this.officenumbertxt_Leave);
             // 
@@ -252,7 +252,7 @@
             this.officenametxt.SelectionLength = 0;
             this.officenametxt.SelectionStart = 0;
             this.officenametxt.Size = new System.Drawing.Size(236, 23);
-            this.officenametxt.TabIndex = 29;
+            this.officenametxt.TabIndex = 7;
             this.officenametxt.UseSystemPasswordChar = false;
             // 
             // label10
@@ -280,7 +280,7 @@
             this.officebox.Location = new System.Drawing.Point(609, 83);
             this.officebox.Name = "officebox";
             this.officebox.Size = new System.Drawing.Size(288, 21);
-            this.officebox.TabIndex = 26;
+            this.officebox.TabIndex = 6;
             this.officebox.SelectedIndexChanged += new System.EventHandler(this.officebox_SelectedIndexChanged);
             // 
             // deptlbl
@@ -315,7 +315,7 @@
             this.editnumbertxt.SelectionLength = 0;
             this.editnumbertxt.SelectionStart = 0;
             this.editnumbertxt.Size = new System.Drawing.Size(223, 23);
-            this.editnumbertxt.TabIndex = 23;
+            this.editnumbertxt.TabIndex = 3;
             this.editnumbertxt.UseSystemPasswordChar = false;
             this.editnumbertxt.Leave += new System.EventHandler(this.editnumbertxt_Leave);
             // 
@@ -337,7 +337,7 @@
             this.rvmofficebtn.Name = "rvmofficebtn";
             this.rvmofficebtn.Primary = true;
             this.rvmofficebtn.Size = new System.Drawing.Size(111, 35);
-            this.rvmofficebtn.TabIndex = 21;
+            this.rvmofficebtn.TabIndex = 11;
             this.rvmofficebtn.Text = "Remove office";
             this.rvmofficebtn.UseVisualStyleBackColor = true;
             this.rvmofficebtn.Click += new System.EventHandler(this.rvmsofficebtn_Click);
@@ -350,7 +350,7 @@
             this.editcancelbtn.Name = "editcancelbtn";
             this.editcancelbtn.Primary = true;
             this.editcancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.editcancelbtn.TabIndex = 20;
+            this.editcancelbtn.TabIndex = 5;
             this.editcancelbtn.Text = "cancel";
             this.editcancelbtn.UseVisualStyleBackColor = true;
             this.editcancelbtn.Click += new System.EventHandler(this.editcancelbtn_Click);
@@ -363,7 +363,7 @@
             this.addoffbtn.Name = "addoffbtn";
             this.addoffbtn.Primary = true;
             this.addoffbtn.Size = new System.Drawing.Size(143, 35);
-            this.addoffbtn.TabIndex = 19;
+            this.addoffbtn.TabIndex = 4;
             this.addoffbtn.Text = "add office";
             this.addoffbtn.UseVisualStyleBackColor = true;
             this.addoffbtn.Click += new System.EventHandler(this.addoffbtn_Click);
@@ -380,7 +380,7 @@
             this.editnametxt.SelectionLength = 0;
             this.editnametxt.SelectionStart = 0;
             this.editnametxt.Size = new System.Drawing.Size(236, 23);
-            this.editnametxt.TabIndex = 14;
+            this.editnametxt.TabIndex = 2;
             this.editnametxt.UseSystemPasswordChar = false;
             this.editnametxt.Leave += new System.EventHandler(this.editnametxt_Leave);
             // 
@@ -400,7 +400,7 @@
             this.deptbox2.Location = new System.Drawing.Point(382, 16);
             this.deptbox2.Name = "deptbox2";
             this.deptbox2.Size = new System.Drawing.Size(331, 21);
-            this.deptbox2.TabIndex = 12;
+            this.deptbox2.TabIndex = 1;
             this.deptbox2.SelectedIndexChanged += new System.EventHandler(this.deptbox2_SelectedIndexChanged);
             // 
             // label9
@@ -512,7 +512,7 @@
             this.editdepttxt.SelectionLength = 0;
             this.editdepttxt.SelectionStart = 0;
             this.editdepttxt.Size = new System.Drawing.Size(287, 23);
-            this.editdepttxt.TabIndex = 42;
+            this.editdepttxt.TabIndex = 5;
             this.editdepttxt.UseSystemPasswordChar = false;
             // 
             // label4
@@ -533,7 +533,7 @@
             this.rvmdeptbtn.Name = "rvmdeptbtn";
             this.rvmdeptbtn.Primary = true;
             this.rvmdeptbtn.Size = new System.Drawing.Size(116, 36);
-            this.rvmdeptbtn.TabIndex = 40;
+            this.rvmdeptbtn.TabIndex = 8;
             this.rvmdeptbtn.Text = "Remove Department";
             this.rvmdeptbtn.UseVisualStyleBackColor = true;
             this.rvmdeptbtn.Click += new System.EventHandler(this.rvmdeptbtn_Click);
@@ -546,7 +546,7 @@
             this.editdeptcancelbtn.Name = "editdeptcancelbtn";
             this.editdeptcancelbtn.Primary = true;
             this.editdeptcancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.editdeptcancelbtn.TabIndex = 39;
+            this.editdeptcancelbtn.TabIndex = 7;
             this.editdeptcancelbtn.Text = "cancel";
             this.editdeptcancelbtn.UseVisualStyleBackColor = true;
             this.editdeptcancelbtn.Click += new System.EventHandler(this.editdeptcancelbtn_Click);
@@ -559,7 +559,7 @@
             this.updatedeptbtn.Name = "updatedeptbtn";
             this.updatedeptbtn.Primary = true;
             this.updatedeptbtn.Size = new System.Drawing.Size(143, 35);
-            this.updatedeptbtn.TabIndex = 38;
+            this.updatedeptbtn.TabIndex = 6;
             this.updatedeptbtn.Text = "update department";
             this.updatedeptbtn.UseVisualStyleBackColor = true;
             this.updatedeptbtn.Click += new System.EventHandler(this.updatedeptbtn_Click);
@@ -570,7 +570,7 @@
             this.deptbox.Location = new System.Drawing.Point(650, 14);
             this.deptbox.Name = "deptbox";
             this.deptbox.Size = new System.Drawing.Size(293, 21);
-            this.deptbox.TabIndex = 32;
+            this.deptbox.TabIndex = 4;
             this.deptbox.SelectedIndexChanged += new System.EventHandler(this.deptbox_SelectedIndexChanged);
             // 
             // label6
@@ -598,7 +598,7 @@
             this.deptcancelbtn.Name = "deptcancelbtn";
             this.deptcancelbtn.Primary = true;
             this.deptcancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.deptcancelbtn.TabIndex = 29;
+            this.deptcancelbtn.TabIndex = 3;
             this.deptcancelbtn.Text = "cancel";
             this.deptcancelbtn.UseVisualStyleBackColor = true;
             this.deptcancelbtn.Click += new System.EventHandler(this.deptcancelbtn_Click);
@@ -611,7 +611,7 @@
             this.adddeptbtn.Name = "adddeptbtn";
             this.adddeptbtn.Primary = true;
             this.adddeptbtn.Size = new System.Drawing.Size(143, 35);
-            this.adddeptbtn.TabIndex = 28;
+            this.adddeptbtn.TabIndex = 2;
             this.adddeptbtn.Text = "add department";
             this.adddeptbtn.UseVisualStyleBackColor = true;
             this.adddeptbtn.Click += new System.EventHandler(this.adddeptbtn_Click);
@@ -628,7 +628,7 @@
             this.deptnametxt.SelectionLength = 0;
             this.deptnametxt.SelectionStart = 0;
             this.deptnametxt.Size = new System.Drawing.Size(287, 23);
-            this.deptnametxt.TabIndex = 23;
+            this.deptnametxt.TabIndex = 1;
             this.deptnametxt.UseSystemPasswordChar = false;
             this.deptnametxt.Leave += new System.EventHandler(this.deptnametxt_Leave);
             // 

@@ -26,12 +26,12 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void readusers()
         {
-            dr = obj.Query("select username from users");
+            dr = obj.Query("select distinct user from ratings");
             DataTable dt = new DataTable();
-            dt.Columns.Add("username", typeof(String));
+            dt.Columns.Add("user", typeof(String));
             dt.Load(dr);
             obj.closeConnection();
-            userlist.DisplayMember = "username";
+            userlist.DisplayMember = "user";
             userlist.DataSource = dt;
         }
 
@@ -65,8 +65,9 @@ namespace Veiled_Kashmir_Admin_Panel
 
             dr = obj.Query("select * from ratings where user='" + userlist.Text + "'");
             dr.Read();
+
             user = dr[2].ToString();
-            placeid = Convert.ToInt32(dr[3]);
+           
             obj.closeConnection();            
             readreviews();
             
@@ -84,7 +85,13 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void reviewbox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            StringBuilder s1 = new StringBuilder(reviewbox.Text);
+            s1.Replace(@"\", @"\\");
+            s1.Replace("'", "\\'");
+            dr = obj.Query("select pid from ratings where review='"+ s1+"'");
+            dr.Read();
+            placeid = Convert.ToInt32(dr[0]);
+            obj.closeConnection();
             dr = obj.Query("select * from places where pid='" + placeid + "'");
             dr.Read();
             placelbl.Text = "in " +dr[1].ToString()+"";

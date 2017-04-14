@@ -98,7 +98,10 @@ namespace Veiled_Kashmir_Admin_Panel
         {
             if (nametxtok && desctxtok && status == true)
             {
-                cmd = "insert into food (`name`, `description`, `location`) values ('" + nametxt.Text + "', '" + desctxt.Text + "', 'C:\\Vkashmir\\food\\" + nametxt.Text + ".jpg')";
+                StringBuilder s1 = new StringBuilder(desctxt.Text);
+                s1.Replace(@"\", @"\\");
+                s1.Replace("'", "\\'");
+                cmd = "insert into food (`name`, `description`, `location`) values ('" + nametxt.Text + "', '" + s1 + @"', 'C:\\Vkashmir\\food\\" + nametxt.Text + ".jpg')";
                 dpbox.BackgroundImage.Save("C:\\Vkashmir\\food\\" + nametxt.Text + ".jpg");
 
                 obj.nonQuery(cmd);
@@ -136,12 +139,18 @@ namespace Veiled_Kashmir_Admin_Panel
                 {
                     if (status == true)
                     {
-                        cmd = ("update food set `name`='" + editnametxt.Text + "', `description`='" + editdesctxt.Text + "', `pic`='C:\\Vkashmir\\food\\" + editnametxt.Text + ".jpg' where `name`='" + foodbox.Text + "';");
+                        StringBuilder s1 = new StringBuilder(editdesctxt.Text);
+                        s1.Replace(@"\", @"\\");
+                        s1.Replace("'", "\\'");
+                        cmd = ("update food set `name`='" + editnametxt.Text + "', `description`='" + s1 + @"', `pic`='C:\\Vkashmir\\food\\" + editnametxt.Text + ".jpg' where `name`='" + foodbox.Text + "';");
                         dpbox.BackgroundImage.Save("C:\\Vkashmir\\food\\" + editnametxt.Text + ".jpg");
                     }
                     else
                     {
-                        cmd = ("update food set `name`='" + editnametxt.Text + "', `description`='" + editdesctxt.Text + "' where `name`='" + foodbox.Text + "';");
+                        StringBuilder s1 = new StringBuilder(editdesctxt.Text);
+                        s1.Replace(@"\", @"\\");
+                        s1.Replace("'", "\\'");
+                        cmd = ("update food set `name`='" + editnametxt.Text + "', `description`='" + s1 + "' where `name`='" + foodbox.Text + "';");
 
                     }
                     obj.nonQuery(cmd);
@@ -181,7 +190,10 @@ namespace Veiled_Kashmir_Admin_Panel
         {
             if (wordtxtok && meaningtxtok == true)
             {
-                cmd = "insert into dictionary (`keyword`, `meaning`) values ('" + wordtxt.Text + "', '" + meaningtxt.Text + "')";
+                StringBuilder s1 = new StringBuilder(meaningtxt.Text);
+                s1.Replace(@"\", @"\\");
+                s1.Replace("'", "\\'");
+                cmd = "insert into dictionary (`keyword`, `meaning`) values ('" + wordtxt.Text + "', '" + s1 + "')";
                 obj.nonQuery(cmd);
 
                 MessageBox.Show("New Word entry added succesfully!");
@@ -221,8 +233,10 @@ namespace Veiled_Kashmir_Admin_Panel
             {
                 if (wagree.Checked && editwordtxtok && editmeaningtxtok == true)
                 {
-
-                    cmd = ("update dictionary set `keyword`='" + editwordtxt.Text + "', `meaning`='" + editmeaningtxt.Text + "' where `keyword`='" + wordbox.Text + "'");
+                    StringBuilder s1 = new StringBuilder(editmeaningtxt.Text);
+                    s1.Replace(@"\", @"\\");
+                    s1.Replace("'", "\\'");
+                    cmd = ("update dictionary set `keyword`='" + editwordtxt.Text + "', `meaning`='" + s1 + "' where `keyword`='" + wordbox.Text + "'");
                     obj.nonQuery(cmd);
 
                     MessageBox.Show("Word entry updated succesfully!");
@@ -250,7 +264,10 @@ namespace Veiled_Kashmir_Admin_Panel
         {
             if (phrasetxtok && phraseentxtok == true)
             {
-                cmd = "insert into phrases (`phrases`, `meaning`) values ('" + phrasetxt.Text + "', '" + phraseentxt.Text + "')";
+                StringBuilder s1 = new StringBuilder(phraseentxt.Text);
+                s1.Replace(@"\", @"\\");
+                s1.Replace("'", "\\'");
+                cmd = "insert into phrases (`phrases`, `meaning`) values ('" + phrasetxt.Text + "', '" + s1 + "')";
                 obj.nonQuery(cmd);
 
                 MessageBox.Show("New Phrase added succesfully!");
@@ -274,8 +291,12 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void phrasebox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dr = obj.Query("select * from phrases where phrases='" + phrasebox.Text + "'");
+            StringBuilder s1 = new StringBuilder(phrasebox.Text);
+            s1.Replace(@"\", @"\\");
+            s1.Replace("'", "\\'");
+            dr = obj.Query("select * from phrases where phrases='" + s1 + "'");
             dr.Read();
+            
             editphrasetxt.Text = dr[1].ToString();
             editphraseentxt.Text = dr[2].ToString();
             inclblep.Visible = false;
@@ -290,7 +311,10 @@ namespace Veiled_Kashmir_Admin_Panel
             {
                 if (pagree.Checked && editphrasetxtok && editphraseentxtok == true)
                 {
-                    cmd = ("update phrases set `phrases`='" + editphrasetxt.Text + "', `meaning`='" + editphraseentxt.Text + "' where `phrases`='" + phrasebox.Text + "'");
+                    StringBuilder s1 = new StringBuilder(editphraseentxt.Text);
+                    s1.Replace(@"\", @"\\");
+                    s1.Replace("'", "\\'");
+                    cmd = ("update phrases set `phrases`='" + editphrasetxt.Text + "', `meaning`='" + s1 + "' where `phrases`='" + phrasebox.Text + "'");
                     obj.nonQuery(cmd);
 
                     MessageBox.Show("Phrase updated succesfully!");

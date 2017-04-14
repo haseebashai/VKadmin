@@ -66,9 +66,11 @@
             this.addshopbtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.shoppnl = new System.Windows.Forms.Panel();
             this.addshoppnl = new System.Windows.Forms.Panel();
+            this.elbl = new System.Windows.Forms.Label();
             this.phnlbl = new System.Windows.Forms.Label();
             this.inclbls = new System.Windows.Forms.Label();
             this.editshoppnl = new System.Windows.Forms.Panel();
+            this.elbl2 = new System.Windows.Forms.Label();
             this.phnelbl = new System.Windows.Forms.Label();
             this.inclbles = new System.Windows.Forms.Label();
             this.editshopcancelbtn = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -124,7 +126,7 @@
             this.editcancelbtn.Name = "editcancelbtn";
             this.editcancelbtn.Primary = true;
             this.editcancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.editcancelbtn.TabIndex = 9;
+            this.editcancelbtn.TabIndex = 5;
             this.editcancelbtn.Text = "cancel";
             this.editcancelbtn.UseVisualStyleBackColor = true;
             this.editcancelbtn.Click += new System.EventHandler(this.editcancelbtn_Click);
@@ -135,7 +137,7 @@
             this.selectbox.Location = new System.Drawing.Point(305, 17);
             this.selectbox.Name = "selectbox";
             this.selectbox.Size = new System.Drawing.Size(461, 21);
-            this.selectbox.TabIndex = 1;
+            this.selectbox.TabIndex = 6;
             this.selectbox.SelectedIndexChanged += new System.EventHandler(this.selectbox_SelectedIndexChanged);
             // 
             // updatebtn
@@ -146,7 +148,7 @@
             this.updatebtn.Name = "updatebtn";
             this.updatebtn.Primary = true;
             this.updatebtn.Size = new System.Drawing.Size(143, 35);
-            this.updatebtn.TabIndex = 8;
+            this.updatebtn.TabIndex = 4;
             this.updatebtn.Text = "Update Details";
             this.updatebtn.UseVisualStyleBackColor = true;
             this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
@@ -158,7 +160,7 @@
             this.editdesctxt.Multiline = true;
             this.editdesctxt.Name = "editdesctxt";
             this.editdesctxt.Size = new System.Drawing.Size(446, 316);
-            this.editdesctxt.TabIndex = 3;
+            this.editdesctxt.TabIndex = 2;
             // 
             // label4
             // 
@@ -206,7 +208,7 @@
             this.selectbox2.Location = new System.Drawing.Point(305, 17);
             this.selectbox2.Name = "selectbox2";
             this.selectbox2.Size = new System.Drawing.Size(461, 21);
-            this.selectbox2.TabIndex = 5;
+            this.selectbox2.TabIndex = 1;
             this.selectbox2.SelectedIndexChanged += new System.EventHandler(this.selectbox2_SelectedIndexChanged);
             // 
             // label8
@@ -247,7 +249,7 @@
             this.rvmcancel.Name = "rvmcancel";
             this.rvmcancel.Primary = true;
             this.rvmcancel.Size = new System.Drawing.Size(143, 35);
-            this.rvmcancel.TabIndex = 9;
+            this.rvmcancel.TabIndex = 3;
             this.rvmcancel.Text = "cancel";
             this.rvmcancel.UseVisualStyleBackColor = true;
             this.rvmcancel.Click += new System.EventHandler(this.rvmcancel_Click);
@@ -260,7 +262,7 @@
             this.rmvbtn.Name = "rmvbtn";
             this.rmvbtn.Primary = true;
             this.rmvbtn.Size = new System.Drawing.Size(172, 35);
-            this.rmvbtn.TabIndex = 8;
+            this.rmvbtn.TabIndex = 2;
             this.rmvbtn.Text = "Remove business entry";
             this.rmvbtn.UseVisualStyleBackColor = true;
             this.rmvbtn.Click += new System.EventHandler(this.rmvbtn_Click);
@@ -327,7 +329,7 @@
             this.agree.Location = new System.Drawing.Point(640, 262);
             this.agree.Name = "agree";
             this.agree.Size = new System.Drawing.Size(182, 17);
-            this.agree.TabIndex = 30;
+            this.agree.TabIndex = 3;
             this.agree.Text = "I have entered the correct details";
             this.agree.UseVisualStyleBackColor = true;
             this.agree.CheckedChanged += new System.EventHandler(this.agree_CheckedChanged);
@@ -454,7 +456,7 @@
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Primary = true;
             this.cancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.cancelbtn.TabIndex = 9;
+            this.cancelbtn.TabIndex = 4;
             this.cancelbtn.Text = "cancel";
             this.cancelbtn.UseVisualStyleBackColor = true;
             this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
@@ -467,7 +469,7 @@
             this.addbusbtn.Name = "addbusbtn";
             this.addbusbtn.Primary = true;
             this.addbusbtn.Size = new System.Drawing.Size(143, 35);
-            this.addbusbtn.TabIndex = 8;
+            this.addbusbtn.TabIndex = 3;
             this.addbusbtn.Text = "add entry";
             this.addbusbtn.UseVisualStyleBackColor = true;
             this.addbusbtn.Click += new System.EventHandler(this.addbusbtn_Click);
@@ -489,7 +491,7 @@
             this.desctxt.Multiline = true;
             this.desctxt.Name = "desctxt";
             this.desctxt.Size = new System.Drawing.Size(446, 333);
-            this.desctxt.TabIndex = 3;
+            this.desctxt.TabIndex = 2;
             this.desctxt.Leave += new System.EventHandler(this.desctxt_Leave);
             // 
             // label2
@@ -568,6 +570,7 @@
             // 
             // addshoppnl
             // 
+            this.addshoppnl.Controls.Add(this.elbl);
             this.addshoppnl.Controls.Add(this.phnlbl);
             this.addshoppnl.Controls.Add(this.inclbls);
             this.addshoppnl.Controls.Add(this.editshoppnl);
@@ -589,6 +592,18 @@
             this.addshoppnl.Name = "addshoppnl";
             this.addshoppnl.Size = new System.Drawing.Size(986, 363);
             this.addshoppnl.TabIndex = 2;
+            // 
+            // elbl
+            // 
+            this.elbl.AutoSize = true;
+            this.elbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.elbl.ForeColor = System.Drawing.Color.Red;
+            this.elbl.Location = new System.Drawing.Point(346, 155);
+            this.elbl.Name = "elbl";
+            this.elbl.Size = new System.Drawing.Size(75, 13);
+            this.elbl.TabIndex = 72;
+            this.elbl.Text = "incorrect email";
+            this.elbl.Visible = false;
             // 
             // phnlbl
             // 
@@ -616,6 +631,7 @@
             // 
             // editshoppnl
             // 
+            this.editshoppnl.Controls.Add(this.elbl2);
             this.editshoppnl.Controls.Add(this.phnelbl);
             this.editshoppnl.Controls.Add(this.inclbles);
             this.editshoppnl.Controls.Add(this.editshopcancelbtn);
@@ -635,6 +651,19 @@
             this.editshoppnl.Name = "editshoppnl";
             this.editshoppnl.Size = new System.Drawing.Size(469, 290);
             this.editshoppnl.TabIndex = 18;
+            // 
+            // elbl2
+            // 
+            this.elbl2.AutoSize = true;
+            this.elbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.elbl2.ForeColor = System.Drawing.Color.Red;
+            this.elbl2.Location = new System.Drawing.Point(368, 150);
+            this.elbl2.Name = "elbl2";
+            this.elbl2.Size = new System.Drawing.Size(75, 13);
+            this.elbl2.TabIndex = 73;
+            this.elbl2.Text = "incorrect email";
+            this.elbl2.Visible = false;
+            this.elbl2.Leave += new System.EventHandler(this.elbl2_Leave);
             // 
             // phnelbl
             // 
@@ -668,7 +697,7 @@
             this.editshopcancelbtn.Name = "editshopcancelbtn";
             this.editshopcancelbtn.Primary = true;
             this.editshopcancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.editshopcancelbtn.TabIndex = 25;
+            this.editshopcancelbtn.TabIndex = 14;
             this.editshopcancelbtn.Text = "cancel";
             this.editshopcancelbtn.UseVisualStyleBackColor = true;
             this.editshopcancelbtn.Click += new System.EventHandler(this.editshopcancelbtn_Click);
@@ -681,7 +710,7 @@
             this.shoprvmbtn.Name = "shoprvmbtn";
             this.shoprvmbtn.Primary = true;
             this.shoprvmbtn.Size = new System.Drawing.Size(79, 35);
-            this.shoprvmbtn.TabIndex = 17;
+            this.shoprvmbtn.TabIndex = 15;
             this.shoprvmbtn.Text = "Remove";
             this.shoprvmbtn.UseVisualStyleBackColor = true;
             this.shoprvmbtn.Click += new System.EventHandler(this.shoprvmbtn_Click);
@@ -694,7 +723,7 @@
             this.updateshopbtn.Name = "updateshopbtn";
             this.updateshopbtn.Primary = true;
             this.updateshopbtn.Size = new System.Drawing.Size(143, 35);
-            this.updateshopbtn.TabIndex = 24;
+            this.updateshopbtn.TabIndex = 13;
             this.updateshopbtn.Text = "Update shop";
             this.updateshopbtn.UseVisualStyleBackColor = true;
             this.updateshopbtn.Click += new System.EventHandler(this.updateshopbtn_Click);
@@ -711,8 +740,9 @@
             this.shopeditemailtxt.SelectionLength = 0;
             this.shopeditemailtxt.SelectionStart = 0;
             this.shopeditemailtxt.Size = new System.Drawing.Size(354, 23);
-            this.shopeditemailtxt.TabIndex = 23;
+            this.shopeditemailtxt.TabIndex = 12;
             this.shopeditemailtxt.UseSystemPasswordChar = false;
+            this.shopeditemailtxt.Leave += new System.EventHandler(this.shopeditemailtxt_Leave);
             // 
             // shopeditnotxt
             // 
@@ -726,7 +756,7 @@
             this.shopeditnotxt.SelectionLength = 0;
             this.shopeditnotxt.SelectionStart = 0;
             this.shopeditnotxt.Size = new System.Drawing.Size(323, 23);
-            this.shopeditnotxt.TabIndex = 22;
+            this.shopeditnotxt.TabIndex = 11;
             this.shopeditnotxt.UseSystemPasswordChar = false;
             this.shopeditnotxt.Leave += new System.EventHandler(this.shopeditnotxt_Leave);
             // 
@@ -742,7 +772,7 @@
             this.shopeditaddresstxt.SelectionLength = 0;
             this.shopeditaddresstxt.SelectionStart = 0;
             this.shopeditaddresstxt.Size = new System.Drawing.Size(354, 23);
-            this.shopeditaddresstxt.TabIndex = 21;
+            this.shopeditaddresstxt.TabIndex = 10;
             this.shopeditaddresstxt.UseSystemPasswordChar = false;
             // 
             // shopeditnametxt
@@ -757,7 +787,7 @@
             this.shopeditnametxt.SelectionLength = 0;
             this.shopeditnametxt.SelectionStart = 0;
             this.shopeditnametxt.Size = new System.Drawing.Size(354, 23);
-            this.shopeditnametxt.TabIndex = 20;
+            this.shopeditnametxt.TabIndex = 9;
             this.shopeditnametxt.UseSystemPasswordChar = false;
             // 
             // label14
@@ -830,7 +860,7 @@
             this.shopbox.Location = new System.Drawing.Point(579, 14);
             this.shopbox.Name = "shopbox";
             this.shopbox.Size = new System.Drawing.Size(339, 21);
-            this.shopbox.TabIndex = 15;
+            this.shopbox.TabIndex = 8;
             this.shopbox.SelectedIndexChanged += new System.EventHandler(this.shopbox_SelectedIndexChanged);
             // 
             // shopcancelbtn
@@ -841,7 +871,7 @@
             this.shopcancelbtn.Name = "shopcancelbtn";
             this.shopcancelbtn.Primary = true;
             this.shopcancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.shopcancelbtn.TabIndex = 13;
+            this.shopcancelbtn.TabIndex = 7;
             this.shopcancelbtn.Text = "cancel";
             this.shopcancelbtn.UseVisualStyleBackColor = true;
             this.shopcancelbtn.Click += new System.EventHandler(this.shopcancelbtn_Click);
@@ -854,7 +884,7 @@
             this.addshopdetbtn.Name = "addshopdetbtn";
             this.addshopdetbtn.Primary = true;
             this.addshopdetbtn.Size = new System.Drawing.Size(143, 35);
-            this.addshopdetbtn.TabIndex = 12;
+            this.addshopdetbtn.TabIndex = 6;
             this.addshopdetbtn.Text = "add shop";
             this.addshopdetbtn.UseVisualStyleBackColor = true;
             this.addshopdetbtn.Click += new System.EventHandler(this.addshopdetbtn_Click);
@@ -871,8 +901,9 @@
             this.shopemailtxt.SelectionLength = 0;
             this.shopemailtxt.SelectionStart = 0;
             this.shopemailtxt.Size = new System.Drawing.Size(354, 23);
-            this.shopemailtxt.TabIndex = 11;
+            this.shopemailtxt.TabIndex = 5;
             this.shopemailtxt.UseSystemPasswordChar = false;
+            this.shopemailtxt.Leave += new System.EventHandler(this.shopemailtxt_Leave);
             // 
             // shopnotxt
             // 
@@ -886,7 +917,7 @@
             this.shopnotxt.SelectionLength = 0;
             this.shopnotxt.SelectionStart = 0;
             this.shopnotxt.Size = new System.Drawing.Size(323, 23);
-            this.shopnotxt.TabIndex = 10;
+            this.shopnotxt.TabIndex = 4;
             this.shopnotxt.UseSystemPasswordChar = false;
             this.shopnotxt.Leave += new System.EventHandler(this.shopnotxt_Leave);
             // 
@@ -902,7 +933,7 @@
             this.shopaddtxt.SelectionLength = 0;
             this.shopaddtxt.SelectionStart = 0;
             this.shopaddtxt.Size = new System.Drawing.Size(354, 23);
-            this.shopaddtxt.TabIndex = 9;
+            this.shopaddtxt.TabIndex = 3;
             this.shopaddtxt.UseSystemPasswordChar = false;
             // 
             // shopnametxt
@@ -917,7 +948,7 @@
             this.shopnametxt.SelectionLength = 0;
             this.shopnametxt.SelectionStart = 0;
             this.shopnametxt.Size = new System.Drawing.Size(354, 23);
-            this.shopnametxt.TabIndex = 8;
+            this.shopnametxt.TabIndex = 2;
             this.shopnametxt.UseSystemPasswordChar = false;
             // 
             // label26
@@ -990,7 +1021,7 @@
             this.selectbox3.Location = new System.Drawing.Point(431, 28);
             this.selectbox3.Name = "selectbox3";
             this.selectbox3.Size = new System.Drawing.Size(288, 21);
-            this.selectbox3.TabIndex = 0;
+            this.selectbox3.TabIndex = 1;
             this.selectbox3.SelectedIndexChanged += new System.EventHandler(this.selectbox3_SelectedIndexChanged);
             // 
             // openFileDialog1
@@ -1129,5 +1160,7 @@
         private System.Windows.Forms.Label inclbles;
         private System.Windows.Forms.Label phnlbl;
         private System.Windows.Forms.Label phnelbl;
+        private System.Windows.Forms.Label elbl;
+        private System.Windows.Forms.Label elbl2;
     }
 }

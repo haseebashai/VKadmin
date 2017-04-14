@@ -200,7 +200,7 @@ namespace Veiled_Kashmir_Admin_Panel
                 threadtxtok = true;
             if (threadtxt.Text.Contains("\\") || threadtxt.Text.Contains("'"))
             {
-                MessageBox.Show("Topic cannot contain special characters");
+                MessageBox.Show("Topic cannot contain ' &\\");
                 threadtxt.Text = "";
                 threadtxt.Focus();
             }

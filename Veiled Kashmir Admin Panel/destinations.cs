@@ -44,8 +44,11 @@ namespace Veiled_Kashmir_Admin_Panel
         {
             if (nametxtok && desctxtok && chkok && status == true)
             {
-    
-                cmd = "insert into places (`name`, `description`, `location`, `explored`) values ('" + nametxt.Text + "', '" + desctxt.Text + "', 'C:\\Vkashmir\\places\\"+nametxt.Text+ ".jpg', '" + exp + "')";
+                StringBuilder s1 = new StringBuilder(desctxt.Text);
+                s1.Replace(@"\", @"\\");
+                s1.Replace("'", "\\'");
+                   
+                cmd = "insert into places (`name`, `description`, `location`, `explored`) values ('" + nametxt.Text + "', '" + s1 + @"', 'C:\\Vkashmir\\places\\"+nametxt.Text+ ".jpg', '" + exp + "')";
                 dpbox.BackgroundImage.Save("C:\\Vkashmir\\places\\" + nametxt.Text + ".jpg");
                 obj.nonQuery(cmd);
                 
@@ -184,18 +187,19 @@ namespace Veiled_Kashmir_Admin_Panel
                 {
                     if (status2 == true)
                     {
-                        cmd = ("update places set `name`='" + editnametxt.Text + "', `description`='" + editdesctxt.Text + "', `location`='C:\\Vkashmir\\places\\" + editnametxt.Text + ".jpg', `explored`='" + exp + "' where `name`='" + selectbox.Text + "';");
+                        StringBuilder s1 = new StringBuilder(editdesctxt.Text);
+                        s1.Replace(@"\", @"\\");
+                        s1.Replace("'", "\\'");
+                        cmd = ("update places set `name`='" + editnametxt.Text + "', `description`='" + s1 + @"', `location`='C:\\Vkashmir\\places\\" + editnametxt.Text + ".jpg', `explored`='" + exp + "' where `name`='" + selectbox.Text + "';");
                         edpbox.BackgroundImage.Save("C:\\Vkashmir\\places\\" + editnametxt.Text + ".jpg");
 
                     }
                     else
                     {
-                        StringBuilder s, s1;
-                        s = new StringBuilder(editnametxt.Text);
-                        s.Replace("'", "\\'");
-                        s1 = new StringBuilder(editdesctxt.Text);
-                        s.Replace("'", "\\'");
-                        cmd = ("update places set `name`='" + editnametxt.Text + "', `description`='" + editdesctxt.Text + "', `explored`='" + exp + "' where `name`='" + selectbox.Text + "';");
+                        StringBuilder s1 = new StringBuilder(editdesctxt.Text);
+                        s1.Replace(@"\", @"\\");
+                        s1.Replace("'", "\\'");
+                        cmd = ("update places set `name`='" + editnametxt.Text + "', `description`='" + s1 + "', `explored`='" + exp + "' where `name`='" + selectbox.Text + "';");
                     }
 
                     MessageBox.Show("Details updated for the selected place.");

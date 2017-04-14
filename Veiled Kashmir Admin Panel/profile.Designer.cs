@@ -93,7 +93,7 @@
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Primary = true;
             this.cancelbtn.Size = new System.Drawing.Size(92, 31);
-            this.cancelbtn.TabIndex = 119;
+            this.cancelbtn.TabIndex = 11;
             this.cancelbtn.Text = "cancel";
             this.cancelbtn.UseVisualStyleBackColor = true;
             this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
@@ -106,7 +106,7 @@
             this.updatebtn.Name = "updatebtn";
             this.updatebtn.Primary = true;
             this.updatebtn.Size = new System.Drawing.Size(119, 31);
-            this.updatebtn.TabIndex = 118;
+            this.updatebtn.TabIndex = 10;
             this.updatebtn.Text = "update details";
             this.updatebtn.UseVisualStyleBackColor = true;
             this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
@@ -171,7 +171,7 @@
             this.confirmtxt.SelectionLength = 0;
             this.confirmtxt.SelectionStart = 0;
             this.confirmtxt.Size = new System.Drawing.Size(162, 23);
-            this.confirmtxt.TabIndex = 102;
+            this.confirmtxt.TabIndex = 5;
             this.confirmtxt.UseSystemPasswordChar = false;
             this.confirmtxt.Leave += new System.EventHandler(this.confirmtxt_Leave);
             // 
@@ -227,7 +227,7 @@
             this.yeartxt.SelectionLength = 0;
             this.yeartxt.SelectionStart = 0;
             this.yeartxt.Size = new System.Drawing.Size(42, 23);
-            this.yeartxt.TabIndex = 107;
+            this.yeartxt.TabIndex = 9;
             this.yeartxt.Text = "YYYY";
             this.yeartxt.UseSystemPasswordChar = false;
             this.yeartxt.Leave += new System.EventHandler(this.yeartxt_Leave);
@@ -245,7 +245,7 @@
             this.montxt.SelectionLength = 0;
             this.montxt.SelectionStart = 0;
             this.montxt.Size = new System.Drawing.Size(27, 23);
-            this.montxt.TabIndex = 106;
+            this.montxt.TabIndex = 8;
             this.montxt.Text = "MM";
             this.montxt.UseSystemPasswordChar = false;
             this.montxt.Leave += new System.EventHandler(this.montxt_Leave);
@@ -264,7 +264,7 @@
             this.daytxt.SelectionLength = 0;
             this.daytxt.SelectionStart = 0;
             this.daytxt.Size = new System.Drawing.Size(21, 23);
-            this.daytxt.TabIndex = 105;
+            this.daytxt.TabIndex = 7;
             this.daytxt.Text = "DD";
             this.daytxt.UseSystemPasswordChar = false;
             this.daytxt.Leave += new System.EventHandler(this.daytxt_Leave);
@@ -295,7 +295,7 @@
             this.phonetxt.SelectionLength = 0;
             this.phonetxt.SelectionStart = 0;
             this.phonetxt.Size = new System.Drawing.Size(166, 23);
-            this.phonetxt.TabIndex = 104;
+            this.phonetxt.TabIndex = 6;
             this.phonetxt.UseSystemPasswordChar = false;
             this.phonetxt.Leave += new System.EventHandler(this.phonetxt_Leave);
             // 
@@ -324,7 +324,7 @@
             this.pwdtxt.SelectionLength = 0;
             this.pwdtxt.SelectionStart = 0;
             this.pwdtxt.Size = new System.Drawing.Size(167, 23);
-            this.pwdtxt.TabIndex = 101;
+            this.pwdtxt.TabIndex = 4;
             this.pwdtxt.UseSystemPasswordChar = false;
             this.pwdtxt.Leave += new System.EventHandler(this.pwdtxt_Leave);
             // 
@@ -340,7 +340,7 @@
             this.emailtxt.SelectionLength = 0;
             this.emailtxt.SelectionStart = 0;
             this.emailtxt.Size = new System.Drawing.Size(252, 23);
-            this.emailtxt.TabIndex = 100;
+            this.emailtxt.TabIndex = 3;
             this.emailtxt.UseSystemPasswordChar = false;
             this.emailtxt.Leave += new System.EventHandler(this.emailtxt_Leave);
             // 
@@ -356,7 +356,7 @@
             this.lnametxt.SelectionLength = 0;
             this.lnametxt.SelectionStart = 0;
             this.lnametxt.Size = new System.Drawing.Size(252, 23);
-            this.lnametxt.TabIndex = 99;
+            this.lnametxt.TabIndex = 2;
             this.lnametxt.UseSystemPasswordChar = false;
             this.lnametxt.Leave += new System.EventHandler(this.lnametxt_Leave);
             // 
@@ -424,7 +424,7 @@
             this.fnametxt.SelectionLength = 0;
             this.fnametxt.SelectionStart = 0;
             this.fnametxt.Size = new System.Drawing.Size(253, 23);
-            this.fnametxt.TabIndex = 98;
+            this.fnametxt.TabIndex = 1;
             this.fnametxt.UseSystemPasswordChar = false;
             this.fnametxt.Leave += new System.EventHandler(this.fnametxt_Leave);
             // 

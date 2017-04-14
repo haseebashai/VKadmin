@@ -90,7 +90,7 @@
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(88, 19);
             this.materialLabel2.TabIndex = 8;
-            this.materialLabel2.Text = "v1.0-090417";
+            this.materialLabel2.Text = "v1.0-140417";
             // 
             // panel1
             // 

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Net.Mail;
+using System.Net;
 
 namespace Veiled_Kashmir_Admin_Panel
 {
@@ -28,34 +29,42 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void loginbtn_Click(object sender, EventArgs e)
         {
-            int i;
-            i = obj.Count("Select Count(*) from admin where email='" + emailtxt.Text + "';");
-            if (i == 1)
+            try
             {
-                MySqlDataReader dr;
-                dr = obj.Query("Select * from admin where email='" + emailtxt.Text + "';");
-                dr.Read();
+                int i;
+                i = obj.Count("Select Count(*) from admin where email='" + emailtxt.Text + "';");
+                if (i == 1)
+                {
+                    MySqlDataReader dr;
+                    dr = obj.Query("Select * from admin where email='" + emailtxt.Text + "';");
+                    dr.Read();
 
-                MailMessage mail = new MailMessage();
-                SmtpClient Smtpobj = new SmtpClient("smtp.gmail.com");
+                    MailMessage mail = new MailMessage();
+                    SmtpClient Smtpobj = new SmtpClient("smtp.gmail.com");
 
-                mail.From = new MailAddress("veiledkashmir@gmail.com");
-                mail.To.Add(emailtxt.Text);
-                mail.Subject = "Veiled Kashmir Password Recovery Mail";
-                mail.Body = "Hi, Your Password is " + dr[4].ToString() + Environment.NewLine + "If you didn't initiate the request, kindly ignore this mail" + Environment.NewLine + "Contact Veiled Kashmir Team for Further Details";
+                    mail.From = new MailAddress("veiledkashmir@gmail.com");
+                    mail.To.Add(emailtxt.Text);
+                    mail.Subject = "Veiled Kashmir Password Recovery Mail";
+                    mail.Body = "Hi, Your Password is: " + dr[4].ToString() + Environment.NewLine + Environment.NewLine + "If you didn't initiate the request, kindly ignore this mail" + Environment.NewLine + "Contact Veiled Kashmir Team for Further Details";
+                    obj.closeConnection();
+                    Smtpobj.Port = 587;
+                    Smtpobj.Credentials = new NetworkCredential("veiledkashmir@gmail.com", "1forrest1");
+                    Smtpobj.EnableSsl = true;
 
-                Smtpobj.Port = 587;
-                Smtpobj.Credentials = new System.Net.NetworkCredential("veiledkashmir@gmail.com", "1forrest1");
-                Smtpobj.EnableSsl = true;
-
-                Smtpobj.Send(mail);
-                MessageBox.Show("Please check your mail for further instructions.");
-                this.Close();
+                    Smtpobj.Send(mail);
+                    MessageBox.Show("Please check your mail for further instructions.");
+                   
+                    this.Close();
+                }
+                else
+                {
+                    error.Visible = true;
+                    emailtxt.Text = "";
+                }
             }
-            else
+            catch(SmtpException se)
             {
-                error.Visible = true;
-                emailtxt.Text = "";
+                MessageBox.Show("Internet not available.","ERROR");
             }
         }
     }

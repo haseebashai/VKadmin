@@ -31,11 +31,11 @@
             this.back = new System.Windows.Forms.PictureBox();
             this.addevpnl = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.placelbl = new System.Windows.Forms.Label();
             this.reviewbox = new System.Windows.Forms.ListBox();
             this.rvmrepbtn = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label1 = new System.Windows.Forms.Label();
             this.userlist = new System.Windows.Forms.ListBox();
-            this.placelbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.back)).BeginInit();
             this.addevpnl.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -71,6 +71,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(620, 387);
             this.panel2.TabIndex = 15;
+            // 
+            // placelbl
+            // 
+            this.placelbl.AutoSize = true;
+            this.placelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.placelbl.Location = new System.Drawing.Point(507, 4);
+            this.placelbl.Name = "placelbl";
+            this.placelbl.Size = new System.Drawing.Size(32, 13);
+            this.placelbl.TabIndex = 15;
+            this.placelbl.Text = "place";
             // 
             // reviewbox
             // 
@@ -113,16 +123,6 @@
             this.userlist.Size = new System.Drawing.Size(320, 381);
             this.userlist.TabIndex = 13;
             this.userlist.SelectedIndexChanged += new System.EventHandler(this.userlist_SelectedIndexChanged);
-            // 
-            // placelbl
-            // 
-            this.placelbl.AutoSize = true;
-            this.placelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.placelbl.Location = new System.Drawing.Point(507, 4);
-            this.placelbl.Name = "placelbl";
-            this.placelbl.Size = new System.Drawing.Size(32, 13);
-            this.placelbl.TabIndex = 15;
-            this.placelbl.Text = "place";
             // 
             // reviews
             // 
