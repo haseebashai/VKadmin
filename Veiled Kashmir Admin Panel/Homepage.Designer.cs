@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homepage));
             this.titlebar = new System.Windows.Forms.Panel();
+            this.minimize = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.close = new System.Windows.Forms.PictureBox();
             this.title = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.mainpnl = new System.Windows.Forms.Panel();
-            this.minimize = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.close = new System.Windows.Forms.PictureBox();
             this.titlebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -56,6 +57,44 @@
             this.titlebar.Size = new System.Drawing.Size(1023, 38);
             this.titlebar.TabIndex = 3;
             this.titlebar.Paint += new System.Windows.Forms.PaintEventHandler(this.titlebar_Paint);
+            // 
+            // minimize
+            // 
+            this.minimize.BackgroundImage = global::Veiled_Kashmir_Admin_Panel.Properties.Resources.diminish;
+            this.minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.minimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.minimize.ImageLocation = "";
+            this.minimize.Location = new System.Drawing.Point(957, 8);
+            this.minimize.Name = "minimize";
+            this.minimize.Size = new System.Drawing.Size(20, 20);
+            this.minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.minimize.TabIndex = 5;
+            this.minimize.TabStop = false;
+            this.minimize.Click += new System.EventHandler(this.minimize_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::Veiled_Kashmir_Admin_Panel.Properties.Resources.Logo;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(3, 4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            // 
+            // close
+            // 
+            this.close.BackgroundImage = global::Veiled_Kashmir_Admin_Panel.Properties.Resources.turn_on;
+            this.close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.close.ImageLocation = "";
+            this.close.Location = new System.Drawing.Point(986, 5);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(25, 25);
+            this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.close.TabIndex = 4;
+            this.close.TabStop = false;
+            this.close.Click += new System.EventHandler(this.close_Click);
             // 
             // title
             // 
@@ -111,44 +150,6 @@
             this.mainpnl.Size = new System.Drawing.Size(1022, 558);
             this.mainpnl.TabIndex = 6;
             // 
-            // minimize
-            // 
-            this.minimize.BackgroundImage = global::Veiled_Kashmir_Admin_Panel.Properties.Resources.diminish;
-            this.minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.minimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.minimize.ImageLocation = "";
-            this.minimize.Location = new System.Drawing.Point(957, 8);
-            this.minimize.Name = "minimize";
-            this.minimize.Size = new System.Drawing.Size(20, 20);
-            this.minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.minimize.TabIndex = 5;
-            this.minimize.TabStop = false;
-            this.minimize.Click += new System.EventHandler(this.minimize_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::Veiled_Kashmir_Admin_Panel.Properties.Resources.Logo;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
-            // 
-            // close
-            // 
-            this.close.BackgroundImage = global::Veiled_Kashmir_Admin_Panel.Properties.Resources.turn_on;
-            this.close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.close.ImageLocation = "";
-            this.close.Location = new System.Drawing.Point(986, 5);
-            this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(25, 25);
-            this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.close.TabIndex = 4;
-            this.close.TabStop = false;
-            this.close.Click += new System.EventHandler(this.close_Click);
-            // 
             // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,6 +164,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.titlebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Homepage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Panel";
