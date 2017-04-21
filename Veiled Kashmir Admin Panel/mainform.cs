@@ -197,5 +197,14 @@ namespace Veiled_Kashmir_Admin_Panel
             AboutBox ab = new AboutBox();
             ab.ShowDialog();
         }
+
+        private void msgbtn_Click(object sender, EventArgs e)
+        {
+           messages msg = new messages(this, hp);
+            msg.TopLevel = false;
+            hp.mainpnl.Controls.Clear();
+            hp.mainpnl.Controls.Add(msg);
+            msg.Show();
+        }
     }
 }

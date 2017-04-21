@@ -48,6 +48,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.profilebtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.msgbtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.logo = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -210,13 +211,13 @@
             this.addadminbtn.AutoSize = true;
             this.addadminbtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.addadminbtn.Depth = 0;
-            this.addadminbtn.Location = new System.Drawing.Point(37, 61);
+            this.addadminbtn.Location = new System.Drawing.Point(37, 75);
             this.addadminbtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.addadminbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.addadminbtn.Name = "addadminbtn";
             this.addadminbtn.Primary = false;
             this.addadminbtn.Size = new System.Drawing.Size(125, 36);
-            this.addadminbtn.TabIndex = 11;
+            this.addadminbtn.TabIndex = 12;
             this.addadminbtn.Text = "add sub-admins";
             this.addadminbtn.UseVisualStyleBackColor = true;
             this.addadminbtn.Click += new System.EventHandler(this.addadminbtn_Click);
@@ -242,7 +243,7 @@
             this.rvmadminbtn.AutoSize = true;
             this.rvmadminbtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.rvmadminbtn.Depth = 0;
-            this.rvmadminbtn.Location = new System.Drawing.Point(280, 61);
+            this.rvmadminbtn.Location = new System.Drawing.Point(280, 75);
             this.rvmadminbtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.rvmadminbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.rvmadminbtn.Name = "rvmadminbtn";
@@ -274,9 +275,9 @@
             this.sendmsgbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.sendmsgbtn.Name = "sendmsgbtn";
             this.sendmsgbtn.Primary = false;
-            this.sendmsgbtn.Size = new System.Drawing.Size(113, 36);
+            this.sendmsgbtn.Size = new System.Drawing.Size(143, 36);
             this.sendmsgbtn.TabIndex = 15;
-            this.sendmsgbtn.Text = "send message";
+            this.sendmsgbtn.Text = "send Notification";
             this.sendmsgbtn.UseVisualStyleBackColor = true;
             this.sendmsgbtn.Click += new System.EventHandler(this.sendmsgbtn_Click);
             // 
@@ -295,6 +296,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.msgbtn);
             this.panel1.Controls.Add(this.profilebtn);
             this.panel1.Controls.Add(this.rvmadminbtn);
             this.panel1.Controls.Add(this.addadminbtn);
@@ -310,7 +312,7 @@
             this.profilebtn.AutoSize = true;
             this.profilebtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.profilebtn.Depth = 0;
-            this.profilebtn.Location = new System.Drawing.Point(171, 6);
+            this.profilebtn.Location = new System.Drawing.Point(37, 17);
             this.profilebtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.profilebtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.profilebtn.Name = "profilebtn";
@@ -325,7 +327,7 @@
             // 
             this.materialLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel1.Location = new System.Drawing.Point(598, 482);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -335,6 +337,22 @@
             this.materialLabel1.Text = "For any help and suggestions or errors please contact \" veiledkashmir@gmail.com \"" +
     "";
             this.materialLabel1.Click += new System.EventHandler(this.materialLabel1_Click);
+            // 
+            // msgbtn
+            // 
+            this.msgbtn.AutoSize = true;
+            this.msgbtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.msgbtn.Depth = 0;
+            this.msgbtn.Location = new System.Drawing.Point(280, 17);
+            this.msgbtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.msgbtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.msgbtn.Name = "msgbtn";
+            this.msgbtn.Primary = false;
+            this.msgbtn.Size = new System.Drawing.Size(119, 36);
+            this.msgbtn.TabIndex = 11;
+            this.msgbtn.Text = "View messages";
+            this.msgbtn.UseVisualStyleBackColor = true;
+            this.msgbtn.Click += new System.EventHandler(this.msgbtn_Click);
             // 
             // logo
             // 
@@ -397,5 +415,6 @@
         private MaterialSkin.Controls.MaterialFlatButton profilebtn;
         private System.Windows.Forms.PictureBox logo;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialFlatButton msgbtn;
     }
 }
