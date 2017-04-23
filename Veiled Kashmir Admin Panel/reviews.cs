@@ -37,7 +37,7 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void readreviews()
         {
-            dr = obj.Query("select review from ratings where user='"+user+"'");
+            dr = obj.Query("select review from ratings where user='"+user+"' &&review !=''");
             DataTable dt = new DataTable();
             dt.Columns.Add("review", typeof(String));
             dt.Load(dr);

@@ -29,32 +29,62 @@
         private void InitializeComponent()
         {
             this.addevpnl = new System.Windows.Forms.Panel();
+            this.userlbl = new System.Windows.Forms.Label();
+            this.userlist = new System.Windows.Forms.ListBox();
             this.back = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.inclblr = new System.Windows.Forms.Label();
-            this.replycancelbtn = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.addreply = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.replytxt = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.msglist = new System.Windows.Forms.ListBox();
+            this.cancelbtn = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.sndbtn = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.sublist = new System.Windows.Forms.ListBox();
             this.msgtxt = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.replytxt = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.repliedtxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.addevpnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.back)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // addevpnl
             // 
             this.addevpnl.Controls.Add(this.label3);
-            this.addevpnl.Controls.Add(this.panel2);
+            this.addevpnl.Controls.Add(this.repliedtxt);
+            this.addevpnl.Controls.Add(this.label4);
+            this.addevpnl.Controls.Add(this.replytxt);
             this.addevpnl.Controls.Add(this.label1);
-            this.addevpnl.Controls.Add(this.msglist);
+            this.addevpnl.Controls.Add(this.label2);
+            this.addevpnl.Controls.Add(this.msgtxt);
+            this.addevpnl.Controls.Add(this.sublist);
+            this.addevpnl.Controls.Add(this.cancelbtn);
+            this.addevpnl.Controls.Add(this.sndbtn);
+            this.addevpnl.Controls.Add(this.userlbl);
+            this.addevpnl.Controls.Add(this.userlist);
             this.addevpnl.Location = new System.Drawing.Point(12, 128);
             this.addevpnl.Name = "addevpnl";
             this.addevpnl.Size = new System.Drawing.Size(998, 420);
             this.addevpnl.TabIndex = 32;
+            // 
+            // userlbl
+            // 
+            this.userlbl.AutoSize = true;
+            this.userlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userlbl.Location = new System.Drawing.Point(731, 6);
+            this.userlbl.Name = "userlbl";
+            this.userlbl.Size = new System.Drawing.Size(65, 17);
+            this.userlbl.TabIndex = 16;
+            this.userlbl.Text = "Message";
+            // 
+            // userlist
+            // 
+            this.userlist.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userlist.FormattingEnabled = true;
+            this.userlist.ItemHeight = 16;
+            this.userlist.Location = new System.Drawing.Point(14, 26);
+            this.userlist.Name = "userlist";
+            this.userlist.Size = new System.Drawing.Size(229, 388);
+            this.userlist.TabIndex = 1;
+            this.userlist.SelectedIndexChanged += new System.EventHandler(this.msglist_SelectedIndexChanged);
             // 
             // back
             // 
@@ -67,108 +97,108 @@
             this.back.TabStop = false;
             this.back.Click += new System.EventHandler(this.back_Click);
             // 
-            // panel2
+            // cancelbtn
             // 
-            this.panel2.Controls.Add(this.msgtxt);
-            this.panel2.Controls.Add(this.inclblr);
-            this.panel2.Controls.Add(this.replycancelbtn);
-            this.panel2.Controls.Add(this.addreply);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.replytxt);
-            this.panel2.Location = new System.Drawing.Point(443, 27);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(541, 387);
-            this.panel2.TabIndex = 15;
+            this.cancelbtn.Depth = 0;
+            this.cancelbtn.Location = new System.Drawing.Point(672, 372);
+            this.cancelbtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.cancelbtn.Name = "cancelbtn";
+            this.cancelbtn.Primary = true;
+            this.cancelbtn.Size = new System.Drawing.Size(110, 35);
+            this.cancelbtn.TabIndex = 7;
+            this.cancelbtn.Text = "cancel";
+            this.cancelbtn.UseVisualStyleBackColor = true;
+            this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
             // 
-            // inclblr
+            // sndbtn
             // 
-            this.inclblr.AutoSize = true;
-            this.inclblr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inclblr.ForeColor = System.Drawing.Color.Red;
-            this.inclblr.Location = new System.Drawing.Point(423, 220);
-            this.inclblr.Name = "inclblr";
-            this.inclblr.Size = new System.Drawing.Size(105, 20);
-            this.inclblr.TabIndex = 71;
-            this.inclblr.Text = "Add reply first";
-            this.inclblr.Visible = false;
+            this.sndbtn.Depth = 0;
+            this.sndbtn.Location = new System.Drawing.Point(793, 372);
+            this.sndbtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.sndbtn.Name = "sndbtn";
+            this.sndbtn.Primary = true;
+            this.sndbtn.Size = new System.Drawing.Size(110, 35);
+            this.sndbtn.TabIndex = 6;
+            this.sndbtn.Text = "send reply";
+            this.sndbtn.UseVisualStyleBackColor = true;
+            this.sndbtn.Click += new System.EventHandler(this.sndbtn_Click);
             // 
-            // replycancelbtn
+            // sublist
             // 
-            this.replycancelbtn.Depth = 0;
-            this.replycancelbtn.Location = new System.Drawing.Point(423, 290);
-            this.replycancelbtn.MouseState = MaterialSkin.MouseState.HOVER;
-            this.replycancelbtn.Name = "replycancelbtn";
-            this.replycancelbtn.Primary = true;
-            this.replycancelbtn.Size = new System.Drawing.Size(110, 35);
-            this.replycancelbtn.TabIndex = 3;
-            this.replycancelbtn.Text = "cancel";
-            this.replycancelbtn.UseVisualStyleBackColor = true;
-            // 
-            // addreply
-            // 
-            this.addreply.Depth = 0;
-            this.addreply.Location = new System.Drawing.Point(423, 249);
-            this.addreply.MouseState = MaterialSkin.MouseState.HOVER;
-            this.addreply.Name = "addreply";
-            this.addreply.Primary = true;
-            this.addreply.Size = new System.Drawing.Size(110, 35);
-            this.addreply.TabIndex = 2;
-            this.addreply.Text = "send mail";
-            this.addreply.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(182, 165);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Send Mail";
-            // 
-            // replytxt
-            // 
-            this.replytxt.Location = new System.Drawing.Point(6, 181);
-            this.replytxt.Multiline = true;
-            this.replytxt.Name = "replytxt";
-            this.replytxt.Size = new System.Drawing.Size(411, 199);
-            this.replytxt.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(190, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Messages";
-            // 
-            // msglist
-            // 
-            this.msglist.FormattingEnabled = true;
-            this.msglist.Location = new System.Drawing.Point(14, 26);
-            this.msglist.Name = "msglist";
-            this.msglist.Size = new System.Drawing.Size(423, 381);
-            this.msglist.TabIndex = 13;
+            this.sublist.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sublist.FormattingEnabled = true;
+            this.sublist.ItemHeight = 16;
+            this.sublist.Location = new System.Drawing.Point(249, 26);
+            this.sublist.Name = "sublist";
+            this.sublist.Size = new System.Drawing.Size(278, 388);
+            this.sublist.TabIndex = 2;
+            this.sublist.SelectedIndexChanged += new System.EventHandler(this.sublist_SelectedIndexChanged);
             // 
             // msgtxt
             // 
             this.msgtxt.Enabled = false;
-            this.msgtxt.Location = new System.Drawing.Point(6, 3);
+            this.msgtxt.Location = new System.Drawing.Point(533, 26);
             this.msgtxt.Multiline = true;
             this.msgtxt.Name = "msgtxt";
-            this.msgtxt.ReadOnly = true;
-            this.msgtxt.Size = new System.Drawing.Size(527, 159);
-            this.msgtxt.TabIndex = 0;
+            this.msgtxt.Size = new System.Drawing.Size(452, 106);
+            this.msgtxt.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(366, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 17);
+            this.label2.TabIndex = 77;
+            this.label2.Text = "Subject";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(98, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 17);
+            this.label1.TabIndex = 78;
+            this.label1.Text = "User";
+            // 
+            // replytxt
+            // 
+            this.replytxt.Location = new System.Drawing.Point(533, 261);
+            this.replytxt.Multiline = true;
+            this.replytxt.Name = "replytxt";
+            this.replytxt.Size = new System.Drawing.Size(452, 105);
+            this.replytxt.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(731, 241);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 17);
+            this.label4.TabIndex = 80;
+            this.label4.Text = "Reply";
+            // 
+            // repliedtxt
+            // 
+            this.repliedtxt.Enabled = false;
+            this.repliedtxt.Location = new System.Drawing.Point(533, 138);
+            this.repliedtxt.Multiline = true;
+            this.repliedtxt.Name = "repliedtxt";
+            this.repliedtxt.Size = new System.Drawing.Size(452, 100);
+            this.repliedtxt.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(674, 6);
+            this.label3.Location = new System.Drawing.Point(537, 139);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 17);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "username";
+            this.label3.Size = new System.Drawing.Size(108, 17);
+            this.label3.TabIndex = 82;
+            this.label3.Text = "Already Replied";
             // 
             // messages
             // 
@@ -181,11 +211,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "messages";
             this.Text = "messages";
+            this.Load += new System.EventHandler(this.messages_Load);
             this.addevpnl.ResumeLayout(false);
             this.addevpnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.back)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -194,15 +223,17 @@
 
         private System.Windows.Forms.PictureBox back;
         private System.Windows.Forms.Panel addevpnl;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox msgtxt;
-        private System.Windows.Forms.Label inclblr;
-        private MaterialSkin.Controls.MaterialRaisedButton replycancelbtn;
-        private MaterialSkin.Controls.MaterialRaisedButton addreply;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox replytxt;
+        private System.Windows.Forms.ListBox userlist;
+        private System.Windows.Forms.Label userlbl;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox msglist;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox msgtxt;
+        private System.Windows.Forms.ListBox sublist;
+        private MaterialSkin.Controls.MaterialRaisedButton cancelbtn;
+        private MaterialSkin.Controls.MaterialRaisedButton sndbtn;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox replytxt;
+        private System.Windows.Forms.TextBox repliedtxt;
         private System.Windows.Forms.Label label3;
     }
 }
