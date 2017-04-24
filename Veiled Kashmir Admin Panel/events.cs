@@ -88,7 +88,10 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void eventbox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dr = obj.Query("select * from events where name='" + eventbox.Text + "'");
+            StringBuilder s = new StringBuilder(eventbox.Text);
+            s.Replace(@"\", @"\\");
+            s.Replace("'", "\\'");
+            dr = obj.Query("select * from events where name='" + s + "'");
             dr.Read();
             editeventtxt.Text = dr[1].ToString();
             editeventloctxt.Text = dr[2].ToString();
@@ -107,7 +110,10 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void rvmevbtn_Click(object sender, EventArgs e)
         {
-            cmd = ("delete from events where name= '" + eventbox.Text + "'");
+            StringBuilder s = new StringBuilder(eventbox.Text);
+            s.Replace(@"\", @"\\");
+            s.Replace("'", "\\'");
+            cmd = ("delete from events where name= '" + s + "'");
             obj.nonQuery(cmd);
             MessageBox.Show("selected Event removed sucessfully.");
             readevents();
