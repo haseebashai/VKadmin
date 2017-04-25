@@ -134,8 +134,12 @@ namespace Veiled_Kashmir_Admin_Panel
             userinfo.username = "";           
             this.Close();
             MessageBox.Show("Logged out sucessfully.\nPlease Log in to continue");
-            Homepage hp = new Homepage();
-            hp.Show();
+
+            loginform lg = new loginform(hp,this);
+            hp.mainpnl.Controls.Clear();
+            lg.TopLevel = false;
+            hp.mainpnl.Controls.Add(lg);
+            lg.Show();
         }
 
         private void signoutlbl_Enter(object sender, EventArgs e)

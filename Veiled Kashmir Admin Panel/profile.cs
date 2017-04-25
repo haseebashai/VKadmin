@@ -39,7 +39,7 @@ namespace Veiled_Kashmir_Admin_Panel
             pwdtxt.Text = dr[4].ToString();
             confirmtxt.Text = dr[4].ToString();
             phonetxt.Text = dr[5].ToString();
-            String temp = dr[6].ToString();
+            String temp = dr[6].ToString();            
             daytxt.Text = temp.Substring(0, 2);
             montxt.Text = temp.Substring(3, 2);
             yeartxt.Text = temp.Substring(6, 4);
