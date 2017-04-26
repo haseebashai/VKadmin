@@ -46,9 +46,9 @@
             this.sendmsgbtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.signinlbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.msgbtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.profilebtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.msgbtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.logo = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -307,6 +307,22 @@
             this.panel1.Size = new System.Drawing.Size(465, 181);
             this.panel1.TabIndex = 10;
             // 
+            // msgbtn
+            // 
+            this.msgbtn.AutoSize = true;
+            this.msgbtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.msgbtn.Depth = 0;
+            this.msgbtn.Location = new System.Drawing.Point(280, 17);
+            this.msgbtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.msgbtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.msgbtn.Name = "msgbtn";
+            this.msgbtn.Primary = false;
+            this.msgbtn.Size = new System.Drawing.Size(119, 36);
+            this.msgbtn.TabIndex = 11;
+            this.msgbtn.Text = "View messages";
+            this.msgbtn.UseVisualStyleBackColor = true;
+            this.msgbtn.Click += new System.EventHandler(this.msgbtn_Click);
+            // 
             // profilebtn
             // 
             this.profilebtn.AutoSize = true;
@@ -327,32 +343,15 @@
             // 
             this.materialLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel1.Location = new System.Drawing.Point(598, 482);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(312, 51);
             this.materialLabel1.TabIndex = 12;
-            this.materialLabel1.Text = "For any help and suggestions or errors please contact \" veiledkashmir@gmail.com \"" +
-    "";
+            this.materialLabel1.Text = "For any help and suggestions please contact \" veiledkashmir@gmail.com \"";
             this.materialLabel1.Click += new System.EventHandler(this.materialLabel1_Click);
-            // 
-            // msgbtn
-            // 
-            this.msgbtn.AutoSize = true;
-            this.msgbtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.msgbtn.Depth = 0;
-            this.msgbtn.Location = new System.Drawing.Point(280, 17);
-            this.msgbtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.msgbtn.MouseState = MaterialSkin.MouseState.HOVER;
-            this.msgbtn.Name = "msgbtn";
-            this.msgbtn.Primary = false;
-            this.msgbtn.Size = new System.Drawing.Size(119, 36);
-            this.msgbtn.TabIndex = 11;
-            this.msgbtn.Text = "View messages";
-            this.msgbtn.UseVisualStyleBackColor = true;
-            this.msgbtn.Click += new System.EventHandler(this.msgbtn_Click);
             // 
             // logo
             // 

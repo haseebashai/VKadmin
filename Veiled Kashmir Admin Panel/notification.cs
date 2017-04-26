@@ -65,8 +65,11 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void rvmbtn_Click(object sender, EventArgs e)
         {
+            StringBuilder s1 = new StringBuilder(msgbox.Text);
+            s1.Replace(@"\", @"\\");
+            s1.Replace("'", "\\'");
             string cmd;
-            cmd=("delete from notifications where notification='"+msgbox.Text+"'");
+            cmd=("delete from notifications where notification='"+s1+"'");
             obj.nonQuery(cmd);
             MessageBox.Show("Notification removed sucessfully.");
             msgboxtxt.Text = "";

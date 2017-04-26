@@ -219,8 +219,8 @@ namespace Veiled_Kashmir_Admin_Panel
         {
             dr = obj.Query("select * from dictionary where keyword='" + wordbox.Text + "'");
             dr.Read();
-            editwordtxt.Text = dr[0].ToString();
-            editmeaningtxt.Text = dr[1].ToString();
+            editwordtxt.Text = dr[1].ToString();
+            editmeaningtxt.Text = dr[2].ToString();
             inclblew.Visible = false;
             obj.closeConnection();
         }
@@ -273,6 +273,7 @@ namespace Veiled_Kashmir_Admin_Panel
                 MessageBox.Show("New Phrase added succesfully!");
                 phrasetxt.Text = "";
                 phraseentxt.Text = "";
+                inclblp.Visible = false;
                 
                 readphrases();
             }
@@ -449,9 +450,14 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void rvmphrasebtn_Click(object sender, EventArgs e)
         {
-            cmd = ("delete from phrases where phrases= '" + phrasebox.Text + "';");
+            StringBuilder s1 = new StringBuilder(phrasebox.Text);
+            s1.Replace(@"\", @"\\");
+            s1.Replace("'", "\\'");
+            cmd = ("delete from phrases where phrases= '" + s1 + "';");
             obj.nonQuery(cmd);
             MessageBox.Show("selected Phrase removed sucessfully.");
+            editphraseentxt.Text = "";
+            editphrasetxt.Text = "";
             readphrases();
         }
 
