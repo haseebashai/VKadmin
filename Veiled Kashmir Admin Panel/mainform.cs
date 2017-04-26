@@ -204,11 +204,30 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void msgbtn_Click(object sender, EventArgs e)
         {
-           messages msg = new messages(this, hp);
+            messages msg = new messages(this, hp);
             msg.TopLevel = false;
             hp.mainpnl.Controls.Clear();
             hp.mainpnl.Controls.Add(msg);
             msg.Show();
+        }
+
+        private void rptbtn_Click(object sender, EventArgs e)
+        {
+            report rp = new report(hp);
+            rp.TopLevel = false;
+            hp.mainpnl.Controls.Clear();
+            hp.mainpnl.Controls.Add(rp);
+            rp.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

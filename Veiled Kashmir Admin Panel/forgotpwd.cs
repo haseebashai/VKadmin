@@ -62,7 +62,7 @@ namespace Veiled_Kashmir_Admin_Panel
                     emailtxt.Text = "";
                 }
             }
-            catch(SmtpException se)
+            catch(SmtpException)
             {
                 MessageBox.Show("Internet not available.","ERROR");
             }

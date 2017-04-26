@@ -50,6 +50,7 @@
             this.profilebtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.logo = new System.Windows.Forms.PictureBox();
+            this.rptbtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
@@ -259,11 +260,12 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trajan Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(244, 319);
+            this.label2.Location = new System.Drawing.Point(244, 311);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(162, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Admin Controls";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // sendmsgbtn
             // 
@@ -296,16 +298,18 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.rptbtn);
             this.panel1.Controls.Add(this.msgbtn);
             this.panel1.Controls.Add(this.profilebtn);
             this.panel1.Controls.Add(this.rvmadminbtn);
             this.panel1.Controls.Add(this.addadminbtn);
             this.panel1.Controls.Add(this.sendmsgbtn);
             this.panel1.Controls.Add(this.rvmuserbtn);
-            this.panel1.Location = new System.Drawing.Point(103, 352);
+            this.panel1.Location = new System.Drawing.Point(103, 338);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(465, 181);
+            this.panel1.Size = new System.Drawing.Size(465, 208);
             this.panel1.TabIndex = 10;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // msgbtn
             // 
@@ -365,6 +369,22 @@
             this.logo.TabStop = false;
             this.logo.Click += new System.EventHandler(this.logo_Click);
             // 
+            // rptbtn
+            // 
+            this.rptbtn.AutoSize = true;
+            this.rptbtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.rptbtn.Depth = 0;
+            this.rptbtn.Location = new System.Drawing.Point(164, 164);
+            this.rptbtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.rptbtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.rptbtn.Name = "rptbtn";
+            this.rptbtn.Primary = false;
+            this.rptbtn.Size = new System.Drawing.Size(108, 36);
+            this.rptbtn.TabIndex = 17;
+            this.rptbtn.Text = "View Reports";
+            this.rptbtn.UseVisualStyleBackColor = true;
+            this.rptbtn.Click += new System.EventHandler(this.rptbtn_Click);
+            // 
             // mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,5 +435,6 @@
         private System.Windows.Forms.PictureBox logo;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialFlatButton msgbtn;
+        private MaterialSkin.Controls.MaterialFlatButton rptbtn;
     }
 }
