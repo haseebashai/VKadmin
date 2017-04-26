@@ -70,6 +70,14 @@
             this.back = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.hotspottxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.label9 = new System.Windows.Forms.Label();
+            this.hoteltxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.label10 = new System.Windows.Forms.Label();
+            this.edithoteltxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.label11 = new System.Windows.Forms.Label();
+            this.edithottxt = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.label12 = new System.Windows.Forms.Label();
             this.addpnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dpbox)).BeginInit();
             this.editpnl.SuspendLayout();
@@ -131,6 +139,10 @@
             // 
             // addpnl
             // 
+            this.addpnl.Controls.Add(this.hoteltxt);
+            this.addpnl.Controls.Add(this.label10);
+            this.addpnl.Controls.Add(this.hotspottxt);
+            this.addpnl.Controls.Add(this.label9);
             this.addpnl.Controls.Add(this.inclbl);
             this.addpnl.Controls.Add(this.dpbox);
             this.addpnl.Controls.Add(this.cancelbtn);
@@ -166,7 +178,7 @@
             this.dpbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.dpbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dpbox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dpbox.Location = new System.Drawing.Point(742, 78);
+            this.dpbox.Location = new System.Drawing.Point(742, 17);
             this.dpbox.Name = "dpbox";
             this.dpbox.Size = new System.Drawing.Size(217, 130);
             this.dpbox.TabIndex = 25;
@@ -181,7 +193,7 @@
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Primary = true;
             this.cancelbtn.Size = new System.Drawing.Size(143, 35);
-            this.cancelbtn.TabIndex = 6;
+            this.cancelbtn.TabIndex = 8;
             this.cancelbtn.Text = "cancel";
             this.cancelbtn.UseVisualStyleBackColor = true;
             this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
@@ -194,7 +206,7 @@
             this.addplbtn.Name = "addplbtn";
             this.addplbtn.Primary = true;
             this.addplbtn.Size = new System.Drawing.Size(143, 35);
-            this.addplbtn.TabIndex = 5;
+            this.addplbtn.TabIndex = 7;
             this.addplbtn.Text = "add place";
             this.addplbtn.UseVisualStyleBackColor = true;
             this.addplbtn.Click += new System.EventHandler(this.addplbtn_Click);
@@ -204,7 +216,7 @@
             this.unexbtn.AutoSize = true;
             this.unexbtn.Depth = 0;
             this.unexbtn.Font = new System.Drawing.Font("Roboto", 10F);
-            this.unexbtn.Location = new System.Drawing.Point(667, 268);
+            this.unexbtn.Location = new System.Drawing.Point(817, 169);
             this.unexbtn.Margin = new System.Windows.Forms.Padding(0);
             this.unexbtn.MouseLocation = new System.Drawing.Point(-1, -1);
             this.unexbtn.MouseState = MaterialSkin.MouseState.HOVER;
@@ -222,7 +234,7 @@
             this.exbtn.AutoSize = true;
             this.exbtn.Depth = 0;
             this.exbtn.Font = new System.Drawing.Font("Roboto", 10F);
-            this.exbtn.Location = new System.Drawing.Point(667, 238);
+            this.exbtn.Location = new System.Drawing.Point(716, 169);
             this.exbtn.Margin = new System.Windows.Forms.Padding(0);
             this.exbtn.MouseLocation = new System.Drawing.Point(-1, -1);
             this.exbtn.MouseState = MaterialSkin.MouseState.HOVER;
@@ -239,7 +251,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(627, 130);
+            this.label3.Location = new System.Drawing.Point(627, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 20);
             this.label3.TabIndex = 4;
@@ -322,6 +334,10 @@
             // 
             // editpanel
             // 
+            this.editpanel.Controls.Add(this.edithoteltxt);
+            this.editpanel.Controls.Add(this.label11);
+            this.editpanel.Controls.Add(this.edithottxt);
+            this.editpanel.Controls.Add(this.label12);
             this.editpanel.Controls.Add(this.agree);
             this.editpanel.Controls.Add(this.inclbl2);
             this.editpanel.Controls.Add(this.edpbox);
@@ -343,7 +359,7 @@
             // agree
             // 
             this.agree.AutoSize = true;
-            this.agree.Location = new System.Drawing.Point(653, 264);
+            this.agree.Location = new System.Drawing.Point(653, 273);
             this.agree.Name = "agree";
             this.agree.Size = new System.Drawing.Size(182, 17);
             this.agree.TabIndex = 5;
@@ -370,7 +386,7 @@
             this.edpbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.edpbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.edpbox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.edpbox.Location = new System.Drawing.Point(739, 40);
+            this.edpbox.Location = new System.Drawing.Point(739, 14);
             this.edpbox.Name = "edpbox";
             this.edpbox.Size = new System.Drawing.Size(206, 113);
             this.edpbox.TabIndex = 26;
@@ -408,7 +424,7 @@
             this.unexbtn1.AutoSize = true;
             this.unexbtn1.Depth = 0;
             this.unexbtn1.Font = new System.Drawing.Font("Roboto", 10F);
-            this.unexbtn1.Location = new System.Drawing.Point(653, 199);
+            this.unexbtn1.Location = new System.Drawing.Point(824, 143);
             this.unexbtn1.Margin = new System.Windows.Forms.Padding(0);
             this.unexbtn1.MouseLocation = new System.Drawing.Point(-1, -1);
             this.unexbtn1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -426,7 +442,7 @@
             this.exbtn1.AutoSize = true;
             this.exbtn1.Depth = 0;
             this.exbtn1.Font = new System.Drawing.Font("Roboto", 10F);
-            this.exbtn1.Location = new System.Drawing.Point(653, 169);
+            this.exbtn1.Location = new System.Drawing.Point(723, 143);
             this.exbtn1.Margin = new System.Windows.Forms.Padding(0);
             this.exbtn1.MouseLocation = new System.Drawing.Point(-1, -1);
             this.exbtn1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -443,7 +459,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(617, 91);
+            this.label7.Location = new System.Drawing.Point(617, 65);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(111, 20);
             this.label7.TabIndex = 4;
@@ -601,6 +617,106 @@
             this.openFileDialog2.Filter = "JPG|*.jpg|PNG|*.png";
             this.openFileDialog2.Title = "Select Image";
             // 
+            // hotspottxt
+            // 
+            this.hotspottxt.Depth = 0;
+            this.hotspottxt.Hint = "";
+            this.hotspottxt.Location = new System.Drawing.Point(711, 215);
+            this.hotspottxt.MouseState = MaterialSkin.MouseState.HOVER;
+            this.hotspottxt.Name = "hotspottxt";
+            this.hotspottxt.PasswordChar = '\0';
+            this.hotspottxt.SelectedText = "";
+            this.hotspottxt.SelectionLength = 0;
+            this.hotspottxt.SelectionStart = 0;
+            this.hotspottxt.Size = new System.Drawing.Size(248, 23);
+            this.hotspottxt.TabIndex = 5;
+            this.hotspottxt.UseSystemPasswordChar = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(631, 218);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(74, 20);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "Hotspots";
+            // 
+            // hoteltxt
+            // 
+            this.hoteltxt.Depth = 0;
+            this.hoteltxt.Hint = "";
+            this.hoteltxt.Location = new System.Drawing.Point(711, 260);
+            this.hoteltxt.MouseState = MaterialSkin.MouseState.HOVER;
+            this.hoteltxt.Name = "hoteltxt";
+            this.hoteltxt.PasswordChar = '\0';
+            this.hoteltxt.SelectedText = "";
+            this.hoteltxt.SelectionLength = 0;
+            this.hoteltxt.SelectionStart = 0;
+            this.hoteltxt.Size = new System.Drawing.Size(248, 23);
+            this.hoteltxt.TabIndex = 6;
+            this.hoteltxt.UseSystemPasswordChar = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(631, 263);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(55, 20);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "Hotels";
+            // 
+            // edithoteltxt
+            // 
+            this.edithoteltxt.Depth = 0;
+            this.edithoteltxt.Hint = "";
+            this.edithoteltxt.Location = new System.Drawing.Point(697, 224);
+            this.edithoteltxt.MouseState = MaterialSkin.MouseState.HOVER;
+            this.edithoteltxt.Name = "edithoteltxt";
+            this.edithoteltxt.PasswordChar = '\0';
+            this.edithoteltxt.SelectedText = "";
+            this.edithoteltxt.SelectionLength = 0;
+            this.edithoteltxt.SelectionStart = 0;
+            this.edithoteltxt.Size = new System.Drawing.Size(248, 23);
+            this.edithoteltxt.TabIndex = 31;
+            this.edithoteltxt.UseSystemPasswordChar = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(617, 227);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(55, 20);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Hotels";
+            // 
+            // edithottxt
+            // 
+            this.edithottxt.Depth = 0;
+            this.edithottxt.Hint = "";
+            this.edithottxt.Location = new System.Drawing.Point(697, 179);
+            this.edithottxt.MouseState = MaterialSkin.MouseState.HOVER;
+            this.edithottxt.Name = "edithottxt";
+            this.edithottxt.PasswordChar = '\0';
+            this.edithottxt.SelectedText = "";
+            this.edithottxt.SelectionLength = 0;
+            this.edithottxt.SelectionStart = 0;
+            this.edithottxt.Size = new System.Drawing.Size(248, 23);
+            this.edithottxt.TabIndex = 30;
+            this.edithottxt.UseSystemPasswordChar = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(617, 182);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(74, 20);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "Hotspots";
+            // 
             // destinations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -611,9 +727,9 @@
             this.Controls.Add(this.editbtn);
             this.Controls.Add(this.addbtn);
             this.Controls.Add(this.back);
-            this.Controls.Add(this.removepnl);
             this.Controls.Add(this.editpnl);
             this.Controls.Add(this.addpnl);
+            this.Controls.Add(this.removepnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "destinations";
             this.Text = "destinations";
@@ -681,5 +797,13 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
         private System.Windows.Forms.Label inclbl2;
         private System.Windows.Forms.CheckBox agree;
+        private MaterialSkin.Controls.MaterialSingleLineTextField hoteltxt;
+        private System.Windows.Forms.Label label10;
+        private MaterialSkin.Controls.MaterialSingleLineTextField hotspottxt;
+        private System.Windows.Forms.Label label9;
+        private MaterialSkin.Controls.MaterialSingleLineTextField edithoteltxt;
+        private System.Windows.Forms.Label label11;
+        private MaterialSkin.Controls.MaterialSingleLineTextField edithottxt;
+        private System.Windows.Forms.Label label12;
     }
 }

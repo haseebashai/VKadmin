@@ -42,13 +42,16 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void addplbtn_Click(object sender, EventArgs e)
         {
-            if (nametxtok && desctxtok && chkok && status == true)
+            if (hotspottxt.Text.Contains("\\") || hotspottxt.Text.Contains("'") || hoteltxt.Text.Contains("\\") || hoteltxt.Text.Contains("'"))
+                MessageBox.Show("Details cannot contain ' & \\ ");
+
+            if (nametxtok && desctxtok && chkok && status)
             {
                 StringBuilder s1 = new StringBuilder(desctxt.Text);
                 s1.Replace(@"\", @"\\");
                 s1.Replace("'", "\\'");
                    
-                cmd = "insert into places (`name`, `description`, `location`, `explored`) values ('" + nametxt.Text + "', '" + s1 + @"', 'C:\\Vkashmir\\places\\"+nametxt.Text+ ".jpg', '" + exp + "')";
+                cmd = "insert into places (`name`, `description`, `location`, `explored`, `hotspot`, `hotels`) values ('" + nametxt.Text + "', '" + s1 + @"', 'C:\\Vkashmir\\places\\"+nametxt.Text+ ".jpg', '" + exp + "', '" + hotspottxt.Text+"', '" + hoteltxt.Text +"')";
                 dpbox.BackgroundImage.Save("C:\\Vkashmir\\places\\" + nametxt.Text + ".jpg");
                 obj.nonQuery(cmd);
                 
@@ -115,6 +118,7 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void addbtn_Click(object sender, EventArgs e)
         {
+
             editpnl.Visible = false;
             removepnl.Visible = false;
             addpnl.Visible = true;
@@ -146,6 +150,8 @@ namespace Veiled_Kashmir_Admin_Panel
         {
             nametxt.Text = "";
             desctxt.Text = "";
+            hotspottxt.Text = "";
+            hoteltxt.Text = "";
             dpbox.BackgroundImage = null;
             exbtn.Checked = false;
             unexbtn.Checked = false;
@@ -158,9 +164,12 @@ namespace Veiled_Kashmir_Admin_Panel
             dr = obj.Query("select * from places where name='"+selectbox.Text+"'");
             dr.Read();
             editpanel.Visible = true;
-                editnametxt.Text = dr[1].ToString();
-                editdesctxt.Text = dr[2].ToString();
-                edpbox.BackgroundImage = new Bitmap(dr[3].ToString());
+            editnametxt.Text = dr[1].ToString();
+            editdesctxt.Text = dr[2].ToString();
+            edpbox.BackgroundImage = new Bitmap(dr[3].ToString());
+            edithottxt.Text = dr[5].ToString();
+            edithoteltxt.Text = dr[6].ToString();
+
                 exp = Convert.ToInt32(dr[4]);
             if (exp == 1)
             {
@@ -179,8 +188,9 @@ namespace Veiled_Kashmir_Admin_Panel
 
         private void updatebtn_Click(object sender, EventArgs e)
         {
-            if (editnametxt.Text.Contains("'") || editnametxt.Text.Contains("\\"))
-                MessageBox.Show("Name cannot contacin ' & \\");
+           
+            if (editnametxt.Text.Contains("'") || editnametxt.Text.Contains("\\") || edithottxt.Text.Contains("'") || edithottxt.Text.Contains("\\") || edithoteltxt.Text.Contains("'") || edithoteltxt.Text.Contains("\\"))
+                MessageBox.Show("Details cannot contain ' & \\");
             else
             {
                 if (agree.Checked && editnametxtok && editdesctxtok && chkok2 == true)
@@ -190,7 +200,7 @@ namespace Veiled_Kashmir_Admin_Panel
                         StringBuilder s1 = new StringBuilder(editdesctxt.Text);
                         s1.Replace(@"\", @"\\");
                         s1.Replace("'", "\\'");
-                        cmd = ("update places set `name`='" + editnametxt.Text + "', `description`='" + s1 + @"', `location`='C:\\Vkashmir\\places\\" + editnametxt.Text + ".jpg', `explored`='" + exp + "' where `name`='" + selectbox.Text + "';");
+                        cmd = ("update places set `name`='" + editnametxt.Text + "', `description`='" + s1 + @"', `location`='C:\\Vkashmir\\places\\" + editnametxt.Text + ".jpg', `explored`='" + exp + "', `hotspot`='"+ edithottxt.Text+"', `hotels`='"+edithoteltxt.Text+"' where `name`='" + selectbox.Text + "';");
                         edpbox.BackgroundImage.Save("C:\\Vkashmir\\places\\" + editnametxt.Text + ".jpg");
 
                     }
@@ -199,12 +209,14 @@ namespace Veiled_Kashmir_Admin_Panel
                         StringBuilder s1 = new StringBuilder(editdesctxt.Text);
                         s1.Replace(@"\", @"\\");
                         s1.Replace("'", "\\'");
-                        cmd = ("update places set `name`='" + editnametxt.Text + "', `description`='" + s1 + "', `explored`='" + exp + "' where `name`='" + selectbox.Text + "';");
+                        cmd = ("update places set `name`='" + editnametxt.Text + "', `description`='" + s1 + "', `explored`='" + exp + "', `hotspot`='" + edithottxt.Text + "', `hotels`='" + edithoteltxt.Text + "' where `name`='" + selectbox.Text + "';");
                     }
 
                     MessageBox.Show("Details updated for the selected place.");
                     editnametxt.Text = "";
                     editdesctxt.Text = "";
+                    edithottxt.Text = "";
+                    edithoteltxt.Text = "";
                     exbtn1.Checked = false;
                     unexbtn1.Checked = false;
                     inclbl2.Visible = false;
@@ -272,11 +284,14 @@ namespace Veiled_Kashmir_Admin_Panel
 
         }
 
+        
+
         private void editcancelbtn_Click(object sender, EventArgs e)
         {
             editnametxt.Text = "";
             editdesctxt.Text = "";
-            
+            edithoteltxt.Text = "";
+            edithottxt.Text = "";
             exbtn1.Checked = false;
             unexbtn1.Checked = false;
         }

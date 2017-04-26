@@ -305,7 +305,7 @@
             this.userlbl.AutoSize = true;
             this.userlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userlbl.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.userlbl.Location = new System.Drawing.Point(433, 43);
+            this.userlbl.Location = new System.Drawing.Point(317, 44);
             this.userlbl.Name = "userlbl";
             this.userlbl.Size = new System.Drawing.Size(51, 20);
             this.userlbl.TabIndex = 63;
