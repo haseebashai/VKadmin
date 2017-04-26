@@ -46,11 +46,11 @@
             this.sendmsgbtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.signinlbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rptbtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.msgbtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.profilebtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.logo = new System.Windows.Forms.PictureBox();
-            this.rptbtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
@@ -311,6 +311,22 @@
             this.panel1.TabIndex = 10;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // rptbtn
+            // 
+            this.rptbtn.AutoSize = true;
+            this.rptbtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.rptbtn.Depth = 0;
+            this.rptbtn.Location = new System.Drawing.Point(148, 168);
+            this.rptbtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.rptbtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.rptbtn.Name = "rptbtn";
+            this.rptbtn.Primary = false;
+            this.rptbtn.Size = new System.Drawing.Size(144, 36);
+            this.rptbtn.TabIndex = 17;
+            this.rptbtn.Text = "Generate Reports";
+            this.rptbtn.UseVisualStyleBackColor = true;
+            this.rptbtn.Click += new System.EventHandler(this.rptbtn_Click);
+            // 
             // msgbtn
             // 
             this.msgbtn.AutoSize = true;
@@ -368,22 +384,6 @@
             this.logo.TabIndex = 11;
             this.logo.TabStop = false;
             this.logo.Click += new System.EventHandler(this.logo_Click);
-            // 
-            // rptbtn
-            // 
-            this.rptbtn.AutoSize = true;
-            this.rptbtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.rptbtn.Depth = 0;
-            this.rptbtn.Location = new System.Drawing.Point(164, 164);
-            this.rptbtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.rptbtn.MouseState = MaterialSkin.MouseState.HOVER;
-            this.rptbtn.Name = "rptbtn";
-            this.rptbtn.Primary = false;
-            this.rptbtn.Size = new System.Drawing.Size(108, 36);
-            this.rptbtn.TabIndex = 17;
-            this.rptbtn.Text = "View Reports";
-            this.rptbtn.UseVisualStyleBackColor = true;
-            this.rptbtn.Click += new System.EventHandler(this.rptbtn_Click);
             // 
             // mainform
             // 

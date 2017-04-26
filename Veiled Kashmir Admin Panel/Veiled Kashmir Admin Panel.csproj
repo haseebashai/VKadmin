@@ -80,6 +80,9 @@
     <Compile Include="business.Designer.cs">
       <DependentUpon>business.cs</DependentUpon>
     </Compile>
+    <Compile Include="businessdetail.cs">
+      <DependentUpon>shopmodel.tt</DependentUpon>
+    </Compile>
     <Compile Include="contacts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +149,24 @@
     <Compile Include="notification.Designer.cs">
       <DependentUpon>notification.cs</DependentUpon>
     </Compile>
+    <Compile Include="place.cs">
+      <DependentUpon>placesmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="placesmodel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>placesmodel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="placesmodel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>placesmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="placesmodel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>placesmodel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="profile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +192,39 @@
     </Compile>
     <Compile Include="reviews.Designer.cs">
       <DependentUpon>reviews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="shopmodel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>shopmodel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="shopmodel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>shopmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="shopmodel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>shopmodel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="user.cs">
+      <DependentUpon>usermodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usermodel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>usermodel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usermodel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>usermodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usermodel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>usermodel.edmx</DependentUpon>
     </Compile>
     <Compile Include="wildlife.cs">
       <SubType>Form</SubType>
@@ -220,6 +274,7 @@
     <EmbeddedResource Include="notification.resx">
       <DependentUpon>notification.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="placereport.rdlc" />
     <EmbeddedResource Include="profile.resx">
       <DependentUpon>profile.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,10 +297,21 @@
     <EmbeddedResource Include="reviews.resx">
       <DependentUpon>reviews.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="shopreport.rdlc" />
+    <EmbeddedResource Include="userreport.rdlc" />
     <EmbeddedResource Include="wildlife.resx">
       <DependentUpon>wildlife.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="businessdetail.datasource" />
     <None Include="packages.config" />
+    <EntityDeploy Include="placesmodel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>placesmodel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="place.datasource" />
+    <None Include="placesmodel.edmx.diagram">
+      <DependentUpon>placesmodel.edmx</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -255,6 +321,21 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="usermodel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>usermodel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="shopmodel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>shopmodel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="shopmodel.edmx.diagram">
+      <DependentUpon>shopmodel.edmx</DependentUpon>
+    </None>
+    <None Include="user.datasource" />
+    <None Include="usermodel.edmx.diagram">
+      <DependentUpon>usermodel.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -293,6 +374,38 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="placesmodel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>placesmodel.edmx</DependentUpon>
+      <LastGenOutput>placesmodel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="placesmodel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>placesmodel.edmx</DependentUpon>
+      <LastGenOutput>placesmodel.cs</LastGenOutput>
+    </Content>
+    <Content Include="shopmodel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>shopmodel.edmx</DependentUpon>
+      <LastGenOutput>shopmodel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="shopmodel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>shopmodel.edmx</DependentUpon>
+      <LastGenOutput>shopmodel.cs</LastGenOutput>
+    </Content>
+    <Content Include="usermodel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>usermodel.edmx</DependentUpon>
+      <LastGenOutput>usermodel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="usermodel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>usermodel.edmx</DependentUpon>
+      <LastGenOutput>usermodel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
