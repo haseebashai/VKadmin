@@ -22,6 +22,6 @@ namespace Veiled_Kashmir_Admin_Panel
         public string country { get; set; }
         public string contact { get; set; }
         public Nullable<System.DateTime> DOB { get; set; }
-        public byte[] pic { get; set; }
+        public string pic { get; set; }
     }
 }

@@ -13,10 +13,10 @@ namespace Veiled_Kashmir_Admin_Panel
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class vkashmirEntities2 : DbContext
+    public partial class vkashmirEntities4 : DbContext
     {
-        public vkashmirEntities2()
-            : base("name=vkashmirEntities2")
+        public vkashmirEntities4()
+            : base("name=vkashmirEntities4")
         {
         }
     

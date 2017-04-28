@@ -67,7 +67,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>name</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -363,6 +365,7 @@
         </TablixRowHierarchy>
         <DataSetName>shop</DataSetName>
         <Top>0.64458in</Top>
+        <Left>1.37376in</Left>
         <Height>0.5in</Height>
         <Width>7.66666in</Width>
         <Style>
@@ -389,7 +392,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
         <Top>0.155in</Top>
-        <Left>3.04042in</Left>
+        <Left>4.16542in</Left>
         <Height>0.25in</Height>
         <Width>1.29167in</Width>
         <ZIndex>1</ZIndex>
@@ -407,7 +410,7 @@
     <Height>1.16667in</Height>
     <Style />
   </Body>
-  <Width>7.66667in</Width>
+  <Width>9.41542in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>

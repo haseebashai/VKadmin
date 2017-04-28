@@ -53,11 +53,12 @@ namespace Veiled_Kashmir_Admin_Panel
             reportViewer1.Visible = false;
             reportViewer2.Visible = true;
             reportViewer3.Visible = false;
-            using(vkashmirEntities2 db2=new vkashmirEntities2())
+            using(vkashmirEntities4 db2=new vkashmirEntities4())
             {
                 userBindingSource.DataSource = db2.users.ToList();
                 reportViewer2.RefreshReport();
             }
+     
         }
 
         private void shpbtn_Click(object sender, EventArgs e)
@@ -69,7 +70,7 @@ namespace Veiled_Kashmir_Admin_Panel
             {
                 businessdetailBindingSource.DataSource = db3.businessdetails.ToList();
                 reportViewer3.RefreshReport();
-            }
+            } 
         }
 
         

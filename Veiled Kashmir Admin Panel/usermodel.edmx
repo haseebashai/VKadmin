@@ -17,7 +17,7 @@
           <Property Name="country" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="contact" Type="varchar" MaxLength="15" />
           <Property Name="DOB" Type="date" />
-          <Property Name="pic" Type="blob" />
+          <Property Name="pic" Type="varchar" MaxLength="200" />
         </EntityType>
         <EntityContainer Name="vkashmirModel1StoreContainer">
           <EntitySet Name="users" EntityType="Self.users" Schema="vkashmir" store:Type="Tables" />
@@ -39,9 +39,9 @@
           <Property Name="country" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="contact" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="DOB" Type="DateTime" />
-          <Property Name="pic" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="pic" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="vkashmirEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="vkashmirEntities4" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="users" EntityType="Self.user" />
         </EntityContainer>
       </Schema>
@@ -49,7 +49,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="vkashmirModel1StoreContainer" CdmEntityContainer="vkashmirEntities2">
+        <EntityContainerMapping StorageEntityContainer="vkashmirModel1StoreContainer" CdmEntityContainer="vkashmirEntities4">
           <EntitySetMapping Name="users">
             <EntityTypeMapping TypeName="vkashmirModel1.user">
               <MappingFragment StoreEntitySet="users">

@@ -321,10 +321,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EntityDeploy Include="usermodel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>usermodel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <EntityDeploy Include="shopmodel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>shopmodel.Designer.cs</LastGenOutput>
@@ -332,6 +328,10 @@
     <None Include="shopmodel.edmx.diagram">
       <DependentUpon>shopmodel.edmx</DependentUpon>
     </None>
+    <EntityDeploy Include="usermodel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>usermodel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
     <None Include="user.datasource" />
     <None Include="usermodel.edmx.diagram">
       <DependentUpon>usermodel.edmx</DependentUpon>

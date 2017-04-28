@@ -12,10 +12,10 @@
               <Width>1in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.5625in</Width>
+              <Width>1.35417in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.9375in</Width>
+              <Width>2.14583in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1in</Width>
@@ -123,7 +123,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox8">
+                    <Textbox Name="Textbox7">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -139,7 +139,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox8</rd:DefaultName>
+                      <rd:DefaultName>Textbox7</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -155,7 +155,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox10">
+                    <Textbox Name="Textbox9">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -171,7 +171,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox10</rd:DefaultName>
+                      <rd:DefaultName>Textbox9</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -364,7 +364,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>user</DataSetName>
-        <Top>0.54042in</Top>
+        <Top>0.60292in</Top>
+        <Left>1.5in</Left>
         <Height>0.5in</Height>
         <Width>6.5in</Width>
         <Style>
@@ -373,7 +374,7 @@
           </Border>
         </Style>
       </Tablix>
-      <Textbox Name="Textbox7">
+      <Textbox Name="Textbox11">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -383,17 +384,18 @@
                 <Value>User Report</Value>
                 <Style>
                   <FontSize>14pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>0.125in</Top>
-        <Left>2in</Left>
-        <Height>0.25in</Height>
-        <Width>1.6875in</Width>
+        <rd:DefaultName>Textbox11</rd:DefaultName>
+        <Top>0.22792in</Top>
+        <Left>4.00917in</Left>
+        <Height>0.36458in</Height>
+        <Width>1.76042in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -406,10 +408,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>1.0625in</Height>
+    <Height>1.13542in</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>9.01042in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>
@@ -424,7 +426,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>4353ef3d-c957-4648-b6b1-3b16b5a09b1c</rd:DataSourceID>
+      <rd:DataSourceID>36174421-508d-404a-89e1-e0c0cf965645</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -464,7 +466,7 @@
         </Field>
         <Field Name="pic">
           <DataField>pic</DataField>
-          <rd:TypeName>System.Byte[]</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="username">
           <DataField>username</DataField>
@@ -479,5 +481,5 @@
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>d57ee8f4-f5dc-4dd0-b1ad-8177da901799</rd:ReportID>
+  <rd:ReportID>6dab1c4f-8a27-4cb2-a871-270dfd38a250</rd:ReportID>
 </Report>
